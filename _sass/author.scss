@@ -1,0 +1,52 @@
+.author-cover {
+    height: 32rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.author-image {
+    margin-top: 50px;
+
+    &.has-cover {
+        margin-top: -52px;
+    }
+
+    .img {
+        border: 4px solid white;
+    }
+}
+
+.author-info {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    margin: 20px auto 40px;
+
+    &:after {
+        margin-top: 40px;
+    }
+}
+
+.author-title {
+    font-size: 4rem;
+}
+
+.author-bio {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #666666;
+}
+
+.author-meta {
+    color: #9EABB3;
+    font-size: 1.6rem;
+
+    a {
+        margin-top: 10px;
+        color: #9EABB3;
+        &:hover {
+            color: #111;
+        }
+    }
+}

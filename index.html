@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<main id="content" class="content post-list" role="main">
+    {% for post in site.posts limit:5 %}
+
+    <article class="post short-diver">
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        </header>
+        <section class="post-meta">
+            <a href="">{{ post.author }}</a>
+            on
+            {% for tag in post.tags limit:5 %}
+            <span><a href="">{{ tag }}</a></span>
+            {% endfor %}
+            <time class="post-date" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: '%d. %B %Y'}}</time>
+        </section>
+        <section class="post-excerpt">
+            <p>{{ post.content | strip_html | truncatewords: 26 }} ... <a class="read-more" href="{{ post.url }}">read more</a></p>
+        </section>
+    </article>
+
+    {% endfor %}
+</main>

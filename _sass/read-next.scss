@@ -1,0 +1,47 @@
+
+.read-next .title {
+    text-align: center;
+    font-style: italic;
+    font-family: "Merriweather", serif;
+    margin-bottom: 30px;
+}
+
+.read-next a {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding-right: 10px;
+}
+
+.read-next a:last-child {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.read-next a h2 {
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.read-next .post {
+    position: relative;
+}
+
+.read-next .white-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
+.read-next p {
+    max-height: 150px;
+    overflow: hidden;
+}
