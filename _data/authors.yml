@@ -1,0 +1,13 @@
+default:
+  name: "Jens Willmer"
+  picture: /img/jwillmer.jpg
+  bio: Something about me
+  location: Germany
+  website: http://jwillmer.de
+
+jwillmer:
+  name: "Jens Willmer"
+  picture: /img/jwillmer.jpg
+  bio: Something about me
+  location: Germany
+  website: http://jwillmer.de
