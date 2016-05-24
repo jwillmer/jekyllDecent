@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Welcome to my Blog Example"
-date:   2016-07-27 00:40:31 +0200
+title:  "Example Blog Page"
+date:   2016-05-23 00:40:31 +0200
 tags: jekyll update
-category: "Example"
+category: Example
 author: jwillmer
 cover: /assets/mountain.jpg
 published: true
 ---
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 
