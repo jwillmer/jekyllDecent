@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Welcome to my Blog"
+title:  "Welcome to my Blog Example"
 date:   2015-02-28 00:40:31 +0200
 tags: jekyll update
-category: ".NET"
+category: "Example"
 author: jwillmer
 cover: /assets/mountain.jpg
 published: true
@@ -18,7 +18,7 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 <figure markdown="1">
-![Mountain View](/media/img/mountain1.jpg)
+![Mountain View]({{ site.github.url }}/media/img/mountain1.jpg)
 <figcaption>Phasellus ut molestie odio, vel elementum erat.</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ Jekyll also offers powerful support for code snippets:
 ```
 
 <figure class="large" markdown="1">
-![](/media/img/mountain2.jpg)
+![]({{ site.github.url }}/media/img/mountain2.jpg)
 <figcaption>wow so handsome</figcaption>
 </figure>
 
@@ -55,17 +55,17 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 
 <div class="album">
 <figure>
-<img src="/media/img/mountain1.jpg" />
+<img src="{{ site.github.url }}/media/img/mountain1.jpg" />
 <figcaption>wow so handsome 1</figcaption>
 </figure>
 
 <figure>
-<img src="/media/img/mountain2.jpg" />
+<img src="{{ site.github.url }}/media/img/mountain2.jpg" />
 <figcaption>wow so handsome 2</figcaption>
 </figure>
 
 <figure>
-<img src="/media/img/mountain3.jpg" />
+<img src="{{ site.github.url }}/media/img/mountain3.jpg" />
 <figcaption>wow so handsome 3</figcaption>
 </figure>
 
