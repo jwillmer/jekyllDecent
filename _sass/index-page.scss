@@ -1,3 +1,14 @@
+/* some data is duplicated from other files to allow an easy merge of updates 
+   from the forked theme without destroying the css for this page */
+
+.recent-posts,
+.recent-posts .article {
+    width: 90%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
 
 .recent-posts {
     li {

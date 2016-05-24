@@ -1,6 +1,7 @@
 ---
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
+# color-profile datalist merged with forked file.
 ---
 
 @import 'normalize';
@@ -12,9 +13,9 @@
 @import 'index-page';
 @import 'prism';
 @import 'author';
-@import 'read-next';
+@import 'media1080';
 @import 'media780';
 @import 'media500';
-
 @import 'photoswipe';
 @import 'photoswipe-default-skin';
+@import 'override';
