@@ -1,10 +1,11 @@
+
 {% if page.cover %}
 {% assign cover = page.cover %}
 {% elsif site.cover %}
 {% assign cover = site.cover %}
 {% endif %}
 
-<header class="main-header detail-page image-bg {% if cover %} has-cover" style="background-image: url({{ cover }})" {% else %} no-cover" {% endif %}>
+<header class="main-header detail-page image-bg {% if cover %} has-cover" style="background-image: url({{ cover | prepend: site.github.url }})" {% else %} no-cover" {% endif %}>
     <h1 class="page-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
     <h2 class="page-description">{{ site.subtitle }}</h2>
     <div class="nav">
