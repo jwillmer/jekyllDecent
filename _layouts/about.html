@@ -16,12 +16,12 @@ layout: person
 
 <section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
     {%  if author.cover %}
-    <div class="author-cover image-bg" style="background-image: url('{{author.cover}}')"></div>
+    <div class="author-cover image-bg" style="background-image: url('{{author.cover | prepend: site.github.url}}')"></div>
     {% endif %}
 
     {%  if author.picture %}
     <figure class="author-image  {%  if author.cover %} has-cover  {% endif %}">
-        <div class="img image-bg" style="background-image: url({{author.picture}})"><span class="hidden">{{author.name}}'s Picture</span></div>
+        <div class="img image-bg" style="background-image: url({{author.picture | prepend: site.github.url}})"><span class="hidden">{{author.name}}'s Picture</span></div>
     </figure>
     {% endif %}
 
