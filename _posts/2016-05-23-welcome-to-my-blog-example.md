@@ -38,7 +38,7 @@ Jekyll also offers powerful support for code snippets:
 <figcaption>wow so handsome</figcaption>
 </figure>
 
-```javascript
+<pre><code class="language-javascript">
 Array.prototype.uniq = function () {
     var map = {};
     return this.filter(function (item) {
@@ -50,7 +50,8 @@ Array.prototype.uniq = function () {
         }
     });
 };
-```
+</code></pre>
+
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
