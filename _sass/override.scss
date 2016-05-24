@@ -5,6 +5,10 @@
     border-radius: 25px;
 }
 
+figure p {
+    margin: 0; /* jekyll generates paragraphs in figure elements */
+}
+
 @media only screen and (max-width: 780px) {
     .category .date {
         display: none;

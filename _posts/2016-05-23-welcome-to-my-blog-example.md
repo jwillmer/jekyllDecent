@@ -34,11 +34,11 @@ Jekyll also offers powerful support for code snippets:
 ```
 
 <figure class="large" markdown="1">
-![]({{ site.github.url }}/media/img/mountain2.jpg)
+<img src="{{ site.github.url }}/media/img/mountain2.jpg" />
 <figcaption>wow so handsome</figcaption>
 </figure>
 
-<pre><code class="language-javascript">
+<pre data-line="5" class="line-numbers language-javascript"><code>
 Array.prototype.uniq = function () {
     var map = {};
     return this.filter(function (item) {
