@@ -10,8 +10,14 @@ figure p {
 }
 
 @media only screen and (max-width: 780px) {
-    .category .date {
-        display: none;
+    .category {
+        .date {
+            display: none;
+        }
+
+        .article {
+            text-align: center;
+        }
     }
 }
 
