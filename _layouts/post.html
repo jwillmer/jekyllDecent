@@ -20,17 +20,19 @@ layout: default
             {{content}}
         </section>
 
-        <footer class="post-footer">
+        <footer class="post-footer"> 
             {% if site.data.authors and site.data.authors[page.author] %}          
-            {% assign author = site.data.authors[page.author] %}
+            {% assign author = site.data.authors.[page.author] %}
             {% elsif site.data.authors %}
-            {% assign author = site.data.authors["default"] %}    
+            {% assign author = site.data.authors[0] %}    
             {% endif %}
 
             {%  if author %}
+            {%  if author.picture %}
             <div class="author-image">
                 <a class="img image-bg" href="#" style="background-image: url({{author.picture}})"><span class="hidden">{{author.name}}'s Picture</span></a>
             </div>
+            {% endif %}
 
             <section class="author short-diver" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <h4><a href="{{#}}" itemprop="name">{{ author.name }}</a></h4>

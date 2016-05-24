@@ -1,13 +1,16 @@
 default:
+  initial: jwillmer
   name: "Jens Willmer"
-  picture: /img/jwillmer.jpg
+  cover: /assets/mountain.jpg
+  picture: /assets/jwillmer.jpg
   bio: Something about me
   location: Germany
   website: http://jwillmer.de
-
 jwillmer:
+  initial: jwillmer
   name: "Jens Willmer"
-  picture: /img/jwillmer.jpg
+  picture: /assets/jwillmer.jpg
+  cover: /assets/mountain.jpg
   bio: Something about me
   location: Germany
   website: http://jwillmer.de

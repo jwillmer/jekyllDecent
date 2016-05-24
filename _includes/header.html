@@ -9,14 +9,11 @@
     <h2 class="page-description">{{ site.subtitle }}</h2>
     <div class="nav">
         <ul>
-            <li><a class="page-link" href="{{ site.github.url}}">Home</a></li>
-            {% assign pages = site.pages | sort:"weight"  %}
-            {% for my_page in pages %}
-            {% if my_page.title %}
-            <!--class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"-->
-            <li><a class="page-link" href="{{ my_page.url | prepend: site.github.url }}">{{ my_page.title }}</a></li>
-            {% endif %}
-            {% endfor %}
+            <li><a class="page-link" href="{{ site.github.url}}/">Home</a></li>
+            <!--<li><a class="page-link" href="{{ site.github.url}}/files/">Files</a></li>
+            <li><a class="page-link" href="{{ site.github.url}}/gallery/">Gallery</a></li>-->
+            <li><a class="page-link" href="{{ site.github.url}}/offline/">Offline</a></li>
+            <li><a class="page-link" href="{{ site.github.url}}/about/">About</a></li>
         </ul>
     </div>
 </header>

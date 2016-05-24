@@ -1,6 +1,22 @@
 /* In order to prevent changes on files from the forked repo we use this file to make adjustments. 
-    This way it is easy to merge changes from the fork. */ 
+    This way it is easy to merge changes from the fork. */
 
 .go-to-top {
-     border-radius: 25px;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 780px) {
+    .category .date {
+        display: none;
     }
+}
+
+
+/* as long as is is not fixed in the forked repo */
+.single-post .post-content > dl {
+    width: 90%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}

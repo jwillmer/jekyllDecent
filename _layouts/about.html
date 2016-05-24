@@ -1,0 +1,49 @@
+---
+layout: person
+---
+{% if site.data.authors and site.data.authors[page.author] %}
+{% assign author = site.data.authors.[page.author] %}
+{% elsif site.data.authors %}
+{% assign author = site.data.authors[0] %}
+{% endif %}
+
+{% assign counter = 0 %}
+{% for post in site.posts %}
+    {% unless post.draft or post.author != author.initial %}
+        {% assign counter = counter | plus: 1 %}
+    {% endunless %}
+{% endfor %}
+
+<section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    {%  if author.cover %}
+    <div class="author-cover image-bg" style="background-image: url('{{author.cover}}')"></div>
+    {% endif %}
+
+    {%  if author.picture %}
+    <figure class="author-image  {%  if author.cover %} has-cover  {% endif %}">
+        <div class="img image-bg" style="background-image: url({{author.picture}})"><span class="hidden">{{author.name}}'s Picture</span></div>
+    </figure>
+    {% endif %}
+
+    <div class="author-info">
+        <h1 class="author-title" itemprop="name">{{author.name}}</h1>
+        {% if author.bio %}
+        <h2 class="author-bio">{{author.bio}}</h2>
+        {% endif %}
+        <div class="author-meta">
+            {%  if author.location %}<span class="author-location icon-location">{{ author.location }}</span>{% endif %}
+            {%  if author.website %}<span class="author-link icon-link"><a href="{{ author.website }}">{{ author.website }}</a></span>{% endif %}
+            <span class="author-stats"><i class="icon-stats"></i> {{ counter }} posts</span>
+        </div>
+    </div>
+</section>
+
+<main class="content" role="main">
+    <article class="single-post">
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+    </article>
+</main>

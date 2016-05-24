@@ -1,47 +1,32 @@
 /* some data is duplicated from other files to allow an easy merge of updates 
    from the forked theme without destroying the css for this page */
 
-.recent-posts,
-.recent-posts .article {
+.category {
     width: 90%;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     word-wrap: break-word;
-}
+    margin-bottom: 50px;
 
-.recent-posts {
     li {
         margin-bottom: 8px;
         list-style-type: none;
     }
 
-    .dropdown {
-        position: absolute;
-        background-color: white;
-        display:none;
-        z-index: 100;
-        border-left: 1px solid #eeeeee;
-        border-right: 1px solid #eeeeee;
-        border-bottom: 1px solid #eeeeee;
-        padding: 10px;
-    }
-
     .article {
-        position: relative;
-        display: inline-block;
         text-align: left;
+
+        .post-header {
+            border-bottom: 1px solid #eeeeee;
+            margin-bottom: 10px;
+        }
 
         .title a {
             text-decoration: none;
         }
 
-        .tags, .tags a {
-            font-size: 0.75em;
-            text-decoration: none;
-        }
-
-        .date, .author {
+        .date {
             float: right;
             font-size: 12px;
             text-transform: uppercase;
@@ -49,19 +34,6 @@
             line-height: 24px;
             margin-top: 7px;
             margin-bottom: 0;
-        }
-
-                .post-meta {
-            margin-bottom: 0;
-        }
-
-        .post-header {
-            border-bottom: 1px solid #eeeeee;
-            margin-bottom: 10px;
-        }
-
-        .post-excerpt {
-            font-size: 0.8em;
         }
     }
 }

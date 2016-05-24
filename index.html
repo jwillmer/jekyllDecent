@@ -4,8 +4,7 @@ layout: default
 
 
 <div id="content" class="content">
-
-    <ul class="recent-posts">
+    <ul class="category recent-posts">
         <h3>Recent Posts</h3>
         {% for post in site.posts limit:5  %}
         {% unless post.draft %}
@@ -16,26 +15,38 @@ layout: default
                         <span class="title"><a itemprop="name" href="{{ post.url }}">{{ post.title }}</a></span>
                         <time class="date" itemprop="datePublished" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%B %e, %Y"}}</time>
                     </header>
-                    <div class="dropdown">
-                        <section class="post-excerpt" itemprop="description">
-                            <p> {{ post.content | strip_html | truncatewords: 26 }} </p>
-                        </section>
-                        <section class="post-meta">
-                            <span class="tags" itemprop="keywords">
-                                Tags:
-                                {% for tag in post.tags limit:5 %}
-                                <span><a href="">{{ tag }}</a></span>
-                                {% endfor %}
-                            </span>
-                            <span class="author" itemprop="author">{{ post.author }}</span>
-                        </section>
-                    </div>
                 </article>
             </div>
         </li>
         {% endunless %}
         {% endfor %}
     </ul>
+
+
+    {% assign sorted_cats = site.categories | sort %}
+    {% for category in sorted_cats %}
+    {% assign sorted_posts = category[1] | reversed %}
+    <ul class="category {{category[0] | uri_escape | downcase | slugify}}">
+        <h3 id="{{category[0] | uri_escape | downcase | slugify }}">{{category[0] | camelcase }}</h3>
+
+        {% for post in sorted_posts %}
+        {% unless post.draft %}
+        <li>
+            <div class="article">
+                <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+                    <header class="post-header">
+                        <span class="title"><a itemprop="name" href="{{ post.url }}">{{ post.title }}</a></span>
+                        <time class="date" itemprop="datePublished" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%B %e, %Y"}}</time>
+                    </header>
+                </article>
+            </div>
+        </li>
+        {% endunless %}
+        {% endfor %}
+    </ul>
+    {% endfor %}
+
+
 
 </div>
 

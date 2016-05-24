@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+{% unless post.draft %}
+{{ post }}
+{% endunless %}
+{% endfor %}
