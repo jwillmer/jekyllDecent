@@ -30,7 +30,7 @@ layout: default
             {%  if author %}
             {%  if author.picture %}
             <div class="author-image">
-                <a class="img image-bg" href="#" style="background-image: url({{author.picture}})"><span class="hidden">{{author.name}}'s Picture</span></a>
+                <a class="img image-bg" href="#" style="background-image: url({{author.picture | prepend: site.github.url}})"><span class="hidden">{{author.name}}'s Picture</span></a>
             </div>
             {% endif %}
 

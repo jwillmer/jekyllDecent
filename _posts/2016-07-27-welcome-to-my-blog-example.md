@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to my Blog Example"
-date:   2015-02-28 00:40:31 +0200
+date:   2016-07-27 00:40:31 +0200
 tags: jekyll update
 category: "Example"
 author: jwillmer
