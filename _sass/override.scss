@@ -23,10 +23,16 @@ figure p {
 
 
 /* as long as is is not fixed in the forked repo */
-.single-post .post-content > dl {
-    width: 90%;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    word-wrap: break-word;
+.single-post .post-content {
+    iframe {
+        min-height: 350px;
+    }
+
+    dl, iframe {
+        width: 90%;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        word-wrap: break-word;
+    }
 }
