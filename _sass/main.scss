@@ -171,7 +171,8 @@
     height: 40px;
     position: fixed;
     bottom: 30px;
-    right: 100px;
+    left: 50%;
+    transform: translateX(400px);
     border: none;
     display: none;
     opacity: 0.8;
@@ -203,7 +204,28 @@
 .single-post .post-content > blockquote,
 .single-post .post-content .single-post-header,
 .single-post .post-content > table,
+.single-post .post-content > address,
+.single-post .post-content > article,
+.single-post .post-content > aside,
+.single-post .post-content > canvas,
+.single-post .post-content > dd,
+.single-post .post-content > dl,
+.single-post .post-content > fieldset,
+.single-post .post-content > figcaption,
 .single-post .post-content > figure,
+.single-post .post-content > footer,
+.single-post .post-content > form,
+.single-post .post-content > header,
+.single-post .post-content > hgroup,
+.single-post .post-content > li,
+.single-post .post-content > main,
+.single-post .post-content > nav,
+.single-post .post-content > noscript,
+.single-post .post-content > output,
+.single-post .post-content > section,
+.single-post .post-content > tfoot,
+.single-post .post-content > video,
+.single-post .post-content > iframe,
 .read-next {
     width: 90%;
     max-width: 650px;

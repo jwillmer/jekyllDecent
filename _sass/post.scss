@@ -130,7 +130,6 @@
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
         padding: 20px;
-        cursor: move;
         overflow-x: auto;
         overflow-y: hidden;
         user-select: none;
@@ -153,13 +152,17 @@
             max-width: none;
             height: 100%;
             display: inline-block;
+
+            img {
+                margin: 0;
+            }
         }
 
         figcaption {
             position: absolute;
             width: auto;
-            left: 10px;
-            right: 10px;
+            left: 0;
+            right: 0;
             bottom: 0;
             padding: 20px 5px 5px;
             top: auto;

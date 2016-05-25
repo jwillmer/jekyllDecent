@@ -70,9 +70,14 @@
                 width: 100%;
             }
         }
+
+        .album {
+            height: 200px;
+        }
     }
 
     .go-to-top {
         right: 10px;
+        display: none !important;
     }
 }
