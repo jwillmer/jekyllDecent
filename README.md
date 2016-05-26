@@ -1,9 +1,9 @@
 # jekyllDecent
 Blog template for a static site generator named[Jekyll](https://jekyllrb.com/docs/home/) based on a [Ghost](https://ghost.org) template named [Decent](https://github.com/serenader2014/decent).
 
-Live demo can be visit at [gh-pages](http://jwillmer.github.io/jekyllDecent).
+**Live demo** can be visit at [gh-pages](http://jwillmer.github.io/jekyllDecent).
 
-Installation instructions and feature description can be found in the wiki or at the end of this page.
+Installation instructions and feature description can be found in the [wiki](https://github.com/jwillmer/jekyllDecent/wiki/Tutorial) or at the end of this page.
 
 ## Example Previews
 
@@ -30,7 +30,7 @@ Installation instructions and feature description can be found in the wiki or at
 Blogposts can be written in [Markdown](https://de.wikipedia.org/wiki/Markdown). 
 
 - The folder for blog content is `_posts`
-- For author details you need to modify ´_data/authors.yml`
+- For author details you need to modify Â´_data/authors.yml`
 - For site properties (like the name) you need to modify `_config.yml`
 - For the about page you need to modify the `about.md` in `_pages`
 
@@ -161,7 +161,7 @@ Array.prototype.uniq = function () {
 ```
 > Our destiny offers not the cup of despair, but the chalice of opportunity. So let us seize it, not in fear, but in gladness.
 > 
-> <cite>——R.M. Nixon</cite>
+> <cite>â€”â€”R.M. Nixon</cite>
 ```
 
 ### PDF, PowerPoint integration
