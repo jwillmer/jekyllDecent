@@ -9,7 +9,7 @@ cover: /assets/mountain.jpg
 published: true
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Nulla convallis odio dui, mollis dignissim urna `egestas` at. Praesent malesuada suscipit tellus id sagittis. Morbi quis velit non diam dictum vulputate. Aliquam et ullamcorper urna. Etiam feugiat maximus sagittis. Quisque eu dolor sed leo tristique scelerisque. Mauris id turpis ultrices, laoreet eros sit amet, luctus turpis. Quisque et volutpat elit. Praesent malesuada sapien non luctus fermentum. Cras ac accumsan erat. Suspendisse est leo, porttitor nec orci in, pharetra congue tortor. Donec tortor enim, ultricies ut lectus et, maximus ultrices enim. Aliquam volutpat quam sit amet magna auctor, nec dictum est consectetur. Morbi pharetra tortor nec blandit sollicitudin. Curabitur mollis risus ut nunc tincidunt sodales.
 
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://img.labnol.org/di/PowerPoint.ppt' frameborder='0'></iframe>
 
@@ -17,14 +17,14 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 > 
 > <cite>——R.M. Nixon</cite>
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Fusce ac placerat erat. Integer feugiat velit vel ipsum maximus, ac semper enim egestas. Duis nec nulla sed tellus rutrum faucibus. Integer lorem massa, egestas eu eros non, imperdiet accumsan erat. In hac habitasse platea dictumst. Nulla hendrerit ornare tempus. Donec sodales, metus quis tincidunt pharetra, magna velit ullamcorper dolor, quis dignissim magna justo quis lacus. Aliquam erat volutpat. Donec condimentum nisi at vulputate pellentesque. Nulla facilisi. Maecenas imperdiet et nibh ac fringilla. Vestibulum et ullamcorper augue, efficitur semper nisl.
 
 <figure markdown="1">
 ![Mountain View]({{ site.github.url }}/media/img/mountain1.jpg)
 <figcaption>Phasellus ut molestie odio, vel elementum erat.</figcaption>
 </figure>
 
-Jekyll also offers powerful support for code snippets:
+Etiam finibus accumsan libero et egestas. Nam tempor sit amet lacus ut semper. Cras eu metus laoreet, laoreet sem quis, condimentum neque. Mauris sit amet sem in arcu dignissim volutpat ut quis elit. Morbi tincidunt velit nec finibus dignissim. Ut ullamcorper lectus vel arcu faucibus, lacinia lobortis eros viverra. Sed a ipsum iaculis, accumsan ipsum et, vehicula eros. Pellentesque consequat id ex vel dignissim.
 
 ```html
 <script>
@@ -53,8 +53,17 @@ Array.prototype.uniq = function () {
 };
 </code></pre>
 
+<div class="bg-scroll" style="background-image: url('{{ site.github.url }}/media/img/mountain1.jpg')"></div>
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Etiam finibus accumsan libero et egestas. Nam tempor sit amet lacus ut semper. Cras eu metus laoreet, laoreet sem quis, condimentum neque. Mauris sit amet sem in arcu dignissim volutpat ut quis elit. Morbi tincidunt velit nec finibus dignissim. Ut ullamcorper lectus vel arcu faucibus, lacinia lobortis eros viverra. Sed a ipsum iaculis, accumsan ipsum et, vehicula eros. Pellentesque consequat id ex vel dignissim.
+
+Fusce ac placerat erat. Integer feugiat velit vel ipsum maximus, ac semper enim egestas. Duis nec nulla sed tellus rutrum faucibus. Integer lorem massa, egestas eu eros non, imperdiet accumsan erat. In hac habitasse platea dictumst. Nulla hendrerit ornare tempus. Donec sodales, metus quis tincidunt pharetra, magna velit ullamcorper dolor, quis dignissim magna justo quis lacus. Aliquam erat volutpat. Donec condimentum nisi at vulputate pellentesque. Nulla facilisi. Maecenas imperdiet et nibh ac fringilla. Vestibulum et ullamcorper augue, efficitur semper nisl.
+
+![]({{ site.github.url }}/media/img/grass.jpg#right)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan ante nulla, quis pulvinar nibh tempus sed. In congue congue odio, vel ornare mauris ultrices vel. Vestibulum tristique eros at enim vulputate fringilla. Nullam non augue sit amet elit interdum tempus non ut justo. Phasellus ut ipsum id leo sagittis pretium a quis neque. Maecenas rutrum lectus id magna malesuada, non dapibus neque tincidunt. Suspendisse ultrices accumsan eros, sit amet facilisis quam hendrerit a. Integer sed felis et diam efficitur accumsan. Suspendisse facilisis lectus non orci mattis vestibulum. Suspendisse molestie vulputate nunc non tincidunt. Maecenas vulputate, mauris ut rhoncus vulputate, tellus augue aliquet nibh, vel egestas nulla ipsum bibendum lorem. Pellentesque posuere laoreet lectus eget luctus. Vestibulum mattis ut ligula sed sodales. Vestibulum sit amet viverra arcu.
+
+Cras tellus dui, eleifend eget pulvinar a, ullamcorper eget mi. Donec scelerisque ornare nibh at ullamcorper. Praesent tristique interdum purus et pellentesque. Proin lacinia erat massa, ac finibus tortor fringilla eget. Quisque a consectetur diam. Vivamus quis ex eu ex molestie tempus a in urna. Pellentesque finibus, lacus et pellentesque pharetra, risus massa vehicula quam, et varius sem nibh ac urna.
 
 <div class="album">
 <figure>
