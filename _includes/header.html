@@ -10,9 +10,21 @@
     <div class="nav">
         <ul>
             <li><a class="page-link" href="{{ site.github.url}}/">Home</a></li>
-            <!--<li><a class="page-link" href="{{ site.github.url}}/files/">Files</a></li>
-            <li><a class="page-link" href="{{ site.github.url}}/gallery/">Gallery</a></li>-->
-            <li><a class="page-link" href="{{ site.github.url}}/offline">Offline</a></li>
+
+            {% assign pages = site.pages | sort:"weight"  %}
+            {% for my_page in pages %}
+
+            {% if my_page.menutitle %}
+            {% assign title = my_page.menutitle %}
+            {% elsif site.cover %}
+            {% assign title = my_page.title %}
+            {% endif %}
+
+            {% if title %}
+            <li><a class="page-link" href="{{ my_page.url | prepend: site.github.url }}">{{ title }}</a></li>
+            {% endif %}
+            {% endfor %}
+
             <li><a class="page-link" href="{{ site.github.url}}/about/">About</a></li>
         </ul>
     </div>
