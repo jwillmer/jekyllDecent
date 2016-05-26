@@ -21,6 +21,11 @@ figure p {
     }
 }
 
+.author-cover {
+    background-attachment:fixed;
+    background-size: contain;
+    background-position: top center;
+}
 
 /* as long as is is not fixed in the forked repo */
 .single-post .post-content {
