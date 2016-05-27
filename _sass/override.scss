@@ -5,6 +5,11 @@
     border-radius: 25px;
     top: 30px;
     bottom: auto;
+
+    &:focus {
+        outline: none;
+        opacity:1;
+    }
 }
 
 figure p {
