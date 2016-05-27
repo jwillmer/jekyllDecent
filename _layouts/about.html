@@ -15,6 +15,7 @@ layout: person
 {% endfor %}
 
 <section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
+
     {%  if author.cover %}
     <div class="author-cover image-bg" style="background-image: url('{{author.cover | prepend: site.github.url}}')"></div>
     {% endif %}
@@ -25,7 +26,7 @@ layout: person
     </figure>
     {% endif %}
 
-    <div class="author-info">
+    <div class="author-info">        
         <h1 class="author-title" itemprop="name">{{author.name}}</h1>
         {% if author.bio %}
         <h2 class="author-bio">{{author.bio}}</h2>
