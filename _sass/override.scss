@@ -1,6 +1,17 @@
 /* In order to prevent changes on files from the forked repo we use this file to make adjustments. 
     This way it is easy to merge changes from the fork. */
 
+.content {
+    .short-diver {
+        margin: 20px auto 40px;
+    }
+}
+
+.author-info:after {
+    display: none;
+}
+
+
 .go-to-top {
     background-image: url('../assets/arrow-up.png');
     border-radius: 25px;
@@ -9,7 +20,7 @@
 
     &:focus {
         outline: none;
-        opacity:1;
+        opacity: 1;
     }
 }
 

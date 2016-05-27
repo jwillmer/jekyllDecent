@@ -1,31 +1,26 @@
----
-layout: default
----
-
 <main class="content" role="main">
     <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
 
         <header class="post-header short-diver">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+            <h1 class="post-title" itemprop="name headline">{{ post.title }}</h1>
             <section class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> 
+                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> 
                 on
-                {% for tag in page.tags limit:5 %}
+                {% for tag in post.tags limit:5 %}
                 <span><a href="">{{ tag }}</a></span>
                 {% endfor %}
             </section>
         </header>
 
         <section class="post-content short-diver" itemprop="articleBody">
-            {{content}}
+            {{post.content}}
         </section>
 
         <footer class="post-footer"> 
-            {% include authorinfo.html param=page.author %}
+            {% include authorinfo.html param=post.author %}
         </footer>
 
     </article>
 </main>
 
 {% include photoswipe.html %}
-{% include post_scripts.html %}

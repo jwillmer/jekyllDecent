@@ -7,7 +7,7 @@ layout: default
 
 {% for post in site.posts | sort %}
 {% unless post.draft %}
-{% include offline.html %}
+{% include post-list-item.html %}
 {% endunless %}
 {% endfor %}
 
