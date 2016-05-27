@@ -3,9 +3,10 @@ layout: default
 ---
 
 <h2 class="post-title">All posts in one long list</h2>
+<hr />
 
 {% for post in site.posts | sort %}
 {% unless post.draft %}
-{{ post }}
+{% include offline.html %}
 {% endunless %}
 {% endfor %}

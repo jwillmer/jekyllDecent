@@ -1,0 +1,92 @@
+<main class="content" role="main">
+    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header short-diver">
+            <h1 class="post-title" itemprop="name headline">{{ post.title }}</h1>
+            <section class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> 
+                on
+                {% for tag in post.tags limit:5 %}
+                <span><a href="">{{ tag }}</a></span>
+                {% endfor %}
+            </section>
+        </header>
+
+        <section class="post-content short-diver" itemprop="articleBody">
+            {{post.content}}
+        </section>
+
+        <footer class="post-footer"> 
+            {% if site.data.authors and site.data.authors[post.author] %}          
+            {% assign author = site.data.authors.[post.author] %}
+            {% elsif site.data.authors %}
+            {% assign author = site.data.authors[0] %}    
+            {% endif %}
+
+            {%  if author %}
+            {%  if author.picture %}
+            <div class="author-image">
+                <a class="img image-bg" href="#" style="background-image: url({{author.picture | prepend: site.github.url}})"><span class="hidden">{{author.name}}'s Picture</span></a>
+            </div>
+            {% endif %}
+
+            <section class="author short-diver" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <h4><a href="{{#}}" itemprop="name">{{ author.name }}</a></h4>
+          
+                {% if author.bio %}<p>{{ author.bio }}</p>{% endif %}
+
+                <div class="author-meta">
+                    {%  if author.location %}<span class="author-location icon-location">{{ author.location }}</span>{% endif %}
+                    {%  if author.website %}<span class="author-link icon-link"><a href="{{ author.website }}">{{ author.website }}</a></span>{% endif %}
+                </div>
+            </section>
+            {% endif %}
+
+        </footer>
+
+    </article>
+</main>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ site.github.url }}/js/jquery-1.12.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="{{ site.github.url }}/js/jquery.fitvids.js"></script>
+<script src="{{ site.github.url }}/js/prism.js"></script>
+<script src="{{ site.github.url }}/js/photoswipe.js"></script>
+<script src="{{ site.github.url }}/js/photoswipe-ui-default.js"></script>
+<script src="{{ site.github.url }}/js/post.js"></script>
