@@ -1,0 +1,15 @@
+/* this file is intended to customize some css properties without changing the forked css files */
+/* this allows us to simple replace the forked scss files on changes in the forked repo */
+
+figure p {
+    margin: 0; /* jekyll generates paragraphs in figure elements */
+}
+
+.bg-scroll {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+	margin: 0 0 1.75em 0;
+}

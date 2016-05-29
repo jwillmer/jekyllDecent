@@ -1,0 +1,18 @@
+/* this file is intended to customize some css properties without changing the forked css files */
+/* this allows us to simple replace the forked scss files on changes in the forked repo */
+
+@media only screen and (max-width: 780px) {
+    .category {
+        .date {
+            display: none;
+        }
+
+        .article {
+            text-align: center;
+        }
+    }
+
+    .bg-scroll {
+        height: 350px;
+    }
+}

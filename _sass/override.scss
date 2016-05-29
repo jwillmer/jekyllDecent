@@ -1,60 +1,21 @@
-/* In order to prevent changes on files from the forked repo we use this file to make adjustments. 
-    This way it is easy to merge changes from the fork. */
-
-.content {
-    .short-diver {
-        margin: 20px auto 40px;
-    }
-}
-
-.author-info:after {
-    display: none;
-}
-
-
-.go-to-top {
-    background-image: url('../assets/arrow-up.png');
-    border-radius: 25px;
-    top: 30px;
-    bottom: auto;
-
-    &:focus {
-        outline: none;
-        opacity: 1;
-    }
-}
-
-figure p {
-    margin: 0; /* jekyll generates paragraphs in figure elements */
-}
-
-.bg-scroll {
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 500px;
-}
-
-@media only screen and (max-width: 780px) {
-    .category {
-        .date {
-            display: none;
-        }
-
-        .article {
-            text-align: center;
-        }
-    }
-
-    .bg-scroll {
-        height: 350px;
-    }
-}
-
 /* as long as is is not fixed in the forked repo */
 .single-post .post-content {
     iframe {
         min-height: 350px;
+    }
+}
+
+ol {
+    width: 90%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+.go-to-top {
+    &:focus {
+        outline: none;
+        opacity: 1;
     }
 }
