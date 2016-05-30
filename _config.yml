@@ -24,3 +24,8 @@ cover: /assets/mountain2.jpg
 markdown: kramdown
 
 include: ['_pages']
+
+gems:
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-sitemap
