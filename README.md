@@ -24,6 +24,7 @@ Installation instructions and feature description can be found in the [wiki](htt
 - To locally display the blog and auto update on file changes open a command prompt and type `jekyll serve`
 - To build the static site you can use the generated site folder that Jekyll creates when you use `jekyll serve` or you can build it explicitly with `jekyll build`.
 - If you like to use GitHub to host your blog you can fork this project and publish the code to `gh-pages`. GitHub has jekyll included and will generate the site for you.
+- If you have exceptions while starting the blog with `jekyll serve` try to remove `Gemfile` and remove all `gems:` from the `_config.yml`  
 
 ## Content
 
