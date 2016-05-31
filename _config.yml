@@ -17,14 +17,12 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jwillmer.github.io/jekyllDecent" # the base hostname & protocol for your site
 permalink: /blog/:categories/:title
-
 cover: /assets/mountain2.jpg
 
 # Build settings
 markdown: kramdown
-
 include: ['_pages']
-
+exclude: [vendor]
 gems:
   - jekyll-mentions
   - jekyll-feed
