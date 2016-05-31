@@ -1,11 +1,33 @@
 # jekyllDecent
-Blog template for a static site generator named[Jekyll](https://jekyllrb.com/docs/home/) based on a [Ghost](https://ghost.org) template named [Decent](https://github.com/serenader2014/decent).
+[![Build Status](https://travis-ci.org/jwillmer/jekyllDecent.svg?branch=gh-pages)](https://travis-ci.org/jwillmer/jekyllDecent)
 
-**Live demo** can be visit at [gh-pages](http://jwillmer.github.io/jekyllDecent).
+This is a blog template for a static site generator named [Jekyll](https://jekyllrb.com/docs/home/) based on a [Ghost](https://ghost.org) template named [Decent](https://github.com/serenader2014/decent). 
 
-Installation instructions and feature description can be found in the [wiki](https://github.com/jwillmer/jekyllDecent/wiki/Tutorial) or at the end of this page.
+**Demo**: [GitHub generated site](http://jwillmer.github.io/jekyllDecent)
 
-## Example Previews
+
+## Content
+
+- [Screenshots](#screenshot)
+    - [Home page](#home-page)
+    - [Post page](#post-page)
+- [Installation](#installation)
+    - [Windows specific](#windows-specific)
+    - [Build](#build)
+- [User Content](#user-content)
+- [Features](#features)
+    - [Image Features](#image-features)
+        - [Parallax Effect](#Parallax-Effect)
+        - [Caption for Image](#Caption-for-Image)
+        - [Image Allignment](#Image-Allignment)
+        - [Fullscreen image](#Fullscreen-image)
+        - [Image Gallery](#Image-Gallery)
+    - [Sourcecode Features](#Sourcecode-Features)
+    - [Author in quote](#Author-in-quote)
+    - [PDF and PowerPoint integration](#PDF-and-PowerPoint-integration)
+- [License](#license)
+
+## Screenshots
 
 ### Home
 ![](./assets/preview/win10_ie_11.0_home.jpg)
@@ -15,18 +37,23 @@ Installation instructions and feature description can be found in the [wiki](htt
 
 ## Installation
 
-- To generate the blog you need to [install Jekyll](https://jekyllrb.com/docs/installation/)
-- For Windows installation:
-  - install [chocolatey](https://chocolatey.org/) a package manager 
-  - use the command promt to install ruby: `choco install ruby -y` 
-  - use the command prompt to install jekyll: `gem install jekyll`
-  - [Detailed tutorial by Burela](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/) 
-- To locally display the blog and auto update on file changes open a command prompt and type `jekyll serve`
+- To generate/host the blog you need to [install Jekyll](https://jekyllrb.com/docs/installation/). A detailed installation guide can also be found on the Jekyll site. 
+
+### Windows specific
+
+  - Install [chocolatey](https://chocolatey.org/) a package manager 
+  - Use the command promt to install ruby: `choco install ruby -y` 
+  - Use the command prompt to install jekyll: `gem install jekyll`
+  - If you have exceptions while starting the blog with `jekyll serve` try to remove `Gemfile` and remove all `gems:` from the `_config.yml` 
+    - A post how to install github pages-gem is following!
+  
+### Build
+
 - To build the static site you can use the generated site folder that Jekyll creates when you use `jekyll serve` or you can build it explicitly with `jekyll build`.
 - If you like to use GitHub to host your blog you can fork this project and publish the code to `gh-pages`. GitHub has jekyll included and will generate the site for you.
-- If you have exceptions while starting the blog with `jekyll serve` try to remove `Gemfile` and remove all `gems:` from the `_config.yml`  
 
-## Content
+
+## User Content
 
 Blogposts can be written in [Markdown](https://de.wikipedia.org/wiki/Markdown). 
 
@@ -40,9 +67,9 @@ After modifying `*.yml` files you need to restart jekyll to take effect.
 
 ## Features
 
-The `{{ site.github.url }}` is only needed if you like to host the blog on GitHub. 
+The features described in this section are specific for this template. All other language features can be found in the [kramdown documentation](http://kramdown.gettalong.org/syntax.html). 
 
-### Images Features
+### Image Features
 
 
 #### Parallax Effect
@@ -165,8 +192,12 @@ Array.prototype.uniq = function () {
 > <cite>——R.M. Nixon</cite>
 ```
 
-### PDF, PowerPoint integration
+### PDF and PowerPoint integration
 
 ```
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://img.labnol.org/di/PowerPoint.ppt' frameborder='0'></iframe>
 ```
+
+## License
+
+MIT
