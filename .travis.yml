@@ -17,7 +17,7 @@ install:
 script:
   - bundle install
   - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --alt_ignore "*" --url-ignore "*"
+  - bundle exec htmlproofer ./_site --only-4xx --check-favicon --url_ignore ".*" --alt_ignore ".*"
 
 # branch whitelist, only for GitHub Pages
 branches:
