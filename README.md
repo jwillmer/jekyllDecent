@@ -8,7 +8,7 @@ This is a blog template for a static site generator named [Jekyll](https://jekyl
 
 ## Content
 
-- [Screenshots](#screenshot)
+- [Screenshots](#screenshots)
     - [Home page](#home)
     - [Post page](#post)
 - [Installation](#installation)
