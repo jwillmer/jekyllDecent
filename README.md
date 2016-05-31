@@ -45,7 +45,7 @@ This is a blog template for a static site generator named [Jekyll](https://jekyl
   - Use the command promt to install ruby: `choco install ruby -y` 
   - Use the command prompt to install jekyll: `gem install jekyll`
   - If you have exceptions while starting the blog with `jekyll serve` try to remove `Gemfile` and remove all `gems:` from the `_config.yml` 
-    - A post how to install github pages-gem is following!
+  - To get the plugins up and running on Windows please follow this guide: [How to install Jekyll and pages-gem on Windows (x64)](http://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46) 
   
 ### Build
 
