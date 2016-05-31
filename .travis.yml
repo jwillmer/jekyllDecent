@@ -5,14 +5,9 @@ rvm:
   - 2.1
   - 2.2
   - 2.3.0
-
-install: 
-  - gem install github-pages
-  - gem install html-proofer
 	
 script:
-  - bundle install github-pages
-  - bundle install html-proofer
+  - bundle install
   - bundle exec jekyll build
   - bundle exec htmlproof ./_site --only-4xx --check-favicon --check-html
 
