@@ -1,5 +1,5 @@
 <footer class="site-footer">
     <button class="go-to-top"></button>
-    <p class="copyright"><a href="{{site.github.url}}">{{site.title}}</a> &copy; {{ site.time | date: '%Y' }} | <a href="{{site.github.url}}/rss">RSS Feed</a></p>
+    <p class="copyright"><a href="{{site.github.url}}">{{site.title}}</a> &copy; {{ site.time | date: '%Y' }} | <a href="{{ "/feed.xml" | prepend: site.github.url }}">RSS Feed</a></p>
     <p class="poweredby">powered by <a href="https://jekyllrb.com/">Jekyll</a> with the <a href="https://github.com/jwillmer/jekyllDecent">jekyllDecent</a> theme</p>
 </footer>
