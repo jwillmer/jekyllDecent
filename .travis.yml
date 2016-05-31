@@ -1,9 +1,11 @@
 language: ruby
 rvm:
-- 2.1
+  - 2.0
+  - 2.1
+  - 2.2
+  - 2.3.0
 
 install: 
-  - gem install jekyll
   - gem install github-pages
   - gem install html-proofer
 
@@ -21,4 +23,4 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-sudo: false # route your build to the container-based infrastructure for a faster build
+sudo: false
