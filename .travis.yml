@@ -7,6 +7,13 @@ rvm:
   - 2.2
   - 2.3.0
 
+install:
+  - gem install github-pages
+  - gem install html-proofer
+  - gem install jekyll-mentions
+  - gem install jekyll-feed
+  - gem install jekyll-sitemap
+  
 script:
   - bundle install
   - bundle exec jekyll build
