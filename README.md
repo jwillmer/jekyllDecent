@@ -76,13 +76,13 @@ The features described in this section are specific for this template. All other
 
 Keep in mind that paralax effect will not be captured if you like to print the page.
 
-```
+```html
 <div class="bg-scroll" style="background-image: url('{{ site.github.url }}/media/img/mountain1.jpg')"></div>
 ```
 
 #### Caption for Image
 
-```
+```html
 <figure>
 ![]({{ site.github.url }}/media/img/chen.jpg)
 <figcaption>This is figcaption. A beautiful picture.</figcaption>
@@ -98,7 +98,7 @@ Keep in mind that paralax effect will not be captured if you like to print the p
 
 Allignment with caption
 
-```
+```html
 <figure class="left">
 ![]({{ site.github.url }}/media/img/chen.jpg)
 <figcaption>hello world!</figcaption>
@@ -107,7 +107,7 @@ Allignment with caption
 
 #### Fullscreen image
 
-```
+```html
 <div class="large">
 ![]({{ site.github.url }}/media/img/DSC01093.JPG)
 </div>
@@ -115,7 +115,7 @@ Allignment with caption
 
 With caption
 
-```
+```html
 <figure class="large">
 ![]({{ site.github.url }}/media/img/DSC01135-1.jpg)
 <figcaption>wow so handsome</figcaption>
@@ -124,7 +124,7 @@ With caption
 
 #### Image Gallery
 
-```
+```html
 <div class="album">
 ![]({{ site.github.url }}/media/img/Screenshot_2016-04-09-19-16-28.png)
 ![]({{ site.github.url }}/media/img/Screenshot_2016-04-02-00-48-25.png)
@@ -137,7 +137,7 @@ With caption
 
 With caption
 
-```
+```html
 <div class="album">
 <figure>
 ![]({{ site.github.url }}/media/img/wiebe.jpg)
@@ -156,7 +156,7 @@ With caption
 
 With language highlighting
 
-```
+```html
     ```html
     <script>
         var decentThemeConfig = {
@@ -168,7 +168,7 @@ With language highlighting
 
 With language highlighting, line numbers and line highlighting
 
-```
+```javascript
 <pre data-line="5" class="line-numbers language-javascript"><code>
 Array.prototype.uniq = function () {
     var map = {};
@@ -194,7 +194,7 @@ Array.prototype.uniq = function () {
 
 ### PDF and PowerPoint integration
 
-```
+```html
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://img.labnol.org/di/PowerPoint.ppt' frameborder='0'></iframe>
 ```
 
