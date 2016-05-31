@@ -2,8 +2,14 @@ language: ruby
 rvm:
 - 2.1
 
-install: gem install jekyll html-proofer
-script: jekyll build && htmlproofer ./_site
+install: 
+  - gem install jekyll
+  - gem install github-pages
+  - gem install html-proofer
+
+script:
+  - bundle exec jekyll build
+  - bundle exec htmlproof ./_site --only-4xx --check-favicon --check-html
 
 # branch whitelist, only for GitHub Pages
 branches:
