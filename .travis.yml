@@ -26,3 +26,5 @@ branches:
   - /pages-(.*)/ # test every branch which starts with "pages-"
 
 sudo: false
+
+# Check validity of the file via: http://lint.travis-ci.org/

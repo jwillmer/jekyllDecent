@@ -49,14 +49,3 @@ layout: default-cv
 
     </article>
 </main>
-
-
-<script src="{{ site.github.url }}/js/jquery-1.12.0.min.js"></script>
-<script>
-    $(window).scroll(function () {
-        var scrolledY = 50 + $(window).scrollTop() / 5;
-        if (scrolledY <= 100) {
-            $('.author-cover').css('background-position', '50% ' + ((scrolledY)) + '%');
-        }
-    });
-</script>
