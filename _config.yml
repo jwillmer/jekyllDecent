@@ -27,3 +27,4 @@ gems:
   - jekyll-mentions
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from

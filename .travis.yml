@@ -13,6 +13,7 @@ install:
   - gem install jekyll-mentions
   - gem install jekyll-feed
   - gem install jekyll-sitemap
+  - gem install jekyll-redirect-from
   
 script:
   - bundle install
