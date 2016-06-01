@@ -11,7 +11,7 @@ layout: default
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> 
                 on
                 {% for tag in page.tags limit:5 %}
-                <span><a href="">{{ tag }}</a></span>
+                <span>{{ tag }}</span>
                 {% endfor %}
             </section>
         </header>
