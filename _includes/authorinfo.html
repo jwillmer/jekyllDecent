@@ -1,33 +1,37 @@
-{% if site.data.authors and site.data.authors[include.param] %}
-{% assign author = site.data.authors.[include.param] %}
-{% elsif site.data.authors %}
-{% assign author = site.data.authors[0] %}
-{% endif %}
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
 
-{% assign counter = 0 %}
-{% for post in site.posts %}
+    {% if site.data.authors and site.data.authors[include.param] %}
+    {% assign author = site.data.authors.[include.param] %}
+    {% elsif site.data.authors %}
+    {% assign author = site.data.authors[0] %}
+    {% endif %}
+
+    {% assign counter = 0 %}
+    {% for post in site.posts %}
     {% unless post.draft or post.author != author.initial %}
-        {% assign counter = counter | plus: 1 %}
+    {% assign counter = counter | plus: 1 %}
     {% endunless %}
-{% endfor %}
+    {% endfor %}
 
-{%  if author %}
-{%  if author.picture %}
-<div class="author-image">
-    <div class="img image-bg" style="background-image: url({{author.picture | prepend: site.github.url}})"><span class="hidden">{{author.name}}'s Picture</span></div>
-</div>
-{% endif %}
+    {%  if author %}
+    {%  if author.picture %}
+    <div class="author-image">
+        <div class="img image-bg" style="background-image: url({{author.picture | prepend: site.github.url}})"><a class="hidden" href="{{author.picture | prepend: site.url | prepend: site.baseurl}}" itemprop="image">{{author.name}}'s Picture</a></div>
+    </div>
+    {% endif %}
 
-<!--<section class="short-diver" itemprop="author" itemscope itemtype="http://schema.org/Person">-->
-    <div class="author short-diver" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <!--<section class="short-diver" itemprop="author" itemscope itemtype="http://schema.org/Person">-->
+    <div class="author short-diver">
         <h4 itemprop="name">{{ author.name }}</h4>
 
         {% if author.bio %}<p>{{ author.bio }}</p>{% endif %}
 
         <div class="author-meta">
-            {%  if author.location %}<span class="author-location icon-location">{{ author.location }}</span>{% endif %}
-            {%  if author.website %}<span class="author-link icon-link"><a href="{{ author.website }}">{{ author.website }}</a></span>{% endif %}
+            {%  if author.location %}<span class="author-location icon-location" itemprop="nationality">{{ author.location }}</span>{% endif %}
+            {%  if author.website %}<span class="author-link icon-link" itemprop="name"><a href="{{ author.website }}">{{ author.website }}</a></span>{% endif %}
             <span class="author-stats"><i class="icon-stats"></i>{{ counter }} posts</span>
         </div>
     </div>
-            {% endif %}
+    {% endif %}
+
+</div>
