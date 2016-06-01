@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="{{ site.title | escape }}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 
-{% capture page_url %}{{ page.url | replace:'/index.html','/' | prepend: site.url | prepend: site.baseurl }}{% endcapture %}
+{% capture page_url %}{{ page.url | replace:'/index.html','/' | prepend: site.github.url | prepend: site.baseurl }}{% endcapture %}
 <meta property="og:url" content="{{ page_url }}" />
 
 {% if page.author.url %}
