@@ -1,0 +1,11 @@
+
+@media only screen and (min-width: 1081px) {
+    .single-post .post-content > blockquote {
+        max-width: 730px;
+
+        p {
+            margin-left: 10px;
+            margin-right: 40px;
+        }
+    }
+}
