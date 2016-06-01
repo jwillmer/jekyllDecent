@@ -20,9 +20,8 @@
     </div>
     {% endif %}
 
-    <!--<section class="short-diver" itemprop="author" itemscope itemtype="http://schema.org/Person">-->
-    <div class="author short-diver">
-        <h4 itemprop="name">{{ author.name }}</h4>
+    <div class="short-diver">
+        <h4 class="author" itemprop="name">{{ author.name }}</h4>
 
         {% if author.bio %}<p>{{ author.bio }}</p>{% endif %}
 

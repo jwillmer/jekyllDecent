@@ -7,6 +7,15 @@
 	<meta property="og:type" content="website" />
 {% endif %}
 
+{% if page.cover %}
+{% assign cover = page.cover %}
+{% elsif site.cover %}
+{% assign cover = site.cover %}
+{% endif %}
+{% if cover %}
+<meta property="og:image" content="{{cover | prepend: site.github.url | prepend: site.baseurl}}" />
+{% endif %}
+
 <meta property="og:site_name" content="{{ site.title | escape }}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 
