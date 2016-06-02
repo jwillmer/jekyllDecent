@@ -64,6 +64,16 @@ Blogposts can be written in [Markdown](https://de.wikipedia.org/wiki/Markdown).
 
 After modifying `*.yml` files you need to restart jekyll to take effect.
 
+Following features are supported in the header ([YAML Front Matter](https://jekyllrb.com/docs/frontmatter/)) of each post:
+
+```
+---
+title:         Example
+author:        jwillmer
+cover:         /assets/mountain.jpg
+redirect_from: /foo
+---
+```
 
 ## Features
 
