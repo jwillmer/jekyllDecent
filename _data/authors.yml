@@ -1,11 +1,11 @@
 default:
-  initial: jwillmer
-  name: "Jens Willmer"
-  cover: /assets/mountain.jpg
-  picture: /assets/jwillmer.jpg
-  bio: Something about me
-  location: Germany
-  website: http://jwillmer.de
+  initial: jwillmer               # used for author lookup in posts and for first two characters in the about page back button
+  name: "Jens Willmer"            # used to display author name
+  cover: /assets/mountain.jpg     # OPTIONAL: defines location of cover image in about page
+  picture: /assets/jwillmer.jpg   # OPTIONAL: author picture
+  bio: Something about me         # OPTIONAL: text below author name in posts
+  location: Germany               # OPTIONAL: used to display location of the author
+  website: http://jwillmer.de     # OPTIONAL: link to the author website
 jwillmer:
   initial: jwillmer
   name: "Jens Willmer"

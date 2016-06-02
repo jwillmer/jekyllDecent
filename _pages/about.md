@@ -1,7 +1,7 @@
 ---
-layout: about
+layout:    about
 permalink: "/about/"
-author: jwillmer
+author:    jwillmer
 ---
 
 ## Profile

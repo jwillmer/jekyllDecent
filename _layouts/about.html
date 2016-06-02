@@ -14,6 +14,8 @@ layout: default-cv
     {% endunless %}
 {% endfor %}
 
+<a href="{{ site.github.url }}/" class="logo-readium"><span class="logo">{{ author.initial | slice: 0, 2 | downcase }}</span></a>
+
 <section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
     {%  if author.cover %}
     <div class="author-cover image-bg" style="background-image: url('{{author.cover | prepend: site.github.url}}')"></div>
