@@ -23,30 +23,45 @@ layout: default-cv
 
     {%  if author.picture %}
     <figure class="author-image  {%  if author.cover %} has-cover  {% endif %}">
-        <div class="img image-bg" style="background-image: url({{author.picture | prepend: site.github.url}})"><span class="hidden">{{author.name}}'s Picture</span></div>
+        <div class="img image-bg" style="background-image: url({{author.picture | prepend: site.github.url}})">
+            <a class="hidden" href="{{author.picture | prepend: site.github.url | prepend: site.baseurl}}" itemprop="image">{{author.name}}'s Picture</a>
+        </div>
     </figure>
     {% endif %}
 
     <div class="author-info">
         <h1 class="author-title" itemprop="name">{{author.name}}</h1>
-
-        {% if author.bio %}
-        <h2 class="author-bio">{{author.bio}}</h2>
-        {% endif %}
+        {% if author.bio %} <h2 class="author-bio" itemprop="description">{{author.bio}}</h2> {% endif %}
 
         <div class="author-meta">
-            {%  if author.location %}<span class="author-location icon-location">{{ author.location }}</span>{% endif %}
-            {%  if author.website %}<span class="author-link icon-link"><a href="{{ author.website }}">{{ author.website }}</a></span>{% endif %}
-            <span class="author-stats"><i class="icon-stats"></i>{{ counter }} posts</span>
-        </div>
-    </div>
-</section>
+            {%  if author.email %}<a class="social-mail-alt" href="mailto:{{ author.email }}" itemprop="email">Mail</a>{% endif %}
 
-<main class="content" role="main">
-    <article class="single-post">
+            {%  if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" itemprop="sameAs" class="social-twitter">Twitter</a> {% endif %}
+            {%  if author.linkedin %}<a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs" class="social-linkedin">LinkedIn</a> {% endif %}
+            {%  if author.xing %}<a href="https://www.xing.com/profile/{{ author.xing }}" itemprop="sameAs" class="social-xing">Xing</a> {% endif %}
 
-        <section class="post-content">
-            {{content}}
+            {%  if author.github %}<a href="https://github.com/{{ author.github }}" itemprop="sameAs" class="social-github-circled">GitHub</a> {% endif %}
+            {%  if author.stackoverflow %}<a href="http://stackoverflow.com/users/{{ author.stackoverflow }}" itemprop="sameAs" class="social-stackoverflow">StackOverflow</a> {% endif %}
+
+            {%  if author.facebook %}<a href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs" class="social-facebook-squared">Facebook</a> {% endif %}
+            {%  if author.gplus %}<a href="https://plus.google.com/+{{ author.gplus }}" itemprop="sameAs" class="social-gplus">Google+</a> {% endif %}
+
+            {%  if author.soundcloud %}<a href="https://soundcloud.com/{{ author.soundcloud }}" itemprop="sameAs" class="social-soundcloud">Soundcloud</a> {% endif %}
+            {%  if author.youtube %}<a href="https://www.youtube.com/user/{{ author.youtube }}" itemprop="sameAs" class="social-youtube">YouTube</a> {% endif %}
+
+            {%  if author.pinterest %}<a href="https://www.pinterest.com/{{ author.pinterest }}" itemprop="sameAs" class="social-pinterest">Pinterest</a> {% endif %}
+            {%  if author.dribble %}<a href="https://dribbble.com/{{ author.dribble }}" itemprop="sameAs" class="social-dribbble">Dribble</a> {% endif %}
+            {%  if author.behance %}<a href="https://www.behance.net/{{ author.behance }}" itemprop="sameAs" class="social-behance">Behance</a> {% endif %}
+    
+        </div>                                   
+    </div>                                       
+</section>                                       
+                                                 
+<main class="content" role="main">               
+    <article class="single-post">                
+                                                 
+        <section class="post-content">           
+            {{content}}                          
         </section>
 
     </article>

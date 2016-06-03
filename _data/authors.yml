@@ -1,16 +1,31 @@
 default:
-  initial: jwillmer               # used for author lookup in posts and for first two characters in the about page back button
-  name: "Jens Willmer"            # used to display author name
-  cover: /assets/mountain.jpg     # OPTIONAL: defines location of cover image in about page
-  picture: /assets/jwillmer.jpg   # OPTIONAL: author picture
-  bio: Something about me         # OPTIONAL: text below author name in posts
-  location: Germany               # OPTIONAL: used to display location of the author
-  website: http://jwillmer.de     # OPTIONAL: link to the author website
+  initial:      jwillmer               # used for author lookup in posts and for first two characters in the about page back button
+  name:         "Jens Willmer"         # used to display author name
+  cover:        /assets/mountain.jpg   # OPTIONAL: defines location of cover image in about page
+  picture:      /assets/jwillmer.jpg   # OPTIONAL: author picture
+  bio:          Something about me     # OPTIONAL: text below author name in posts
+  location:     Germany                # OPTIONAL: used to display location of the author
+  website:      http://jwillmer.de     # OPTIONAL: link to the author of a post
+  email:        my@email.com           # OPTIONAL: used in the about page
+  twitter:      jwillmer               # OPTIONAL: used in the about page
+  linkedin:                            # OPTIONAL: used in the about page
+  xing:                                # OPTIONAL: used in the about page
+  github:                              # OPTIONAL: used in the about page
+  stackoverflow:                       # OPTIONAL: used in the about page
+  facebook:                            # OPTIONAL: used in the about page
+  gplus:                               # OPTIONAL: used in the about page
+  soundcloud:                          # OPTIONAL: used in the about page
+  youtube:                             # OPTIONAL: used in the about page
+  pinterest:                           # OPTIONAL: used in the about page
+  dribble:                             # OPTIONAL: used in the about page
+  behance:                             # OPTIONAL: used in the about page
 jwillmer:
-  initial: jwillmer
-  name: "Jens Willmer"
-  picture: /assets/jwillmer.jpg
-  cover: /assets/mountain.jpg
-  bio: Something about me
-  location: Germany
-  website: http://jwillmer.de
+  initial:      jwillmer
+  name:         "Jens Willmer"        
+  cover:        /assets/mountain.jpg  
+  picture:      /assets/jwillmer.jpg  
+  bio:          Something about me 
+  location:     Germany 
+  website:      http://jwillmer.de 
+  email:        my@email.com
+  twitter:      jwillmer
