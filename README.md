@@ -5,7 +5,9 @@
 
 This is a blog template for a static site generator named [Jekyll](https://jekyllrb.com/docs/home/) based on a [Ghost](https://ghost.org) template named [Decent](https://github.com/serenader2014/decent). 
 
-**Demo**: [GitHub generated site](http://jwillmer.github.io/jekyllDecent)
+**Demo Blog**: [GitHub generated site](http://jwillmer.github.io/jekyllDecent)
+
+**Active Blog**: [jwillmer.de](http://jwillmer.de)
 
 
 ## Content
