@@ -20,7 +20,7 @@
             {% assign title = my_page.title %}
             {% endif %}
 
-            {% if title %}
+            {% if title and my_page.visible != false %}
             <li><a class="page-link" href="{{ my_page.url | prepend: site.github.url }}">{{ title }}</a></li>
             {% endif %}
             {% endfor %}
