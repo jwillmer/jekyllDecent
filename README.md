@@ -72,7 +72,7 @@ title:         Example              #Page/post title
 author:        jwillmer             #Page/post author
 cover:         /assets/mountain.jpg #Optional: Posibillity to change cover on a post/page
 redirect_from: /foo                 #Optional: Secondary url that will redirect to this page if GitHub-pages gem is installed!
-visible:       false                #Optional: Hide page from menu. Used for 404 error page
+visible:       false                #Optional: Hide page from listing in the menu.
 weight:        5                    #Optional: Influence sorting of pages in the menu
 menutitle:     Offline              #Optional: Use a secondary name in the menu for a page
 ---
