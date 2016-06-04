@@ -1,31 +1,37 @@
+.error-template {
+    background-size: cover;
 
-.error-page {
-    padding: 150px 0;
-    line-height: 1.6em;
-    text-align: center;
-}
+    .error-page {
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 150px;
+        padding: 15px;
+        line-height: 1.6em;
+        text-align: center;
+        
+        .hgroup {
+            margin-bottom: 15px;
 
-.hgroup {
-    margin-bottom: 15px;
+            h1, h2 {
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+            }
 
-    h1, h2 {
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-    }
+            h1 {
+                margin-bottom: 15px;
+                font-size: 40px;
+            }
 
-    h1 {
-        margin-bottom: 15px;
-        font-size: 40px;
-    }
-
-    h2 {
+            h2 {
                 color: orangered;
-        display: inline-block;
-        padding: 0 0 15px 0;
-        font-size: 80px;
-        border: solid #CCCCCC;
-        border-width: 1px 0;
-        text-transform: lowercase;
+                display: inline-block;
+                padding: 0 0 15px 0;
+                font-size: 80px;
+                border: solid #CCCCCC;
+                border-width: 1px 0;
+                text-transform: lowercase;
+            }
+        }
     }
 }

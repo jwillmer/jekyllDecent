@@ -1,12 +1,26 @@
 ---
-layout: default
+layout: null
 ---
 
-<div class="error-page">
-    <div class="hgroup">
-        <h1>Something Just Went Wrong !</h1>
-        <h2>404 Error</h2>
+{% if page.cover %}
+{% assign cover = page.cover %}
+{% elsif site.cover %}
+{% assign cover = site.cover %}
+{% endif %}
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body class="error-template" style="background-image: url({{ cover | prepend: site.github.url}})">
+    <div class="site-wrapper">
+        <div class="error-page">
+            <div class="hgroup">
+                <h1>Something Just Went Wrong !</h1>
+                <h2>404 Error</h2>
+            </div>
+                <p>For Some Reason The Page You Requested Could Not Be Found On Our Server</p>
+                <h4>Go <a href="javascript:history.go(-1)">Back</a> or <a href="{{ site.github.url }}/">Home</a></h4>
+        </div>
     </div>
-    <p>For Some Reason The Page You Requested Could Not Be Found On Our Server</p>
-    <p>Go <a href="javascript:history.go(-1)">Back</a> or <a href="{{ site.github.url }}/">Home</a></p>
-</div> 
+</body>
+</html>

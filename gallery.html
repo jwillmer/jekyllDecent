@@ -1,9 +1,0 @@
----
-layout: default
----
-<h3>gallery</h3>
-{% for image in site.static_files %}
-    {% if image.path contains 'media/img' %}
-<img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-    {% endif %}
-{% endfor %}
