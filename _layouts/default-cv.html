@@ -10,5 +10,5 @@
 </body>
 
 {% include post_scripts.html %}
-<script src="{{ site.github.url }}/js/global.js"></script>
+<script src="{{ site.github.url | prepend: site.baseurl}}/js/global.js"></script>
 </html>

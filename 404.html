@@ -11,7 +11,7 @@ layout: null
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body class="error-template" style="background-image: url({{ cover | prepend: site.github.url}})">
+<body class="error-template" style="background-image: url({{ cover | prepend: site.github.url | prepend: site.baseurl}})">
     <div class="site-wrapper">
         <div class="error-page">
             <div class="hgroup">
@@ -19,7 +19,7 @@ layout: null
                 <h2>404 Error</h2>
             </div>
                 <p>For Some Reason The Page You Requested Could Not Be Found On Our Server</p>
-                <h4>Go <a href="javascript:history.go(-1)">Back</a> or <a href="{{ site.github.url }}/">Home</a></h4>
+                <h4>Go <a href="javascript:history.go(-1)">Back</a> or <a href="{{ site.github.url | prepend: site.baseurl }}/">Home</a></h4>
         </div>
     </div>
 </body>
