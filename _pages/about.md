@@ -2,6 +2,7 @@
 layout:    about
 permalink: "/about/"
 author:    jwillmer
+keywords:  about person
 ---
 
 ## Profile

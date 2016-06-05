@@ -73,6 +73,8 @@ redirect_from: /foo                 #Optional: Secondary url that will redirect 
 visible:       false                #Optional: Hide page from listing in the menu.
 weight:        5                    #Optional: Influence sorting of pages in the menu
 menutitle:     Offline              #Optional: Use a secondary name in the menu (for page) or in the post list (for posts)
+tags:          hallo welt           #Will be displayed as tags in posts and as keywords in the header
+keywords       hallo welt           #Will only be used if no tags are defined or if it is a page (Don't use tags on pages!)
 ---
 ```
 

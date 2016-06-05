@@ -5,7 +5,14 @@
 
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="keywords" content="your,keywords,here,comma,separated,no,spaces">
+  
+    {% if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}" />
+    {% elsif page.keywords %}
+    <meta name="keywords" content="{{ page.keywords | split: ' ' | join: ', ' | escape }}" />
+	{% elsif site.keywords %}
+    <meta name="keywords" content="{{ site.keywords | split: ' ' | join: ', ' | escape }}" />
+    {% endif %}
 
     <meta name="HandheldFriendly" content="True">
     <meta name="robots" content="index,follow">

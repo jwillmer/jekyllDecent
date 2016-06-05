@@ -3,7 +3,7 @@ layout:            post
 title:             "Example Blog Page"
 menutitle:         "The Example Blog Page"
 date:              2016-05-23 00:40:31 +0200
-tags:              jekyll update
+tags:              jekyll update c# test
 category:          Example
 author:            jwillmer
 cover:             /assets/mountain.jpg
