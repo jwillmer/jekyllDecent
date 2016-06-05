@@ -8,11 +8,18 @@ layout: default
         <h3>Recent Posts</h3>
         {% for post in site.posts limit:5  %}
         {% unless post.draft %}
+
+        {% if post.menutitle %}
+        {% assign title = post.menutitle %}
+        {% else %}
+        {% assign title = post.title %}
+        {% endif %}
+
         <li>
             <div class="article">
                 <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <header class="post-header">
-                        <span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></span>
+                        <span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url }}" title="{{ title }}">{{ title }}</a></span>
                         <time class="date" itemprop="datePublished" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%B %e, %Y"}}</time>
                     </header>
                 </article>
@@ -31,11 +38,18 @@ layout: default
 
         {% for post in sorted_posts %}
         {% unless post.draft %}
+
+        {% if post.menutitle %}
+        {% assign title = post.menutitle %}
+        {% else %}
+        {% assign title = post.title %}
+        {% endif %}
+
         <li>
             <div class="article">
                 <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <header class="post-header">
-                        <span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url}}">{{ post.title }}</a></span>
+                        <span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url}}" title="{{ title }}">{{ title }}</a></span>
                         <time class="date" itemprop="datePublished" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%B %e, %Y"}}</time>
                     </header>
                 </article>

@@ -1,12 +1,14 @@
 ---
-layout: post
-title:  "Example Blog Page"
-date:   2016-05-23 00:40:31 +0200
-tags: jekyll update
-category: Example
-author: jwillmer
-cover: /assets/mountain.jpg
-published: true
+layout:            post
+title:             "Example Blog Page"
+menutitle:         "The Example Blog Page"
+date:              2016-05-23 00:40:31 +0200
+tags:              jekyll update
+category:          Example
+author:            jwillmer
+cover:             /assets/mountain.jpg
+published:         true
+redirect_from:     "/foo"
 ---
 
 - In this blog we changed the cover image to a custome one.
