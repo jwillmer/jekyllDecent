@@ -2,7 +2,7 @@
     {% if site.data.authors and site.data.authors[page.author] %}
     {% assign author = site.data.authors.[page.author] %}
     {% elsif site.data.authors %}
-    {% assign author = site.data.authors[0] %}
+    {% assign author = site.data.authors['default'] %}
     {% endif %}
 
 <meta name="twitter:card" content="summary">
