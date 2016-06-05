@@ -16,7 +16,6 @@ This is a blog template for a static site generator named [Jekyll](https://jekyl
     - [Home page](#home)
     - [Post page](#post)
 - [Installation](#installation)
-    - [Windows specific](#windows-specific)
     - [Build](#build)
 - [User Content](#user-content)
 - [Features](#features)
