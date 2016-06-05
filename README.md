@@ -41,16 +41,11 @@ This is a blog template for a static site generator named [Jekyll](https://jekyl
 
 ## Installation
 
-- To generate/host the blog you need to [install Jekyll](https://jekyllrb.com/docs/installation/). A detailed installation guide can also be found on the Jekyll site. 
+- To generate/host the blog you need to [install Jekyll](https://jekyllrb.com/docs/installation/). 
+- For the plugins (github-pages) you need to install [Bundler](http://bundler.io/): `gem install bundler`
+   - Open a command prompt and install the plugins (github-pages): `bundle install`
+   - On Windows you will propably get an exception. To solve it you can read [How to install Jekyll and pages-gem on Windows (x64)](http://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46) or you remove the plugins by deleting the `Gemfile` and delete all `gems:` from the `_config.yml` 
 
-### Windows specific
-
-  - Install [chocolatey](https://chocolatey.org/) a package manager 
-  - Use the command promt to install ruby: `choco install ruby -y` 
-  - Use the command prompt to install jekyll: `gem install jekyll`
-  - If you have exceptions while starting the blog with `jekyll serve` try to remove `Gemfile` and remove all `gems:` from the `_config.yml` 
-  - To get the plugins up and running on Windows please follow this guide: [How to install Jekyll and pages-gem on Windows (x64)](http://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46) 
-  
 ### Build
 
 - To build the static site you can use the generated site folder that Jekyll creates when you use `jekyll serve` or you can build it explicitly with `jekyll build`.
