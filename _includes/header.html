@@ -16,7 +16,7 @@
 
             {% if my_page.menutitle %}
             {% assign title = my_page.menutitle %}
-            {% elsif site.cover %}
+            {% elsif site.title %}
             {% assign title = my_page.title %}
             {% endif %}
 
@@ -24,8 +24,6 @@
             <li><a class="page-link" href="{{ my_page.url | prepend: site.github.url | prepend: site.baseurl}}" title="{{ title }}">{{ title }}</a></li>
             {% endif %}
             {% endfor %}
-
-            <li><a class="page-link" href="{{ site.github.url | prepend: site.baseurl}}/about/" title="About">About</a></li>
         </ul>
     </div>
 </header>
