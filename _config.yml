@@ -21,6 +21,9 @@ cover: /assets/mountain2.jpg
 
 # Build settings
 markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
 include: ['_pages']
 exclude: [vendor]
 gems:
