@@ -1,5 +1,7 @@
 .error-template {
     background-size: cover;
+    background-repeat: no-repeat;
+    display:inline;
 
     .error-page {
         background-color: white;
@@ -8,7 +10,7 @@
         padding: 15px;
         line-height: 1.6em;
         text-align: center;
-        
+
         .hgroup {
             margin-bottom: 15px;
 

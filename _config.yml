@@ -6,18 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jens Blog
-subtitle: Wasser auf die Steine
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-keywords: demo blog example
+title:        jekyllDecent
+subtitle:     Example Blog
+description:  This is the jekyllTheme example blog. It only exists to demonstrate how the theme looks and feels.
+keywords:     demo theme example github jekyll features
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jwillmer.github.io/jekyllDecent" # the base hostname & protocol for your site
-permalink: /blog/:categories/:title
-cover: /assets/mountain2.jpg
+baseurl:      "" # the subpath of your site, e.g. /blog
+url:          "http://jwillmer.github.io/jekyllDecent" # the base hostname & protocol for your site
+permalink:    /blog/:categories/:title
+cover:        /assets/mountain-cover.jpg
 
 # Build settings
 markdown: kramdown

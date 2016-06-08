@@ -33,10 +33,10 @@ This is a blog template for a static site generator named [Jekyll](https://jekyl
 ## Screenshots
 
 ### Home
-![](./assets/preview/win10_ie_11.0_home.jpg)
+![](./media/img/2016-06-08-Readme-front-page-previewe.jpg)
 
 ### Post
-![](./assets/preview/win10_ie_11.0_page.jpg)
+![](./media/img/2016-06-08-Readme-page-preview.jpg)
 
 ## Installation
 
