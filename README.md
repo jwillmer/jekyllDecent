@@ -7,4 +7,4 @@ This is a blog template for a static site generator named [Jekyll](https://jekyl
 
 Installation instructions, features, previews and more can be found in the [GitHub generated blog](http://jwillmer.github.io/jekyllDecent). This blog is automatically generated out of the source code in the `gh-pages` branch. If you like to see the theme in production have a look at [jwillmer.de](http://jwillmer.de).
 
-![]({{./media/img/2016-06-08-Readme-front-page-previewe.jpg)
+![](./media/img/2016-06-08-Readme-front-page-previewe.jpg)
