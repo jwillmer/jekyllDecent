@@ -11,5 +11,13 @@ figure p {
     background-repeat: no-repeat;
     background-position: center center;
     height: 500px;
-	margin: 0 0 1.75em 0;
+    margin: 0 0 1.75em 0;
+}
+
+.single-post .post-content {
+    img[src*='#right'], img[src*='#left'], 
+    figure.left, figure.right {
+        max-width: 250px;
+        max-height: 250px;
+    }
 }

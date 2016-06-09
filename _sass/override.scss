@@ -19,3 +19,7 @@ ol {
         opacity: 1;
     }
 }
+
+pre, pre[class*="language-"] {    
+    margin-bottom: 1.8em!important; /* override prism.js css */
+}
