@@ -12,7 +12,7 @@ description:  This is the jekyllTheme example blog. It only exists to demonstrat
 keywords:     demo theme example github jekyll features
 
 baseurl:      "" # the subpath of your site, e.g. /blog
-url:          "http://jwillmer.github.io/jekyllDecent" # the base hostname & protocol for your site
+url:          "http://jwillmer.github.io/jekyllDecent" # the base hostname & protocol for your site. Have a look at robots.txt as well!
 permalink:    /blog/:categories/:title
 cover:        /assets/mountain-cover.jpg
 
