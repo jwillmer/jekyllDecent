@@ -10,6 +10,7 @@ cover:             /assets/mountain-alternative-cover.jpg
 published:         true
 redirect_from:     "/YAML-Features-Redirect/"
 cover:             /assets/mountain-alternative-cover.jpg
+language:          EN
 ---
 
 In this short post I changed the title that is displayed on the front page from `YAML Custom Features` to `YAML Features`.
@@ -53,7 +54,7 @@ To generate keywords for the search engines I use the tags that you specify in t
 ```bash
 ---        
 tags:          Jekyll YAML Features Explained  #Only used in posts!
-keywords       Jekyll YAML Features Explained  #Only used in pages!
+keywords:      Jekyll YAML Features Explained  #Only used in pages!
 ---
 ```
 
@@ -73,4 +74,12 @@ weight:       5
 ---
 ```
 
-Additional features that can be specified can be found in the ([YAML Front Matter documentation](https://jekyllrb.com/docs/frontmatter/)).
+The default language of your blog is defined in the `_config.yml` file but if you like to write a post/page in another language you can use the `language` attribute. This will specify that you are using another language on this page for search engines. Please use on of the [language codes](http://www.w3schools.com/tags/ref_language_codes.asp) as value. 
+
+```bash
+---        
+language:       en  
+---
+```
+
+Additional features, that can be specified, can be found in the [YAML Front Matter documentation](https://jekyllrb.com/docs/frontmatter/).
