@@ -34,6 +34,6 @@ visible: false
 <script src="{{ site.github.url | prepend: site.baseurl }}/js/offline.js"></script>
 <script>
     $(document).ready(function () {
-        insertSimilarUrls(String(window.location.href), "{{ site.github.url | prepend: site.baseurl }}api/posts.json", "#article-template", ".urlSuggestions", 10);
+        insertSimilarUrls(String(window.location.href), "{{ site.github.url | prepend: site.baseurl }}/api/posts.json", "#article-template", ".urlSuggestions", 10);
     });
 </script>
