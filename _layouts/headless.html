@@ -5,11 +5,9 @@
 <body class="home-template">
     <div class="site-wrapper">
         {{ content }}
-        {% include photoswipe.html %}
         {% include footer.html %}
     </div>
 </body>
 
 <script src="{{ site.github.url | prepend: site.baseurl}}/js/global.js"></script>
-{% include post_scripts.html %}
 </html>

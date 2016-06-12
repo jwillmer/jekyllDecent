@@ -1,0 +1,16 @@
+---
+---
+[
+{% for post in site.posts %}
+  {% unless post.draft %}
+    {
+        "title": "{{ post.title }}",
+        "category": "{{ post.category }}",
+        "url": "{{ post.url | prepend: site.github.url | prepend: site.baseurl }}",
+        "tags": {{ post.tags | jsonify }},
+        "date": "{{ post.date }}",
+        "language": "{% if post.language %}{{ post.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endunless %}
+{% endfor %}
+]

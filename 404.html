@@ -1,26 +1,39 @@
 ---
-layout: null
+layout: default
+title: 404 - Page not found
+visible: false
 ---
 
-{% if page.cover %}
-{% assign cover = page.cover %}
-{% elsif site.cover %}
-{% assign cover = site.cover %}
-{% endif %}
+<div id="content" class="content">
+    <header class="post-header short-diver">
+        <h1 class="post-title">Page not found</h1>
+        <p>The page you requested could not be found.</p>
+    </header>
 
-<!DOCTYPE html>
-<html>
-{% include head.html %}
-<body class="error-template" style="background-image: url({{ cover | prepend: site.github.url | prepend: site.baseurl}})">
-    <div class="site-wrapper">
-        <div class="error-page">
-            <div class="hgroup">
-                <h1>Something Just Went Wrong !</h1>
-                <h2>404 Error</h2>
-            </div>
-                <p>For Some Reason The Page You Requested Could Not Be Found On Our Server</p>
-                <h4>Go <a href="javascript:history.go(-1)">Back</a> or <a href="{{ site.github.url | prepend: site.baseurl }}/">Home</a></h4>
+    <h3>Similar URLs</h3>
+    <ul class="category recent-posts">
+        <ul class="urlSuggestions"></ul>
+    </ul>
+</div>
+
+<script id="article-template" type="text/x-custom-template">
+    <li>
+        <div class="article">
+            <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+                <header class="post-header">
+                    <span class="title"><a itemprop="name" href="" title=""></a></span>
+                    <time class="date" itemprop="datePublished" datetime=""></time>
+                </header>
+            </article>
         </div>
-    </div>
-</body>
-</html>
+    </li>
+</script>
+
+<script src="{{ site.github.url | prepend: site.baseurl }}/js/jquery-1.12.0.min.js"></script>
+<script src="{{ site.github.url | prepend: site.baseurl }}/js/fuzzyset.js"></script>
+<script src="{{ site.github.url | prepend: site.baseurl }}/js/offline.js"></script>
+<script>
+    $(document).ready(function () {
+        insertSimilarUrls(String(window.location.href), "{{ site.github.url | prepend: site.baseurl }}api/posts.json", "#article-template", ".urlSuggestions", 10);
+    });
+</script>

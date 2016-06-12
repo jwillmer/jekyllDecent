@@ -4,8 +4,8 @@ layout: default
 
 
 <div id="content" class="content">
-    <ul class="category recent-posts">
-        <h3>Recent Posts</h3>
+    <h3>Recent Posts</h3>
+    <ul class="category recent-posts">       
         {% for post in site.posts limit:5  %}
         {% unless post.draft %}
 
@@ -33,9 +33,8 @@ layout: default
     {% assign sorted_cats = site.categories | sort %}
     {% for category in sorted_cats %}
     {% assign sorted_posts = category[1] | reversed %}
-    <ul class="category {{category[0] | uri_escape | downcase | slugify}}">
-        <h3 id="{{category[0] | uri_escape | downcase | slugify }}">{{category[0] | camelcase }}</h3>
-
+    <h3 id="{{category[0] | uri_escape | downcase | slugify }}">{{category[0] | camelcase }}</h3>
+    <ul class="category {{category[0] | uri_escape | downcase | slugify}}">  
         {% for post in sorted_posts %}
         {% unless post.draft %}
 
