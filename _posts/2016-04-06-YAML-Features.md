@@ -58,6 +58,14 @@ keywords:      Jekyll YAML Features Explained  #Only used in pages!
 ---
 ```
 
+Post will be sorted by category on the front page. This is how you define the category in YAML.
+
+```bash
+---        
+category:     Readme
+---
+```
+
 On a page I have additional options. For instance I can hide the page from the menu by setting the `visible` tag to `false`.
 
 ```bash
