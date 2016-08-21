@@ -2,7 +2,7 @@ default:                                                      # Fallback if noth
   initial:      jw                                    # used for author lookup in posts and for first two characters in the about page back button
   name:         "Justin"                                # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
-  picture:      /assets/jwillmer.jpg                          # OPTIONAL: author picture
+  picture:      /assets/javascript-logo.png                        # OPTIONAL: author picture
   bio:          All things JavaScript                         # OPTIONAL: text below author name in posts
   location:     NY                                      # OPTIONAL: used to display location of the author
   website:      "http://justin.github.io                    # OPTIONAL: link to the author of a post
@@ -23,7 +23,7 @@ jwillmer:
   initial:      jw
   name:         "Justin"        
   cover:        /assets/mountain-alternative-cover.jpg  
-  picture:      /assets/jwillmer.jpg  
+  picture:      /assets/javascript-logo.png 
   bio:          All things JavaScript
   location:     NY
   website:      "http://justin.github.io
