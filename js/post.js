@@ -139,13 +139,14 @@
       		          var dsq = document.createElement('script');
                     dsq.type = 'text/javascript'; dsq.async = true;
       		          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.setAttribute('data-timestamp', +new Date());
       		          (document.getElementsByTagName('head')[0] ||
                       document.getElementsByTagName('body')[0]).appendChild(dsq);
       			})();
       		}
         }
 
-        $('.readmore').click(function(){
+        $('.view-comments').click(function(){
       	   loadDisqusComments();
       	    $(this).fadeOut(400);
       	});
