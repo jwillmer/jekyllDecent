@@ -5,10 +5,15 @@
 <body class="home-template">
     <div class="site-wrapper">
         {% include header.html %}
-        {{ content }}        
+        {{ content }}
         {% include footer.html %}
     </div>
 </body>
 
 <script src="{{ site.github.url | prepend: site.baseurl}}/js/global.js"></script>
+<script type="text/javascript">
+var config = {
+  'disqus_shortname': '{{ site.theme_disqus_shortname }}'
+};
+</script>
 </html>
