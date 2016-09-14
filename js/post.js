@@ -127,5 +127,29 @@
         goToTop.on('click', function () {
             $('body, html').animate({ scrollTop: 0 });
         });
+
+
+        /*
+            Disqus comments
+        */
+        function loadDisqusComments() {
+          if(config.disqus_shortname != ''){
+      		    var disqus_shortname = config.disqus_shortname;
+      		      (function() {
+      		          var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript'; dsq.async = true;
+      		          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.setAttribute('data-timestamp', + new Date());
+      		          (document.getElementsByTagName('head')[0] ||
+                      document.getElementsByTagName('body')[0]).appendChild(dsq);
+      			})();
+      		}
+        }
+
+        $('.view-comments').click(function(){
+      	   loadDisqusComments();
+      	    $(this).fadeOut(400);
+      	});
+
     });
 })(jQuery);

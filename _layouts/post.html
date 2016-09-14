@@ -7,7 +7,7 @@ layout: default
         <header class="post-header short-diver">
             <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
             <section class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> 
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
                 on
                 {% for tag in page.tags limit:5 %}
                 <span>{{ tag }}</span>
@@ -19,9 +19,16 @@ layout: default
             {{content}}
         </section>
 
-        <footer class="post-footer"> 
+        <footer class="post-footer">
             {% include authorinfo.html param=page.author %}
         </footer>
+
+        {% if page.comments %}
+    		<div class="comments">
+    			<a href="javascript:;" class="view-comments"><i class="fa fa-comments"></i>View Comments...</a>
+    			<div id="disqus_thread"></div>
+    		</div>
+    		{% endif %}
 
     </article>
 </main>

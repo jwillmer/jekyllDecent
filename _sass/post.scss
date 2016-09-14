@@ -35,7 +35,7 @@
 
     .large {
         img {
-            max-width: none;            
+            max-width: none;
         }
     }
 
@@ -215,3 +215,19 @@
     margin: auto;
     padding: 0;
 }
+
+.view-comments {
+    display: inline-block;
+    padding: 7px 22px;
+    font: 600 14px 'Open Sans', Serif;
+    border-radius: 4px;
+    border: 2px solid $color-text-link;
+		background: #fff;
+		color: $color-text-link;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-text-link-hover;
+        border-color: $color-text-link-hover;
+    }
+  }
