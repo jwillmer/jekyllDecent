@@ -91,4 +91,12 @@ language:       en
 ---
 ```
 
+You can enable [disqus](https://disqus.com/) comments in posts by adding `comments` to the page. To configure the disqus forum you need to modify the `disqus_shortname` in the `_config.yml` file.
+
+```bash
+---        
+comments:       true  
+---
+```
+
 Additional features, that can be specified, can be found in the [YAML Front Matter documentation](https://jekyllrb.com/docs/frontmatter/).
