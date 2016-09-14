@@ -21,3 +21,10 @@ figure p {
         max-height: 250px;
     }
 }
+
+.post-content .tip {
+	border-left: 4px solid $orangered;
+	&:before {
+		background-color: $orangered;
+	}
+ }
