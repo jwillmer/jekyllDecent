@@ -13,13 +13,13 @@
 {% assign cover = site.cover %}
 {% endif %}
 {% if cover %}
-<meta property="og:image" content="{{cover | relative_url  }}" />
+<meta property="og:image" content="{{cover | site.url }}" />
 {% endif %}
 
 <meta property="og:site_name" content="{{ site.title | escape }}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 
-{% capture page_url %}{{ page.url | replace:'/index.html','/' | relative_url  }}{% endcapture %}
+{% capture page_url %}{{ page.url | replace:'/index.html','/' | site.baseurl }}{% endcapture %}
 <meta property="og:url" content="{{ page_url }}" />
 
 
