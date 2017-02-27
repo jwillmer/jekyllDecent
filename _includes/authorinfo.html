@@ -16,8 +16,8 @@
     {%  if author %}
     {%  if author.picture %}
     <div class="author-image">
-        <div class="img image-bg" style="background-image: url({{author.picture | relative_url }})">
-            <a class="hidden" href="{{author.picture | relative_url }}" itemprop="image">{{author.name}}'s Picture</a>
+        <div class="img image-bg" style="background-image: url({{author.picture | absolute_url }})">
+            <a class="hidden" href="{{author.picture | absolute_url }}" itemprop="image">{{author.name}}'s Picture</a>
         </div>
     </div>
     {% endif %}

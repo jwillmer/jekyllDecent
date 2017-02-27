@@ -29,11 +29,11 @@ visible: false
     </li>
 </script>
 
-<script src="{{ site.github.url | prepend: relative_url }}/js/jquery-1.12.0.min.js"></script>
-<script src="{{ site.github.url | prepend: relative_url }}/js/fuzzyset.js"></script>
-<script src="{{ site.github.url | prepend: relative_url }}/js/offline.js"></script>
+<script src="{{ site.url}}/js/jquery-1.12.0.min.js"></script>
+<script src="{{ site.url}}/js/fuzzyset.js"></script>
+<script src="{{ site.url}}/js/offline.js"></script>
 <script>
     $(document).ready(function () {
-        insertSimilarUrls(String(window.location.href), "{{ relative_url }}/api/posts.json", "#article-template", ".urlSuggestions", 10);
+        insertSimilarUrls(String(window.location.href), "{{ site.url }}/api/posts.json", "#article-template", ".urlSuggestions", 10);
     });
 </script>

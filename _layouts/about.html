@@ -18,13 +18,13 @@ layout: headless
 
 <section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
     {%  if author.cover %}
-    <div class="author-cover image-bg" style="background-image: url('{{author.cover | relative_url }}')"></div>
+    <div class="author-cover image-bg" style="background-image: url('{{author.cover | absolute_url }}')"></div>
     {% endif %}
 
     {%  if author.picture %}
     <figure class="author-image  {%  if author.cover %} has-cover  {% endif %}">
-        <div class="img image-bg" style="background-image: url({{author.picture | relative_url }})">
-            <a class="hidden" href="{{author.picture | relative_url }}" itemprop="image">{{author.name}}'s Picture</a>
+        <div class="img image-bg" style="background-image: url({{author.picture | absolute_url }})">
+            <a class="hidden" href="{{author.picture | absolute_url }}" itemprop="image">{{author.name}}'s Picture</a>
         </div>
     </figure>
     {% endif %}
