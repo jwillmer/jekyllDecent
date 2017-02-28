@@ -29,11 +29,11 @@ visible: false
     </li>
 </script>
 
-<script src="{{ site.baseurl | prepend: site.url }}/js/jquery-1.12.0.min.js"></script>
-<script src="{{ site.baseurl | prepend: site.url }}/js/fuzzyset.js"></script>
-<script src="{{ site.baseurl | prepend: site.url }}/js/offline.js"></script>
+<script src="{{ "/js/jquery-1.12.0.min.js" | absolute_url }}"></script>
+<script src="{{ "/js/fuzzyset.js" | absolute_url }}"></script>
+<script src="{{ "/js/offline.js" | absolute_url }}"></script>
 <script>
     $(document).ready(function () {
-        insertSimilarUrls(String(window.location.href), "{{ site.baseurl | prepend: site.url }}/api/posts.json", "#article-template", ".urlSuggestions", 10);
+        insertSimilarUrls(String(window.location.href), "{{ "/api/posts.json" | absolute_url }}", "#article-template", ".urlSuggestions", 10);
     });
 </script>

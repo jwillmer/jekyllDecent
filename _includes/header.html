@@ -5,11 +5,11 @@
 {% endif %}
 
 <header class="main-header detail-page image-bg {% if cover %} has-cover" style="background-image: url({{ cover | absolute_url }})" {% else %} no-cover" {% endif %}>
-    <h1 class="page-title"><a href="{{ site.baseurl | prepend: site.url }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
+    <h1 class="page-title"><a href="{{ "/" | absolute_url }}" title="{{ site.title }}">{{ site.title }}</a></h1>
     <h2 class="page-description">{{ site.subtitle }}</h2>
     <div class="nav">
         <ul>
-            <li><a class="page-link" href="{{ site.baseurl | prepend: site.url }}/" title="Home">Home</a></li>
+            <li><a class="page-link" href="{{ "/" | absolute_url }}" title="Home">Home</a></li>
 
             {% assign pages = site.pages | sort:"weight"  %}
             {% for my_page in pages %}

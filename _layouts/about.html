@@ -14,7 +14,7 @@ layout: headless
     {% endunless %}
 {% endfor %}
 
-<a href="{{ site.baseurl | prepend: site.url }}/" class="logo-readium"><span class="logo">{{ author.initial | slice: 0, 2 | downcase }}</span></a>
+<a href="{{ "/" | absolute_url }}" class="logo-readium"><span class="logo">{{ author.initial | slice: 0, 2 | downcase }}</span></a>
 
 <section class="author-profile" itemprop="author" itemscope itemtype="http://schema.org/Person">
     {%  if author.cover %}

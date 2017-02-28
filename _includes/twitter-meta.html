@@ -19,7 +19,7 @@
 
 {% if page.url %}
 {% capture page_url %}{{ page.url | replace:'/index.html','/' | absolute_url  }}{% endcapture %}
-<meta name="twitter:url" content="{{ site.baseurl | prepend: site.url }}">
+<meta name="twitter:url" content="{{ "" | absolute_url }}">
 {% endif %}
 
 <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

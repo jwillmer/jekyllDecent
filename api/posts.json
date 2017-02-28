@@ -6,7 +6,7 @@
     {
         "title": "{{ post.title }}",
         "category": "{{ post.category }}",
-        "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
+        "url": "{{ post.url | absolute_url }}",
         "tags": {{ post.tags | jsonify }},
         "date": "{{ post.date }}",
         "language": "{% if post.language %}{{ post.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}"
