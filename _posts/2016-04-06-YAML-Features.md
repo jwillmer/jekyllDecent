@@ -25,7 +25,7 @@ menutitle:         "YAML Features"
 ---
 ```
 
-I also added a redirect to this post. If you browse to [YAML-Feature-Redirect]({{ "/" | absolute_url}}YAML-Features-Redirect) you should be redirected to this page. This only works if you have not removed the plugins.
+I also added a redirect to this post. If you browse to [YAML-Feature-Redirect]({{ "/" | absolute_url}}YAML-Features-Redirect) you should be redirected to this page. This only works if you have not removed the plugins. Hint: There is a [redirect bug](https://github.com/jwillmer/jekyllDecent/issues/35).
 
 ```bash
 ---
