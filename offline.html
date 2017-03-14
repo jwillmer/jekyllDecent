@@ -5,7 +5,8 @@ layout: default
 <h2 class="post-title">All posts in one long list</h2>
 <hr />
 
-{% for post in site.posts | sort %}
+{% assign reverse_posts = site.posts | sort | reverse %}
+{% for post in reverse_posts %}
 {% unless post.draft %}
 {% include post-list-item.html %}
 {% endunless %}

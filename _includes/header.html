@@ -4,12 +4,12 @@
 {% assign cover = site.cover %}
 {% endif %}
 
-<header class="main-header detail-page image-bg {% if cover %} has-cover" style="background-image: url({{ cover | prepend: site.github.url | prepend: site.baseurl}})" {% else %} no-cover" {% endif %}>
-    <h1 class="page-title"><a href="{{ site.github.url}}/" title="{{ site.title }}">{{ site.title }}</a></h1>
+<header class="main-header detail-page image-bg {% if cover %} has-cover" style="background-image: url({{ cover | absolute_url }})" {% else %} no-cover" {% endif %}>
+    <h1 class="page-title"><a href="{{ "/" | absolute_url }}" title="{{ site.title }}">{{ site.title }}</a></h1>
     <h2 class="page-description">{{ site.subtitle }}</h2>
     <div class="nav">
         <ul>
-            <li><a class="page-link" href="{{ site.github.url | prepend: site.baseurl}}/" title="Home">Home</a></li>
+            <li><a class="page-link" href="{{ "/" | absolute_url }}" title="Home">Home</a></li>
 
             {% assign pages = site.pages | sort:"weight"  %}
             {% for my_page in pages %}
@@ -21,7 +21,7 @@
             {% endif %}
 
             {% if title and my_page.visible != false %}
-            <li><a class="page-link" href="{{ my_page.url | prepend: site.github.url | prepend: site.baseurl}}" title="{{ title }}">{{ title }}</a></li>
+            <li><a class="page-link" href="{{ my_page.url | absolute_url }}" title="{{ title }}">{{ title }}</a></li>
             {% endif %}
             {% endfor %}
         </ul>

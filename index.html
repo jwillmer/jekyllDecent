@@ -19,7 +19,7 @@ layout: default
             <div class="article">
                 <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <header class="post-header">
-                        <span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url | prepend: site.baseurl}}" title="{{ title }}">{{ title }}</a></span>
+                        <span class="title"><a itemprop="name" href="{{ post.url | absolute_url }}" title="{{ title }}">{{ title }}</a></span>
                         <time class="date" itemprop="datePublished" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%B %e, %Y"}}</time>
                     </header>
                 </article>
@@ -48,7 +48,7 @@ layout: default
             <div class="article">
                 <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
                     <header class="post-header">
-                        <span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url | prepend: site.baseurl }}" title="{{ title }}">{{ title }}</a></span>
+                        <span class="title"><a itemprop="name" href="{{ post.url | absolute_url }}" title="{{ title }}">{{ title }}</a></span>
                         <time class="date" itemprop="datePublished" datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date: "%B %e, %Y"}}</time>
                     </header>
                 </article>

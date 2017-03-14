@@ -12,8 +12,8 @@ description:      This is the jekyllTheme example blog. It only exists to demons
 keywords:         demo theme example github jekyll features
 language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
 
-baseurl:          "" # the subpath of your site, e.g. /blog
-url:              "http://jwillmer.github.io/jekyllDecent" # the base hostname & protocol for your site. Have a look at robots.txt as well!
+baseurl:          "/jekyllDecent" # the subpath of your site, e.g. /blog
+url:              "http://jwillmer.github.io" # the base hostname & protocol for your site. Have a look at robots.txt as well!
 permalink:        /blog/:categories/:title
 cover:            /assets/mountain-cover.jpg
 disqus_shortname: "jekylldecent"

@@ -16,8 +16,8 @@
     {%  if author %}
     {%  if author.picture %}
     <div class="author-image">
-        <div class="img image-bg" style="background-image: url({{author.picture | prepend: site.github.url | prepend: site.baseurl}})">
-            <a class="hidden" href="{{author.picture | prepend: site.github.url | prepend: site.baseurl}}" itemprop="image">{{author.name}}'s Picture</a>
+        <div class="img image-bg" style="background-image: url({{author.picture | absolute_url }})">
+            <a class="hidden" href="{{author.picture | absolute_url }}" itemprop="image">{{author.name}}'s Picture</a>
         </div>
     </div>
     {% endif %}
@@ -29,7 +29,10 @@
 
         <div class="author-meta">
             {%  if author.location %}<span class="author-location icon-location" itemprop="nationality">{{ author.location }}</span>{% endif %}
-            <span class="author-stats"><i class="icon-stats"></i>{{ counter }} posts</span>
+            <span class="author-stats">
+			<i class="icon-stats"></i>
+			{{ counter }} post{% if counter > 1 %}s{% endif %}			
+			</span>
             {%  if author.website %}<span class="author-link icon-link" itemprop="url"><a href="{{ author.website }}">About</a></span>{% endif %}
         </div>
     </div>

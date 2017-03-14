@@ -18,11 +18,11 @@
 {% endif %}
 
 {% if page.url %}
-{% capture page_url %}{{ page.url | replace:'/index.html','/' | prepend: site.github.url | prepend: site.baseurl }}{% endcapture %}
-<meta name="twitter:url" content="{{ page_url}}">
+{% capture page_url %}{{ page.url | replace:'/index.html','/' | absolute_url  }}{% endcapture %}
+<meta name="twitter:url" content="{{ "" | absolute_url }}">
 {% endif %}
 
 <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<meta name="twitter:image:src" content="{{cover | prepend: site.github.url | prepend: site.baseurl }}">
+<meta name="twitter:image:src" content="{{cover | absolute_url  }}">
 <!-- End: Twitter data -->
