@@ -12,6 +12,7 @@ redirect_from:     "/YAML-Features-Redirect/"
 cover:             /assets/mountain-alternative-cover.jpg
 language:          EN
 comments:          true
+math:			   false
 ---
 
 In this short post I changed the title that is displayed on the front page from `YAML Custom Features` to `YAML Features`.
@@ -96,6 +97,14 @@ You can enable [disqus](https://disqus.com/) comments in posts by adding `commen
 ```bash
 ---        
 comments:       true  
+---
+```
+
+If you like to write some formula you can enable [MathJax](https://www.mathjax.org/). Go to the [theme feature post](features/Features) to see it in action. You can find the [preprocessing options](http://docs.mathjax.org/en/latest/options/tex2jax.html#configure-tex2jax) in `_includes/mathjax_support.html`.
+
+```bash
+---        
+math:           true  
 ---
 ```
 
