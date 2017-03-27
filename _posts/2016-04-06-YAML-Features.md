@@ -104,6 +104,15 @@ If you like to write some formula you can enable [MathJax](https://www.mathjax.o
 
 ```bash
 ---        
+math:           true 
+---
+```
+
+
+If you are writing a scholar article and like to add [bibliographic metadata](https://scholar.google.com/intl/en/scholar/inclusion.html#indexing) you can use the following YAML. This makes your article searchable at [Google Scholar](https://scholar.google.com/).
+
+```bash
+---        
 citation:
   author: 
     - "Doe, John"
@@ -124,15 +133,6 @@ citation:
   institution:         "institution"
   report_institution:  "report_institution"
   report_number:       "12345678"
----
-```
-
-
-If you are writing a scholar article and like to add [bibliographic metadata](https://scholar.google.com/intl/en/scholar/inclusion.html#indexing) you can use the following YAML. This makes your article searchable at [Google Scholar](https://scholar.google.com/).
-
-```bash
----        
- 
 ---
 ```
 
