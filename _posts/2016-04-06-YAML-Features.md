@@ -104,7 +104,35 @@ If you like to write some formula you can enable [MathJax](https://www.mathjax.o
 
 ```bash
 ---        
-math:           true  
+citation:
+  author: 
+    - "Doe, John"
+    - "Roe, Jane"
+  publication_date:    "1996/05/17"
+  online_date:         "1996/06/22"
+  title:               "title"
+  conference_title:    "conference_title"
+  journal_title:       "journal_title"
+  volume:              "271"
+  issue:               "20"
+  firstpage:           "11761"
+  lastpage:            "11766"
+  pdf_url:             "/media/scholar_article.pdf"
+  pdf_url_dynamic:     true                            #true: http://your-domain.com/[pdf_url]
+  issn:                "1234-5678"
+  isbn:                "0-2345-6634-6"
+  institution:         "institution"
+  report_institution:  "report_institution"
+  report_number:       "12345678"
+---
+```
+
+
+If you are writing a scholar article and like to add [bibliographic metadata](https://scholar.google.com/intl/en/scholar/inclusion.html#indexing) you can use the following YAML. This makes your article searchable at [Google Scholar](https://scholar.google.com/).
+
+```bash
+---        
+ 
 ---
 ```
 
