@@ -9,43 +9,43 @@
 {% endfor %}
 {% endif %}
 
-{% if cit.publication_date != '' %}
+{% if cit.publication_date | strip_newlines %}
 <meta name="citation_publication_date" content="{{cit.publication_date}}">
 {% endif %}
 
-{% if cit.online_date != '' %}
+{% if cit.online_date | strip_newlines  %}
 <meta name="citation_online_date" content="{{cit.online_date}}">
 {% endif %}
 
-{% if cit.title != '' %}
+{% if cit.title | strip_newlines  %}
 <meta name="citation_title" content="{{cit.title}}">
 {% endif %}
 
-{% if cit.journal_title != '' %}
+{% if cit.journal_title | strip_newlines  %}
 <meta name="citation_journal_title" content="{{cit.journal_title}}">
 {% endif %}
 
-{% if cit.conference_title != '' %}
+{% if cit.conference_title | strip_newlines  %}
 <meta name="citation_conference_title" content="{{cit.conference_title}}">
 {% endif %}
 
-{% if cit.volume != '' %}
+{% if cit.volume | strip_newlines  %}
 <meta name="citation_volume" content="{{cit.volume}}">
 {% endif %}
 
-{% if cit.issue != '' %}
+{% if cit.issue | strip_newlines  %}
 <meta name="citation_issue" content="{{cit.issue}}">
 {% endif %}
 
-{% if cit.firstpage != '' %}
+{% if cit.firstpage | strip_newlines  %}
 <meta name="citation_firstpage" content="{{cit.firstpage}}">
 {% endif %}
 
-{% if cit.lastpage != '' %}
+{% if cit.lastpage | strip_newlines  %}
 <meta name="citation_lastpage" content="{{cit.lastpage}}">
 {% endif %}
 
-{% if cit.pdf_url != '' %}
+{% if cit.pdf_url | strip_newlines  %}
 {% if cit.pdf_url_dynamic %}
 {% assign url = cit.pdf_url | absolute_url %}
 {% else %}
@@ -54,23 +54,23 @@
 <meta name="citation_pdf_url" content="{{url}}">
 {% endif %}
 
-{% if cit.issn != '' %}
+{% if cit.issn | strip_newlines  %}
 <meta name="citation_issn" content="{{cit.issn}}">
 {% endif %}
 
-{% if cit.isbn != '' %}
+{% if cit.isbn | strip_newlines  %}
 <meta name="citation_isbn" content="{{cit.isbn}}">
 {% endif %}
 
-{% if cit.institution != '' %}
+{% if cit.institution | strip_newlines  %}
 <meta name="citation_dissertation_institution" content="{{cit.institution}}">
 {% endif %}
 
-{% if cit.report_institution != '' %}
+{% if cit.report_institution | strip_newlines  %}
 <meta name="citation_technical_report_institution" content="{{cit.report_institution}}">
 {% endif %}
 
-{% if cit.report_number != '' %}
+{% if cit.report_number | strip_newlines  %}
 <meta name="citation_technical_report_number" content="{{cit.report_number}}">
 {% endif %}
 
