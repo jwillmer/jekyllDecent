@@ -1,9 +1,9 @@
 ---
 layout:    about
 permalink: "/about/"
-author:    jwillmer
+author:    johndoe
 keywords:  about person demo example
-title:     About Jens Willmer
+title:     About John Doe
 menutitle: About
 weight:    90
 excerpt:   This page contains the curriculum vitae (CV) of the author.
