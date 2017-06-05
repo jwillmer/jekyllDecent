@@ -1,6 +1,6 @@
 default:                                                      # Fallback if nothing is specified
-  initial:      johndoe                                       # used for author lookup in posts and for first two characters in the about page back button
-  name:         "John Doe"                                    # used to display author name
+  initial:      jdecent                                       # used for author lookup in posts and for first two characters in the about page back button
+  name:         "Jekyll Decent"                               # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/johndoe.jpg                           # OPTIONAL: author picture
   bio:          This is my bio!                               # OPTIONAL: text below author name in posts
@@ -23,9 +23,9 @@ default:                                                      # Fallback if noth
   twitch:                                                     # OPTIONAL: used in the about page
   s500px:                                                     # OPTIONAL: used in the about page
   reddit:                                                     # OPTIONAL: used in the about page
-johndoe:
-  initial:      johndoe
-  name:         "John Doe"       
+jdecent:
+  initial:      jdecent
+  name:         "Jekyll Decent"       
   cover:        /assets/mountain-alternative-cover.jpg  
   picture:      /assets/johndoe.jpg  
   bio:          This is my bio!

@@ -2,7 +2,7 @@
     color: $color-cv-text;
     font-size: 1.5rem;
     padding: 25px 0 5px 0;
-    margin: 25px auto 50px auto;
+    margin: 0 auto 50px auto;
 
 
     h2 {
@@ -180,25 +180,58 @@
 }
 
 
-    @media screen and (max-width: 768px) {
-        .timeline-container:before {
-            left: 8px;
-            width: 2px;
-        }
-
-        .timeline-block {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+@media screen and (max-width: 768px) {
+    .timeline-container:before {
+        left: 8px;
+        width: 2px;
     }
 
-    @media only screen and (max-width: 1081px) {
-
-        .timeline-block > .time {
-            display: none;
-        }
-
-        .timeline-content > .time {
-            display: block;
-        }
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
     }
+}
+
+@media only screen and (max-width: 1081px) {
+
+    .timeline-block > .time {
+        display: none;
+    }
+
+    .timeline-content > .time {
+        display: block;
+    }
+}
+
+@media only print {
+    .author-cover, .author-image, .author-meta, .logo-readium, .author-bio,
+    .timeline-block > .time, .marker, .timeline-container:before, .go-to-top,
+    .icon-briefcase, .site-footer {
+        display: none !important;
+    }
+
+    .timeline-content > .time {
+        display: block;
+    }
+
+    .timeline-container {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .shadow {
+        box-shadow:none;
+    }
+
+    .md-card {
+        margin: 0 auto;
+    }
+
+    .employment-heading, .project-heading {
+        page-break-before: always;
+    }
+
+    .md-card, .timeline-block, .education {
+        page-break-inside: avoid;
+    }
+}
