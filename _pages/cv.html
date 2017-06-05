@@ -18,11 +18,13 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     <div class="title icon-stats-bars">
         <h2>Skills</h2>
     </div>
-    <ul>
-        {% for skill in cv.skills %}
-        <li>{{ skill }}</li>
-        {% endfor %}
-    </ul>
+    <div class="content">
+        <ul>
+            {% for skill in cv.skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 <div class="md-card shadow education">

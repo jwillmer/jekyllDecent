@@ -1,12 +1,22 @@
 @media only screen and (max-width: 500px) {
 
+    dl {
+        display: flex;
+        flex-direction: column;
+    }
+
+   dl dt {
+        width: auto;
+        text-align: left;
+    }
+
     hr {
         margin: 1.75em 0;
     }
 
-    p, ul, ol, dl {
+    p, ul, ol, dl, dd {
         font-size: 0.95em;
-        margin: 0 0 2.5rem 0;
+        margin: 0 0 2.5rem 0 !important;
     }
 
     h1, h2, h3,

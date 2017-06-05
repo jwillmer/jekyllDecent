@@ -1,7 +1,7 @@
 .md-card {
     color: $color-cv-text;
     font-size: 1.5rem;
-    padding: 25px 25px 5px 25px;
+    padding: 25px 0 5px 0;
     margin: 25px auto 50px auto;
 
 
@@ -52,6 +52,10 @@
         padding {
             margin: 0;
         }
+    }
+
+    & > * {
+        padding: 0 25px 0 25px;
     }
 }
 
