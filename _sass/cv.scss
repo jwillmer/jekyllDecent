@@ -97,9 +97,11 @@
 
 .timeline-block > .time {
     position: absolute;
-    margin-left: -170px;
+    margin-left: -180px;
     margin-top: 3px;
     color: $color-cv-blue;
+    text-align: right;
+    width: 170px;
 }
 
 .timeline-content {
