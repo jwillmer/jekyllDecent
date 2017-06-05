@@ -80,8 +80,9 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
     <div class="footer">
         <ul>
-            {% for technology in project.technologies %}
-            <li>{{technology}}</li>
+            {% assign technologies = project.technologies | split: ',' %}
+            {% for technology in technologies %}
+            <li> {{ technology }}</li>
             {% endfor %}
         </ul>
         <span class="icon-briefcase"></span>

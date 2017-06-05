@@ -30,8 +30,7 @@ johndoe:
         - time:             "5 months in 2017"
           team:             "Team of 2"
           title:            "Web Project"
-          technologies:
-            - "C#, JavaScript, HTML5, CSS"
+          technologies:     "C#, JavaScript, HTML5, CSS"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet finibus libero sed ullamcorper. Donec."
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed."
@@ -39,8 +38,7 @@ johndoe:
         - time:             "9 months in 2016"
           team:             "Team of 6"
           title:            "Android App"
-          technologies:
-            - "Mono, .NET"
+          technologies:     "Mono, .NET"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, urna id hendrerit interdum, metus dui ultricies massa."
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo nec lacus aliy rutrum."
@@ -48,8 +46,7 @@ johndoe:
         - time:             "3 months in 2015"
           team:             "Team of 2"
           title:            "Software Evaluation"
-          technologies:
-            - "Recruting, .NET"
+          technologies:     "Recruting, .NET"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, urna id hendrerit interdum, metus dui ultricies massa."
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo nec lacus aliy rutrum."
