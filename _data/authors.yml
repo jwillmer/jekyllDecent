@@ -21,7 +21,7 @@ default:                                                      # Fallback if noth
   behance:                                                    # OPTIONAL: used in the about page
   spotify:                                                    # OPTIONAL: used in the about page
   twitch:                                                     # OPTIONAL: used in the about page
-  500px:                                                      # OPTIONAL: used in the about page
+  s500px:                                                     # OPTIONAL: used in the about page
   reddit:                                                     # OPTIONAL: used in the about page
 johndoe:
   initial:      johndoe
@@ -30,9 +30,9 @@ johndoe:
   picture:      /assets/johndoe.jpg  
   bio:          This is my bio!
   location:     Germany
-  email:        -   
-  twitter:      -    
-  twitch:       -
+  email:        "-"   
+  twitter:      "-"    
+  twitch:       "-"
 jwillmer:
   initial:      jwillmer
   name:         "Jens Willmer"        

@@ -37,6 +37,7 @@
     .title {
         display: flex;
         align-items: baseline;
+        font-size: 2rem;
 
         h2 {
             padding-left: 10px;
@@ -150,6 +151,10 @@
     }
 
     .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         ul {
             display: flex;
             padding: 0;
@@ -159,6 +164,10 @@
             padding-right: 10px;
             list-style-type: none;
             font-weight: 600;
+        }
+
+        span {
+            font-size: 2rem;
         }
     }
 }
