@@ -1,0 +1,61 @@
+johndoe:
+    profile: "Integer sit amet libero non sapien sagittis dapibus. Phasellus gravida quam ac nisl finibus dictum. Pellentesque vel orci et nisi pretium tincidunt nec a diam. Vivamus et leo eu lorem congue pellentesque id sed tortor. Nulla et nibh neque. Sed ut fermentum lectus, id rhoncus erat."
+    skills:
+        - "C#, ASP.NET MVC"
+        - "XAML, WPF, LINQ, Silverlight"
+        - "JavaScript, jQuery, HTML5, CSS, LESS"
+        - "Web Services, Active Directory, Windows 10, Windows Phone Apps"
+    education:
+        - time:             "2009 - 2011"
+          location:         "University of Someplace"
+          description:      "BSc in Applied Computer Science"
+    employment:
+        - time:             "2015 - 2017"
+          location:         "Stuttgart"
+          company:          "South-West Company"
+          position:         ".NET Developer"
+          responsibilities:
+            - "Support of web applications"
+            - "Training of students"
+            - "Flirting with the secretary"
+        - time:             "2011 - 2015"
+          location:         "Berlin"
+          company:          "Local-B Company"
+          position:         "Junior Developer"
+          responsibilities:
+            - "Developed jQuery plugins"
+            - "Had a nice place on the window"
+            - "Dreamed about beeing a senior developer"
+    projects:
+        - time:             "5 months in 2017"
+          team:             "Team of 2"
+          title:            "Web Project"
+          technologies:
+            - "C#"
+            - "JavaScript"
+            - "HTML5"            
+            - "CSS"
+          responsibilities:
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet finibus libero sed ullamcorper. Donec."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales ligula sit amet nisl pellentesque, eu cursus neque."
+        - time:             "9 months in 2016"
+          team:             "Team of 6"
+          title:            "Android App"
+          technologies:
+            - "Mono"
+            - ".NET"
+          responsibilities:
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, urna id hendrerit interdum, metus dui ultricies massa."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo nec lacus aliy rutrum."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum."
+        - time:             "3 months in 2015"
+          team:             "Team of 2"
+          title:            "Software Evaluation"
+          technologies:
+            - "Recruting"
+            - ".NET"
+          responsibilities:
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, urna id hendrerit interdum, metus dui ultricies massa."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo nec lacus aliy rutrum."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum."
