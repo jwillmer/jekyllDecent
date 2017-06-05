@@ -10,7 +10,7 @@ johndoe:
           location:         "University of Someplace"
           description:      "BSc in Applied Computer Science"
     employment:
-        - time:             "2015 - 2017"
+        - time:             "02.2015 - 11.2017"
           location:         "Stuttgart"
           company:          "South-West Company"
           position:         ".NET Developer"
@@ -18,7 +18,7 @@ johndoe:
             - "Support of web applications"
             - "Training of students"
             - "Flirting with the secretary"
-        - time:             "2011 - 2015"
+        - time:             "08.2011 - 02.2015"
           location:         "Berlin"
           company:          "Local-B Company"
           position:         "Junior Developer"
@@ -31,10 +31,7 @@ johndoe:
           team:             "Team of 2"
           title:            "Web Project"
           technologies:
-            - "C#"
-            - "JavaScript"
-            - "HTML5"            
-            - "CSS"
+            - "C#, JavaScript, HTML5, CSS"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet finibus libero sed ullamcorper. Donec."
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed."
@@ -43,8 +40,7 @@ johndoe:
           team:             "Team of 6"
           title:            "Android App"
           technologies:
-            - "Mono"
-            - ".NET"
+            - "Mono, .NET"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, urna id hendrerit interdum, metus dui ultricies massa."
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo nec lacus aliy rutrum."
@@ -53,8 +49,7 @@ johndoe:
           team:             "Team of 2"
           title:            "Software Evaluation"
           technologies:
-            - "Recruting"
-            - ".NET"
+            - "Recruting, .NET"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, urna id hendrerit interdum, metus dui ultricies massa."
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo nec lacus aliy rutrum."
