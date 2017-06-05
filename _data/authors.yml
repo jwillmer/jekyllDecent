@@ -19,6 +19,10 @@ default:                                                      # Fallback if noth
   pinterest:                                                  # OPTIONAL: used in the about page
   dribble:                                                    # OPTIONAL: used in the about page
   behance:                                                    # OPTIONAL: used in the about page
+  spotify:                                                    # OPTIONAL: used in the about page
+  twitch:                                                     # OPTIONAL: used in the about page
+  500px:                                                      # OPTIONAL: used in the about page
+  reddit:                                                     # OPTIONAL: used in the about page
 johndoe:
   initial:      johndoe
   name:         "John Doe"       
@@ -26,6 +30,9 @@ johndoe:
   picture:      /assets/johndoe.jpg  
   bio:          This is my bio!
   location:     Germany
+  email:        -   
+  twitter:      -    
+  twitch:       -
 jwillmer:
   initial:      jwillmer
   name:         "Jens Willmer"        

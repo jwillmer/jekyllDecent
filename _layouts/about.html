@@ -34,25 +34,28 @@ layout: headless
         {% if author.bio %} <h2 class="author-bio" itemprop="description">{{author.bio}}</h2> {% endif %}
 
         <div class="author-meta">
-            {%  if author.email %}<a class="social-mail-alt" href="mailto:{{ author.email }}" itemprop="email">Mail</a>{% endif %}
+            {%  if author.email %}<a href="mailto:{{ author.email }}" itemprop="email" class="icon-mail">Mail</a>{% endif %}
 
-            {%  if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" itemprop="sameAs" class="social-twitter">Twitter</a> {% endif %}
-            {%  if author.linkedin %}<a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs" class="social-linkedin">LinkedIn</a> {% endif %}
-            {%  if author.xing %}<a href="https://www.xing.com/profile/{{ author.xing }}" itemprop="sameAs" class="social-xing">Xing</a> {% endif %}
+            {%  if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" itemprop="sameAs" class="icon-twitter">Twitter</a> {% endif %}
+            {%  if author.linkedin %}<a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs" class="icon-linkedin">LinkedIn</a> {% endif %}
+            {%  if author.xing %}<a href="https://www.xing.com/profile/{{ author.xing }}" itemprop="sameAs" class="icon-xing">Xing</a> {% endif %}
 
-            {%  if author.github %}<a href="https://github.com/{{ author.github }}" itemprop="sameAs" class="social-github-circled">GitHub</a> {% endif %}
-            {%  if author.stackoverflow %}<a href="http://stackoverflow.com/users/{{ author.stackoverflow }}" itemprop="sameAs" class="social-stackoverflow">StackOverflow</a> {% endif %}
+            {%  if author.github %}<a href="https://github.com/{{ author.github }}" itemprop="sameAs" class="icon-github">GitHub</a> {% endif %}
+            {%  if author.stackoverflow %}<a href="http://stackoverflow.com/users/{{ author.stackoverflow }}" itemprop="sameAs" class="icon-stackoverflow">StackOverflow</a> {% endif %}
 
-            {%  if author.facebook %}<a href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs" class="social-facebook-squared">Facebook</a> {% endif %}
-            {%  if author.gplus %}<a href="https://plus.google.com/+{{ author.gplus }}" itemprop="sameAs" class="social-gplus">Google+</a> {% endif %}
+            {%  if author.facebook %}<a href="https://www.facebook.com/{{ author.facebook }}" itemprop="sameAs" class="icon-facebook">Facebook</a> {% endif %}
+            {%  if author.gplus %}<a href="https://plus.google.com/+{{ author.gplus }}" itemprop="sameAs" class="icon-google-plus">Google+</a> {% endif %}
 
-            {%  if author.soundcloud %}<a href="https://soundcloud.com/{{ author.soundcloud }}" itemprop="sameAs" class="social-soundcloud">Soundcloud</a> {% endif %}
-            {%  if author.youtube %}<a href="https://www.youtube.com/user/{{ author.youtube }}" itemprop="sameAs" class="social-youtube">YouTube</a> {% endif %}
+            {%  if author.soundcloud %}<a href="https://soundcloud.com/{{ author.soundcloud }}" itemprop="sameAs" class="icon-soundcloud">Soundcloud</a> {% endif %}
+            {%  if author.youtube %}<a href="https://www.youtube.com/user/{{ author.youtube }}" itemprop="sameAs" class="icon-youtube">YouTube</a> {% endif %}
+            {%  if author.spotify %}<a href="https://open.spotify.com/user/{{ author.spotify }}" itemprop="sameAs" class="icon-spotify">Spotify</a> {% endif %}
+            {%  if author.twitch %}<a href="https://www.twitch.tv/{{ author.twitch }}" itemprop="sameAs" class="icon-twitch">Twitch</a> {% endif %}
 
-            {%  if author.pinterest %}<a href="https://www.pinterest.com/{{ author.pinterest }}" itemprop="sameAs" class="social-pinterest">Pinterest</a> {% endif %}
-            {%  if author.dribble %}<a href="https://dribbble.com/{{ author.dribble }}" itemprop="sameAs" class="social-dribbble">Dribble</a> {% endif %}
-            {%  if author.behance %}<a href="https://www.behance.net/{{ author.behance }}" itemprop="sameAs" class="social-behance">Behance</a> {% endif %}
-    
+            {%  if author.pinterest %}<a href="https://www.pinterest.com/{{ author.pinterest }}" itemprop="sameAs" class="icon-pinterest">Pinterest</a> {% endif %}
+            {%  if author.dribble %}<a href="https://dribbble.com/{{ author.dribble }}" itemprop="sameAs" class="icon-dribbble">Dribble</a> {% endif %}
+            {%  if author.behance %}<a href="https://www.behance.net/{{ author.behance }}" itemprop="sameAs" class="icon-behance">Behance</a> {% endif %}  
+            {%  if author.500px %}<a href="https://500px.com/{{ author.500px }}" itemprop="sameAs" class="icon-500px">500px</a> {% endif %}
+            {%  if author.reddit %}<a href="https://de.reddit.com/user/{{ author.reddit }}" itemprop="sameAs" class="icon-reddit">Reddit</a> {% endif %}
         </div>                                   
     </div>                                       
 </section>                                       

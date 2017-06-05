@@ -1,0 +1,381 @@
+$icomoon-font-path: "../fonts" !default;
+$icon-home3: "\e902";
+$icon-office: "\e903";
+$icon-library: "\e921";
+$icon-profile: "\e923";
+$icon-user-tie: "\e976";
+$icon-stats-bars: "\e99c";
+$icon-stats-bars2: "\e99d";
+$icon-briefcase: "\e9ae";
+$icon-mail: "\ea83";
+$icon-mail2: "\ea84";
+$icon-mail4: "\ea86";
+$icon-google-plus: "\ea8c";
+$icon-hangouts: "\ea8e";
+$icon-google-drive: "\ea8f";
+$icon-facebook: "\ea91";
+$icon-spotify: "\ea94";
+$icon-telegram: "\ea95";
+$icon-twitter: "\ea96";
+$icon-rss: "\ea9b";
+$icon-youtube: "\ea9d";
+$icon-twitch: "\ea9f";
+$icon-behance: "\eaa9";
+$icon-500px: "\eaab";
+$icon-steam: "\eaad";
+$icon-dropbox: "\eaae";
+$icon-github: "\eab0";
+$icon-tumblr: "\eaba";
+$icon-soundcloud: "\eac4";
+$icon-skype: "\eac5";
+$icon-reddit: "\eac6";
+$icon-linkedin: "\eac9";
+$icon-stackoverflow: "\ead0";
+$icon-pinterest: "\ead1";
+$icon-xing: "\ead3";
+$icon-dribbble: "\eaa7";
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('#{$icomoon-font-path}/icomoon.eot?el81f6');
+    src: url('#{$icomoon-font-path}/icomoon.eot?el81f6#iefix') format('embedded-opentype'), url('#{$icomoon-font-path}/icomoon.ttf?el81f6') format('truetype'), url('#{$icomoon-font-path}/icomoon.woff?el81f6') format('woff'), url('#{$icomoon-font-path}/icomoon.svg?el81f6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+    padding: 0 5px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon-home3 {
+    &:before {
+        content: $icon-home3;
+    }
+}
+
+.icon-office {
+    &:before {
+        content: $icon-office;
+    }
+}
+
+.icon-library {
+    &:before {
+        content: $icon-library;
+    }
+}
+
+.icon-profile {
+    &:before {
+        content: $icon-profile;
+    }
+}
+
+.icon-user-tie {
+    &:before {
+        content: $icon-user-tie;
+    }
+}
+
+.icon-stats-bars {
+    &:before {
+        content: $icon-stats-bars;
+    }
+}
+
+.icon-stats-bars2 {
+    &:before {
+        content: $icon-stats-bars2;
+    }
+}
+
+.icon-briefcase {
+    &:before {
+        content: $icon-briefcase;
+    }
+}
+
+.icon-google-drive {
+    &:before {
+        content: $icon-google-drive;
+    }
+}
+
+.icon-mail {
+    &:before {
+        content: $icon-mail;
+    }
+
+    &:hover {
+        color: #111;
+    }
+}
+
+.icon-mail2 {
+    &:before {
+        content: $icon-mail2;
+    }
+
+    &:hover {
+        color: #111;
+    }
+}
+
+.icon-mail4 {
+    &:before {
+        content: $icon-mail4;
+    }
+
+    &:hover {
+        color: #111;
+    }
+}
+
+.icon-google-plus {
+    &:before {
+        content: $icon-google-plus;
+    }
+
+    &:hover {
+        color: #dd4b39;
+    }
+}
+
+.icon-hangouts {
+    &:before {
+        content: $icon-hangouts;
+    }
+
+    &:hover {
+        color: #0f9d58;
+    }
+}
+
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+    }
+
+    &:hover {
+        color: #3b5999;
+    }
+}
+
+.icon-spotify {
+    &:before {
+        content: $icon-spotify;
+    }
+
+    &:hover {
+        color: #1db954;
+    }
+}
+
+.icon-telegram { 
+    &:before {
+        content: $icon-telegram;
+    }
+
+    &:hover {
+        color: #0088cc;
+    }
+}
+
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+    }
+
+    &:hover {
+        color: #55acee;
+    }
+}
+
+.icon-rss {
+    &:before {
+        content: $icon-rss;
+    }
+
+    &:hover {
+        color: #f26522;
+    }
+}
+
+.icon-youtube {
+    &:before {
+        content: $icon-youtube;
+    }
+
+    &:hover {
+        color: #cd201f;
+    }
+}
+
+.icon-twitch {
+    &:before {
+        content: $icon-twitch;
+    }
+
+    &:hover {
+        color: #6441a5;
+    }
+}
+
+.icon-dribbble {
+    &:before {
+        content: $icon-dribbble;
+    }
+
+    &:hover {
+        color: #ea4c89;
+    }
+}
+
+.icon-behance {
+    &:before {
+        content: $icon-behance;
+    }
+
+    &:hover {
+        color: #131418;
+    }
+}
+
+.icon-500px {
+    &:before {
+        content: $icon-500px;
+    }
+
+    &:hover {
+        color: #0099e5;
+    }
+}
+
+.icon-steam {
+    &:before {
+        content: $icon-steam;
+    }
+
+    &:hover {
+        color: #00adee;
+    }
+}
+
+.icon-dropbox {
+    &:before {
+        content: $icon-dropbox;
+    }
+
+    &:hover {
+        color: #007ee5;
+    }
+}
+
+.icon-github {
+    &:before {
+        content: $icon-github;
+    }
+
+    &:hover {
+        color: #4078c0;
+    }
+}
+
+.icon-tumblr {
+    &:before {
+        content: $icon-tumblr;
+    }
+
+    &:hover {
+        color: #34465d;
+    }
+}
+
+.icon-soundcloud {
+    &:before {
+        content: $icon-soundcloud;
+    }
+
+    &:hover {
+        color: #ff3300;
+    }
+}
+
+.icon-skype {
+    &:before {
+        content: $icon-skype;
+    }
+
+    &:hover {
+        color: #00AFF0;
+    }
+}
+
+.icon-reddit {
+    &:before {
+        content: $icon-reddit;
+    }
+
+    &:hover {
+        color: #ff5700;
+    }
+}
+
+.icon-linkedin {
+    &:before {
+        content: $icon-linkedin;
+    }
+
+    &:hover {
+        color: #0077B5;
+    }
+}
+
+.icon-stackoverflow {
+    &:before {
+        content: $icon-stackoverflow;
+    }
+
+    &:hover {
+        color: #FF9900;
+    }
+}
+
+.icon-pinterest {
+    &:before {
+        content: $icon-pinterest;
+    }
+
+    &:hover {
+        color: #bd081c;
+    }
+}
+
+.icon-xing {
+    &:before {
+        content: $icon-xing;
+    }
+
+    &:hover {
+        color: #007072;
+    }
+}
