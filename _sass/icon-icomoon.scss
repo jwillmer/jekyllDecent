@@ -3,10 +3,12 @@ $icon-home3: "\e902";
 $icon-office: "\e903";
 $icon-library: "\e921";
 $icon-profile: "\e923";
+$icon-location: "\e947";
 $icon-user-tie: "\e976";
 $icon-stats-bars: "\e99c";
 $icon-stats-bars2: "\e99d";
 $icon-briefcase: "\e9ae";
+$icon-link: "\e9cb";
 $icon-mail: "\ea83";
 $icon-mail2: "\ea84";
 $icon-mail4: "\ea86";
@@ -20,6 +22,7 @@ $icon-twitter: "\ea96";
 $icon-rss: "\ea9b";
 $icon-youtube: "\ea9d";
 $icon-twitch: "\ea9f";
+$icon-dribbble: "\eaa7";
 $icon-behance: "\eaa9";
 $icon-500px: "\eaab";
 $icon-steam: "\eaad";
@@ -33,7 +36,6 @@ $icon-linkedin: "\eac9";
 $icon-stackoverflow: "\ead0";
 $icon-pinterest: "\ead1";
 $icon-xing: "\ead3";
-$icon-dribbble: "\eaa7";
 
 @font-face {
     font-family: 'icomoon';
@@ -117,6 +119,18 @@ $icon-dribbble: "\eaa7";
 .icon-google-drive {
     &:before {
         content: $icon-google-drive;
+    }
+}
+
+.icon-link {
+    &:before {
+        content: $icon-link;
+    }
+}
+
+.icon-location {
+    &:before {
+        content: $icon-location;
     }
 }
 
