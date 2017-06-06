@@ -20,6 +20,20 @@ ol {
     }
 }
 
-pre, pre[class*="language-"] {    
-    margin-bottom: 1.8em!important; /* override prism.js css */
+pre, pre[class*="language-"] {
+    margin-bottom: 1.8em !important; /* override prism.js css */
+}
+
+.main-header .nav {
+
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin: 5px 10px;
+        min-width: inherit;
+    }
 }
