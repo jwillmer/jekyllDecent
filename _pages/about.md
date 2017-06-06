@@ -1,6 +1,6 @@
 ---
 layout:    about
-permalink: "/about/"
+permalink: "/about"
 author:    jdecent
 keywords:  about person demo example
 title:     About Jekyll Decent
