@@ -37,3 +37,12 @@ pre, pre[class*="language-"] {
         min-width: inherit;
     }
 }
+
+.github-button-container {
+    display: flex;
+    justify-content: center;
+
+    iframe {
+        min-height: inherit !important;
+    }
+}
