@@ -13,3 +13,5 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 If you like this theme and like to show your appreciation then please leave a star in the GitHub repository - Thank you!
 
 <a class="github-button" href="https://github.com/jwillmer/jekyllDecent" data-size="large" data-show-count="true" aria-label="Star jwillmer/jekyllDecent on GitHub">jekyllDecent</a>
+
+I also created an [account at bountysource.com](https://www.bountysource.com/teams/jekylldecent-theme) if you like to buy me a coffee.
