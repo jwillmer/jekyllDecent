@@ -8,8 +8,7 @@
     <h1 class="page-title"><a href="{{ "/" | absolute_url }}" title="{{ site.title }}">{{ site.title }}</a></h1>
     <h2 class="page-description">{{ site.subtitle }}</h2>
     <div class="nav">
-        <ul>
-            <li><a class="page-link" href="{{ "/" | absolute_url }}" title="Home">Home</a></li>
+            <a class="page-link" href="{{ "/" | absolute_url }}" title="Home">Home</a>
 
             {% assign pages = site.pages | sort:"weight"  %}
             {% for my_page in pages %}
@@ -21,9 +20,8 @@
             {% endif %}
 
             {% if title and my_page.visible != false %}
-            <li><a class="page-link" href="{{ my_page.url | absolute_url }}" title="{{ title }}">{{ title }}</a></li>
+            <a class="page-link" href="{{ my_page.url | absolute_url }}" title="{{ title }}">{{ title }}</a>
             {% endif %}
             {% endfor %}
-        </ul>
     </div>
 </header>
