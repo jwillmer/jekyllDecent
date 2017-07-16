@@ -11,7 +11,7 @@
 }
 
 .single-post {
-    .post-content img, .post-title , .post-meta{
+    .post-content img, .post-title, .post-meta {
         max-width: 700px;
         width: 100%;
         margin: auto;
@@ -22,10 +22,20 @@
     }
 
     .post-content {
+        iframe {
+            min-height: 350px;
+        }
+
         &:after {
             content: '';
             display: block;
             clear: both;
+        }
+
+        img[src*='#right'], img[src*='#left'],
+        figure.left, figure.right {
+            max-width: 250px;
+            max-height: 250px;
         }
     }
 
@@ -42,6 +52,11 @@
     figure {
         position: relative;
         margin-bottom: 25px;
+
+        p {
+            margin: 0; /* jekyll generates paragraphs in figure elements */
+        }
+
 
         &.left, &.right, &.large {
             figcaption {
@@ -169,6 +184,7 @@
             color: $color-white;
             text-align: center;
             background: linear-gradient(to top, rgba($color-black,0.8) 0%, rgba($color-black,0) 100%);
+
             &:before {
                 display: none;
             }
@@ -180,6 +196,7 @@
     img {
         cursor: pointer;
     }
+
     a {
         text-decoration: underline;
     }
@@ -202,22 +219,22 @@
         width: 100%;
         margin-bottom: auto;
     }
-	
-	.tip {
+
+    .tip {
         padding: 12px 24px 12px 30px;
         margin: 2em 0;
-        border-left: 4px solid #f66;
         background-color: #f8f8f8;
         position: relative;
         border-bottom-right-radius: 2px;
         border-top-right-radius: 2px;
         box-sizing: border-box;
+        border-left: 4px solid $orangered;
 
         &:before {
+            background-color: $orangered;
             position: absolute;
             top: 14px;
             left: -12px;
-            background-color: #f66;
             color: #fff;
             content: "!";
             width: 20px;
@@ -259,3 +276,12 @@
         border-color: $color-text-link-hover;
     }
   }
+
+.bg-scroll {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    margin: 0 0 1.75em 0;
+}

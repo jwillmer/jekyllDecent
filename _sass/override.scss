@@ -1,43 +1,10 @@
-/* as long as is is not fixed in the forked repo */
-.single-post .post-content {
-    iframe {
-        min-height: 350px;
-    }
-}
-
-ol {
-    width: 90%;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    word-wrap: break-word;
-}
-
-.go-to-top {
-    &:focus {
-        outline: none;
-        opacity: 1;
-    }
-}
-
+/* Override prism.js css */
 pre, pre[class*="language-"] {
-    margin-bottom: 1.8em !important; /* override prism.js css */
+    margin-bottom: 1.8em !important; 
 }
 
-.main-header .nav {
 
-    ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    li {
-        margin: 5px 10px;
-        min-width: inherit;
-    }
-}
-
+/* Custom CSS for GitHub link in about page */
 .github-button-container {
     display: flex;
     justify-content: center;

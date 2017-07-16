@@ -5,6 +5,10 @@
             width: auto;
             text-align: center;
         }
+
+        figcaption::before {
+            display: none; /* bugfix, base theme hides it too late (max-width: 780px)  */
+        }
     }
 
     .go-to-top {
@@ -13,3 +17,16 @@
         left: auto;
     }
 }
+
+
+@media only screen and (min-width: 1081px) {
+    .single-post .post-content > blockquote {
+        max-width: 730px;
+
+        p {
+            margin-left: 10px;
+            margin-right: 40px;
+        }
+    }
+}
+

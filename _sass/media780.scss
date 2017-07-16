@@ -56,4 +56,18 @@
     .go-to-top {
         right: 35px;
     }
+
+    .category {
+        .date {
+            display: none;
+        }
+
+        .article {
+            text-align: center;
+        }
+    }
+
+    .bg-scroll {
+        height: 350px;
+    }
 }
