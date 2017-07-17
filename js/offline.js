@@ -29,7 +29,7 @@ function insertSimilarUrls(url, json, templateSelector, positionSelector, max) {
 
         var useLevenshtein = false;
         var set = FuzzySet(urls, useLevenshtein);
-        matching_urls = set.get(url, null, .6);
+        matching_urls = set.get(url, null, .4);
         var template = $(templateSelector).html();
 
         for (var i = 0; i < matching_urls.length; i++)
