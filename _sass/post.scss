@@ -53,16 +53,20 @@
         position: relative;
         margin-bottom: 25px;
 
+        
         p {
             margin: 0; /* jekyll generates paragraphs in figure elements */
         }
 
 
         &.left, &.right, &.large {
+            margin-bottom:0;
+            
             figcaption {
                 position: static;
                 width: auto;
                 text-align: center;
+                padding-bottom: 10px;
 
                 &:before {
                     display: none;
@@ -88,12 +92,16 @@
 
         &.left {
             float: left;
-            margin: 20px 20px 20px 0;
+            margin-left: 0;
+            margin-right: 20px;
+            margin-top: 20px;
         }
 
         &.right {
             float: right;
-            margin: 20px 0 20px 20px;
+            margin-left: 0;
+            margin-right: 20px;
+            margin-top: 20px;
         }
 
         img {
