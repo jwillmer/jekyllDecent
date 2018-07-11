@@ -3,6 +3,7 @@ pre, pre[class*="language-"] {
     margin-bottom: 1.8em !important; 
 }
 
+pre code { display:block; width:90%; max-width:650px; margin:auto; }
 
 /* Custom CSS for GitHub link in about page */
 .github-button-container {
