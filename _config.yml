@@ -7,10 +7,10 @@
 
 # Site settings
 title:            Geunny's Blog
-subtitle:         Computers do not lie 
-description:      Organize my knowledge about development
+subtitle:         컴퓨터는 거짓말을 하지 않는다.
+description:      알게된 것에 대한 생각정리
 keywords:         demo theme example github jekyll features
-language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
+language:         "ko" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
 
 baseurl:          "/geunny-blog" # the subpath of your site, e.g. /blog
 url:              "" # the base hostname & protocol for your site. Have a look at robots.txt as well!
