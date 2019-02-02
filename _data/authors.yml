@@ -25,7 +25,7 @@ default:                                                      # Fallback if noth
   reddit:                                                     # OPTIONAL: used in the about page
 jdecent:
   initial:      jdecent
-  name:         "Jekyll Decent"       
+  name:         "김근영(Geun Young Kim)"       
   cover:        /assets/mountain-alternative-cover.jpg  
   picture:      /assets/johndoe.jpg  
   bio:          This is my bio!
