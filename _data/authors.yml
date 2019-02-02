@@ -1,11 +1,11 @@
 default:                                                      # Fallback if nothing is specified
-  initial:      Geunny                                       # used for author lookup in posts and for first two characters in the about page back button
-  name:         "김근영(Geun Younh Kim)"                               # used to display author name
+  initial:      Geunny                                        # used for author lookup in posts and for first two characters in the about page back button
+  name:         "김근영(Geun Young Kim)"                       # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/johndoe.jpg                           # OPTIONAL: author picture
   bio:          This is my bio!                               # OPTIONAL: text below author name in posts
-  location:     Germany                                       # OPTIONAL: used to display location of the author
-  website:                          						  # OPTIONAL: link to the author of a post
+  location:     Korea(한국)                                       # OPTIONAL: used to display location of the author
+  website:                          						              # OPTIONAL: link to the author of a post
   email:                                                      # OPTIONAL: used in the about page
   twitter:                                                    # OPTIONAL: used in the about page
   linkedin:                                                   # OPTIONAL: used in the about page
