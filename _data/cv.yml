@@ -1,10 +1,11 @@
 geunyoung:
     profile: "Integer sit amet libero non sapien sagittis dapibus. Phasellus gravida quam ac nisl finibus dictum. Pellentesque vel orci et nisi pretium tincidunt nec a diam. Vivamus et leo eu lorem congue pellentesque id sed tortor. Nulla et nibh neque. Sed ut fermentum lectus, id rhoncus erat."
     skills:
-        - "C#, ASP.NET MVC"
-        - "XAML, WPF, LINQ, Silverlight"
-        - "JavaScript, jQuery, HTML5, CSS, LESS"
-        - "Web Services, Active Directory, Windows 10, Windows Phone Apps"
+        - "Back End Language - Java, Spring"
+        - "DataBase -Oracle, MSSQL"
+        - "서버 - Apache/Tomcat, Jeus, Websphere"
+        - "Front End Language - JavaScript, jQuery, HTML5, CSS"
+        - "운영체제 - Windows, Linux"
     education:
         - time:             "2009 - 2011"
           location:         "University of Someplace"
