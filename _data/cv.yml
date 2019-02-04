@@ -8,26 +8,31 @@ geunyoung:
         - "Front End Language - JavaScript, jQuery, HTML5, CSS"
 
     education:
-        - time:             "2012 - 2018"
+        - time:             "2012.03 - 2018.03"
           location:         "University of Gachoen, Global Compus"
-          description:      "Got bachelor's degree in Computer Science"
+          description:      "컴퓨터공학"
     employment:
-        - time:             "02.2015 - 11.2017"
-          location:         "Stuttgart"
-          company:          "South-West Company"
-          position:         ".NET Developer"
+        - time:             "2016.07 - 2016.08"
+          location:         "경기도 성남시 분당구 판교동"
+          company:          "(주)커리어인스티튜드"
+          position:         "장기현장 실습"
           responsibilities:
-            - "Support of web applications"
-            - "Training of students"
-            - "Flirting with the secretary"
-        - time:             "08.2011 - 02.2015"
-          location:         "Berlin"
-          company:          "Local-B Company"
-          position:         "Junior Developer"
+            - NCS 도입한 대학 교육 Curriculum 플랫폼 제작 및 컨설턴팅
+        - time:             "2017.08 - 2017.12"
+          location:         "서울시 강남구 논현1동 율암빌딩"
+          company:          "(주)모빌씨앤씨"
+          position:         "Intership"
           responsibilities:
-            - "Developed jQuery plugins"
-            - "Had a nice place on the window"
-            - "Dreamed about beeing a senior developer"
+            - "Javascript/JQuery를 이용한 개인 프로젝트 진행"
+            - "Java/Spring를 이용한 개인 프로젝트 진행"
+            - "운영팀 서포트하여 SM(추가개발 및 유지보수)업무 수행"
+        - time:             "2018.01 - "
+          location:         "서울시 강남구 논현1동 율암빌딩"
+          company:          "(주)모빌씨앤씨"
+          position:         "연구원"
+          responsibilities:
+            - "ADT, HITE 및 아모레의 시판 계열 프로젝트 Back-End part SM(추가개발 및 유지보수)업무 수행"
+            - "아모레 시판 및 ADT 상주 SI(System Integration) 업무 "
     projects:
         - time:             "5 months in 2017"
           team:             "Team of 2"
