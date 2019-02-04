@@ -4,9 +4,9 @@ default:                                                      # Fallback if noth
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/johndoe.jpg                           # OPTIONAL: author picture
   bio:          This is my bio!                               # OPTIONAL: text below author name in posts
-  location:     Korea(한국)                                       # OPTIONAL: used to display location of the author
+  location:     Korea(한국)                                    # OPTIONAL: used to display location of the author
   website:                          						              # OPTIONAL: link to the author of a post
-  email:                                                      # OPTIONAL: used in the about page
+  email:        rmsdud2435@naver.com                          # OPTIONAL: used in the about page
   twitter:                                                    # OPTIONAL: used in the about page
   linkedin:                                                   # OPTIONAL: used in the about page
   xing:                                                       # OPTIONAL: used in the about page
