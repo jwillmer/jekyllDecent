@@ -1,4 +1,4 @@
-default:                                                      # Fallback if nothing is specified
+geunyoung:                                                      # Fallback if nothing is specified
   initial:      Geunny                                        # used for author lookup in posts and for first two characters in the about page back button
   name:         "김근영(Geun Young Kim)"                       # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
