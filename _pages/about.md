@@ -1,7 +1,7 @@
 ---
 layout:    about
 permalink: "/about"
-author:    Geunny
+author:    default
 keywords:  about person demo example
 title:     Geunny's Blog의 목적
 menutitle: About
