@@ -59,7 +59,7 @@ geunyoung:
           responsibilities:
             - "WebSphere 세팅"
             - "Application 구축"
-        - time:             "3 months in 2018"
+        - time:             "3 months in 2018 "
           team:             "Team System Operation"
           title:            "(Back-End SI)ADT 주제어장치(유선, 무선) Application"
           technologies:     "CentOS 7.5, Jeus, MSSQL, DB2, Java, Spring"
@@ -71,7 +71,7 @@ geunyoung:
         - time:             "5 months in 2018 and 2019"
           team:             "Team System Operation"
           title:            "(Back-End SI)ADT 대원출동 Application"
-          technologies:     "MQTT, CentOS 7.5, Jeus, MSSQL, Java, Spring"
+          technologies:     "MQTT, CentOS 7.5, Jeus, MSSQL, DB2, Java, Spring"
           responsibilities:
             - "CentOS 세팅"
             - "JEUS 세팅"
