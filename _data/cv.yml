@@ -49,12 +49,24 @@ geunyoung:
         - time:             "12 months in 2018"
           team:             "Team System Operation"
           title:            "(Back-End SM)ADT"
-          technologies:     "Windows, Linux, Websphere, Apache/Tomcat, Java, Spring"
+          technologies:     "Windows, Linux, Websphere, Apache/Tomcat, MSSQL, DB2, Oracle, Java, Spring"
           responsibilities:
             - "Back-End 부분에 대해 유지보수 및 추가개발 업무 수행"
         - time:             "3 months in 2018"
           team:             "Team System Operation"
-          title:            "(Back-End SI)아모레 면세 설무조사 Application"
+          title:            "(Back-End SI)아모레 면세 설문조사 Application"
+          technologies:     "AiX, Websphere, Oracle, Java, Spring"
+          responsibilities:
+            - "Back-End 부분에 대해 상주 개발 "
+        - time:             "3 months in 2018"
+          team:             "Team System Operation"
+          title:            "(Back-End SI)ADT 주제어장치(유선, 무선) Application"
+          technologies:     "CentOS 7.5, Jeus, MSSQL, Java, Spring"
+          responsibilities:
+            - "Back-End 부분에 대해 상주 개발 "
+        - time:             "5 months in 2018"
+          team:             "Team System Operation"
+          title:            "(Back-End SI)ADT 대원출동 Application"
           technologies:     "AiX, Websphere, Oracle, Java, Spring"
           responsibilities:
             - "Back-End 부분에 대해 상주 개발 "
