@@ -36,19 +36,25 @@ geunyoung:
     projects:
         - time:             "12 months in 2018"
           team:             "Team System Operation"
-          title:            "아모레 시판 계열 Back-End SM 업무"
+          title:            "(Back-End SM)아모레 시판 계열"
           technologies:     "AiX, Websphere, Oracle, Spring, Java"
           responsibilities:
             - "Back-End 부분에 대해 유지보수 및 추가개발 업무 수행"
         - time:             "12 months in 2018"
           team:             "Team System Operation"
-          title:            "HITE Back-End SM 업무"
+          title:            "(Back-End SM)HITE"
           technologies:     "Windows, Nginx/Tomcat, Oracle, Spring, Java"
           responsibilities:
             - "Back-End 부분에 대해 유지보수 및 추가개발 업무 수행"
         - time:             "12 months in 2018"
           team:             "Team System Operation"
-          title:            "ADT Back-End SM 업무"
+          title:            "(Back-End SM)ADT"
           technologies:     "Windows, Linux, Websphere, Apache/Tomcat, Java, Spring"
           responsibilities:
             - "Back-End 부분에 대해 유지보수 및 추가개발 업무 수행"
+        - time:             "3 months in 2018"
+          team:             "Team System Operation"
+          title:            "(Back-End SI)아모레 면세 설무조사 Application"
+          technologies:     "AiX, Websphere, Oracle, Java, Spring"
+          responsibilities:
+            - "Back-End 부분에 대해 상주 개발 "
