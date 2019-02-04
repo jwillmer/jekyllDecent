@@ -15,13 +15,13 @@ geunyoung:
         - time:             "2016.07 - 2016.08"
           location:         "경기도 성남시 분당구 판교동"
           company:          "(주)커리어인스티튜드"
-          position:         "장기현장 실습"
+          position:         "현장실습"
           responsibilities:
             - NCS 도입한 대학 교육 Curriculum 플랫폼 제작 및 컨설턴팅
         - time:             "2017.08 - 2017.12"
           location:         "서울시 강남구 논현1동 율암빌딩"
           company:          "(주)모빌씨앤씨"
-          position:         "Intership"
+          position:         "인턴"
           responsibilities:
             - "Javascript/JQuery를 이용한 개인 프로젝트 진행"
             - "Java/Spring를 이용한 개인 프로젝트 진행"
@@ -31,8 +31,8 @@ geunyoung:
           company:          "(주)모빌씨앤씨"
           position:         "연구원"
           responsibilities:
-            - "ADT, HITE 및 아모레의 시판 계열 프로젝트 Back-End part SM(추가개발 및 유지보수)업무 수행"
-            - "아모레 시판 및 ADT 상주 SI(System Integration) 업무 "
+            - "ADT, HITE 및 아모레의 시판 계열 프로젝트 Back-End SM(추가개발 및 유지보수)업무 수행"
+            - "아모레 시판 및 ADT에 대해 상주 SI(System Integration) Back-End 업무 수행"
     projects:
         - time:             "5 months in 2017"
           team:             "Team of 2"
