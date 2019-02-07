@@ -4,7 +4,7 @@
         <header class="post-header short-diver">
             <h1 class="post-title" itemprop="name headline">{{ server.title }}</h1>
             <section class="post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ server.date | date: "%b %-d, %Y" }}</time> 
+                <time datetime="{{ server.date | date_to_xmlschema }}" itemprop="datePublished">{{ server.date | date: "%b %-d, %Y" }}</time> 
                 on
                 {% for tag in server.tags limit:5 %}
                 <span><a href="">{{ tag }}</a></span>
@@ -17,7 +17,7 @@
         </section>
 
         <footer class="post-footer"> 
-            {% include authorinfo.html param=post.author %}
+            {% include authorinfo.html param=server.author %}
         </footer>
 
     </article>
