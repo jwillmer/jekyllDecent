@@ -1,6 +1,6 @@
 ---
 layout:    page
-permalink: "/offline-warning/"
+permalink: "/server_server/"
 author:    jwillmer
 weight:    5
 menutitle: Server
