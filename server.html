@@ -5,8 +5,8 @@ layout: default
 <h2 class="post-title">Server is here</h2>
 <hr />
 
-{% assign reverse_posts = site.server | sort | reverse %}
-{% for server in reverse_posts %}
+{% assign reverse_server = site.server | sort | reverse %}
+{% for server in reverse_server %}
 {% unless server.draft %}
 {% include post-list-item.html %}
 {% endunless %}
