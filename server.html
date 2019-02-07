@@ -8,7 +8,7 @@ layout: default
 {% assign reverse_server = site.server | sort | reverse %}
 {% for server in reverse_server %}
 {% unless server.draft %}
-{% include post-list-item.html %}
+{% include server-list.html %}
 {% endunless %}
 {% endfor %}
 
