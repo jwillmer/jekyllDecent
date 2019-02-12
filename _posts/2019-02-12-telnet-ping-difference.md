@@ -33,7 +33,7 @@ Ping 테스트를 할때 응답이 잘오는데 Telnet 테스트를 할때는 �
 
 <aside>
 <figure class="left">
-<img src="{{ "/assets/mountain-alternative-cover.jpg" | absolute_url }}" />
+<img src="{{ "/media/img/mountain1.jpg" | absolute_url }}" />
 <figcaption>What a view!</figcaption>
 </figure>
 </aside>
