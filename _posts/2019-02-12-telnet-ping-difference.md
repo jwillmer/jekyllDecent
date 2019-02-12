@@ -44,23 +44,19 @@ Sender의 7 Layer에서 1 Layer로, Reciever의 1 Layer에서 7Layer로 가치�
 
 Ping은 3 Layer를 확인을 하고 Telnet은 5 Layer를 확인하는 거죠.
 
-## sadf
+## 경험
 
-즉, ping에서 응답이 오지 않는다면 ####장비(H/W, OS, NETWORK) 
+즉, ping에서 응답이 오지 않는다면 장비(H/W, OS, NETWORK)에 대한 확인을
+telnet에 대해 응답이 없으면 해당 서비스에 대한 확인이 필요합니다.
 
-'분명 내가 개발한 쿼리에선 FROM절이 필요없는데 뭐지?'
+이것을 토대로 인프라 세팅을 하거나 요청할때 작업을 하였고,
+제가 이전에 말했던 문제 원인은 Ping은 잘가는데 Telnet이 응답하지 않은 원인은 Telnet에 대한 정의에서 찾을 수 있었습니다.
+Telnet은 말그대로 서.비.스! 를 체크를 합니다.
+저는 OS, Server세팅을 마무리하고 잘 뚤렸나 확인하려 Telnet 테스트를 했지만, 이 당시 instance를 올려지 않아 
+해당 IP 및 PORT는 열려있었지만 서.비.스! 가 실행되고 있지 않아 응답이 없었던 것입니다.
 
-몇시간을 헤매다 알고보니 너무 허무한 에러였습니다.ㅋㅋㅋㅋㅋ
-validation query 에서 오류가 났던 것이었습니다. 
+지금보면 참 어이없는 실수인데
+그 당시 위의 개념을 몰랐을때 얼마나 고생을 했는지....ㅋㅋㅋ
 
-```xml
-<bean id="oracle" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-        <property name="validationQuery" value="SELECT 1" />
-</bean>
-```
-MSSQL이나 MySQL에선 해당 쿼리가 지원하지만 Oracle에서 지원하지 않는다는 사실!
-validation query를 select 1 from dual로 바꾸고 해결~
-
-또 다시 같은 실수를 반복하지 않기 위해 남깁니다!
+이 글을 저보고 저와 같은 실수를 하지 않길 바랍니다~
 
