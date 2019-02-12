@@ -29,14 +29,24 @@ Ping 테스트를 할때 응답이 잘오는데 Telnet 테스트를 할때는 �
 이럴때 ping과 telnet의 개념를 알면 이유를 들으며 여기가 문제가 되고 있다고 말할 수 있을 것입니다.
 
 ## Telnet과 Ping의 개념
+
 우선 통신을 할때 아래의 7단계에 따라 통신을 하게 됩니다.
 
 <aside>
 <figure>
 <img src="{{ "/media/img/network/7layer.PNG" | absolute_url }}" />
-<figcaption>What a view!</figcaption>
+<figcaption>OSI 7 Layer Model</figcaption>
 </figure>
 </aside>
+
+Sender에서 Reciever에서 통신을 할 때 
+Sender의 7 Layer에서 1 Layer로, Reciever의 1 Layer에서 7Layer로 가치게 됩니다.
+
+Ping은 3 Layer를 확인을 하고 Telnet은 5 Layer를 확인하는 거죠.
+
+## sadf
+
+즉, ping에서 응답이 오지 않는다면 ####장비(H/W, OS, NETWORK) 
 
 '분명 내가 개발한 쿼리에선 FROM절이 필요없는데 뭐지?'
 
