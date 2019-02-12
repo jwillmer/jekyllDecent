@@ -28,7 +28,15 @@ Ping 테스트를 할때 응답이 잘오는데 Telnet 테스트를 할때는 �
 요청을 하거나 어디서 막히고 있는지 파악하여 그 개발자와 이야기를 해야하는데
 이럴때 ping과 telnet의 개념를 알면 이유를 들으며 여기가 문제가 되고 있다고 말할 수 있을 것입니다.
 
+## Telnet과 Ping의 개념
+우선 통신을 할때 아래의 7단계에 따라 통신을 하게 됩니다.
 
+<aside>
+<figure class="left">
+<img src="{{ "/media/img/mountain3.jpg" | absolute_url }}" />
+<figcaption>What a view!</figcaption>
+</figure>
+</aside>
 
 '분명 내가 개발한 쿼리에선 FROM절이 필요없는데 뭐지?'
 
