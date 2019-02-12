@@ -32,7 +32,7 @@ Ping 테스트를 할때 응답이 잘오는데 Telnet 테스트를 할때는 �
 우선 통신을 할때 아래의 7단계에 따라 통신을 하게 됩니다.
 
 <aside>
-<figure class="left">
+<figure>
 <img src="{{ "/media/img/network/7layer.PNG" | absolute_url }}" />
 <figcaption>What a view!</figcaption>
 </figure>
