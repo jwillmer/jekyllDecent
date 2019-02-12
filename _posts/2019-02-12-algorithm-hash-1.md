@@ -67,5 +67,28 @@ class Solution {
 
  - 자꾸 String배열에 length함수가 아닌 size함수를 사용한다. 베열은 length, 리스트가 size()!
  - equals() 만족하면 배열에서 제거하고 팠지만 찾지 못해서 ""값으로 대체. 개인적으로 위험하다고 판단되
+ - 푸는 것만 급급해 해쉬를 사용할 생각을 못했네요.
 
+## 점수가 높았던 답안
+
+```java
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+string solution(vector<string> participant, vector<string> completion) {
+    string answer = "";
+    sort(participant.begin(), participant.end());
+    sort(completion.begin(), completion.end());
+    for(int i=0;i<completion.size();i++)
+    {
+        if(participant[i] != completion[i])
+            return participant[i];
+    }
+    return participant[participant.size() - 1];
+    //return answer;
+}
+```
 
