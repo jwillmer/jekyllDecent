@@ -7,7 +7,7 @@ tags:              Jekyll YAML Features Explained
 category:          Features
 author:            jwillmer
 cover:             /assets/mountain-alternative-cover.jpg
-published:         true
+published:         false
 redirect_from:     "/YAML-Features-Redirect/"
 cover:             /assets/mountain-alternative-cover.jpg
 language:          EN
