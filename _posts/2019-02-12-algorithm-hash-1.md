@@ -41,7 +41,30 @@ participant	                            completion	                      return
 ## 본인답안
 
 ```java
-String i = "헬러"
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        for(int i = 0; i < participant.length; i++){
+            boolean finish = true;
+            
+            for(int j = 0; j < completion.length; j++){
+                if(completion[j].equals(participant[i])){
+                    completion[j] = "";
+                    finish = false;
+                    break;
+                }
+            }
+            
+            if(finish){
+                return participant[i];
+            }
+        }      
+        return "문제에 맞지 않는 현상이 발견 되었습니다.";
+    }
+}
 ```
+
+## 알게된 것
+
+ - 자꾸 String배열에 length함수가 아닌 size함수를 사용한다. 베열은 length, 리스트가 size()!
 
 
