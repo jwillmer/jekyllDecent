@@ -7,7 +7,7 @@ category:          Algorithm
 author:            geunyoung
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
-redirect_from:     "/algoith1/"
+redirect_from:     "/algoith2/"
 cover:             /assets/mountain-alternative-cover.jpg
 language:          KO
 comments:          true
