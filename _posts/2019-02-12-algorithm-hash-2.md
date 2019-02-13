@@ -47,33 +47,35 @@ phone_book                   	return
 ## 본인답안
 
 ```java
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
 class Solution {
-    public String solution(String[] participant, String[] completion) {
-        for(int i = 0; i < participant.length; i++){
-            boolean finish = true;
-            
-            for(int j = 0; j < completion.length; j++){
-                if(completion[j].equals(participant[i])){
-                    completion[j] = "";
-                    finish = false;
-                    break;
-                }
-            }
-            
-            if(finish){
-                return participant[i];
-            }
-        }      
-        return "문제에 맞지 않는 현상이 발견 되었습니다.";
+    public boolean solution(String[] phone_book) {
+        HashMap<String, Integer> temMap = new HashMap<>();
+        for(String phone_number : phone_book){
+        	Set set = temMap.keySet();
+        	Iterator iterator = set.iterator();
+        	while(iterator.hasNext()){
+        		Object object = iterator.next();
+        		int result = phone_number.indexOf(object.toString());
+        		if(!(result == -1)){
+        			return false;
+        		}
+                
+                result = object.toString().indexOf(phone_number);
+        		if(!(result == -1)){
+        			return false;
+        		}
+        	}
+        	temMap.put(phone_number, 0);
+        }
+        return true;
     }
 }
 ```
 
-## 알게된 점 및 아쉬운 점
-
- - 자꾸 String배열에 length함수가 아닌 size함수를 사용한다. 베열은 length, 리스트가 size()!
- - equals() 만족하면 배열에서 제거하고 팠지만 찾지 못해서 ""값으로 대체. 개인적으로 위험하다고 판단되
- - 푸는 것만 급급해 해쉬를 사용할 생각을 못했네요.
 
 ## 점수가 높았던 답안
 
@@ -97,3 +99,8 @@ class Solution {
 }
 ```
 
+## 알게된 점 및 아쉬운 점
+
+ - 자꾸 String배열에 length함수가 아닌 size함수를 사용한다. 베열은 length, 리스트가 size()!
+ - equals() 만족하면 배열에서 제거하고 팠지만 찾지 못해서 ""값으로 대체. 개인적으로 위험하다고 판단되
+ - 푸는 것만 급급해 해쉬를 사용할 생각을 못했네요.
