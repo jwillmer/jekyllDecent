@@ -79,15 +79,6 @@ class Solution {
 ```java
 import java.util.HashMap;
 
-4
-5
-6
-7
-8
-9
-10
-11
-12
 class Solution {
     public boolean solution(String[] phoneBook) {
        for(int i=0; i<phoneBook.length-1; i++) {
