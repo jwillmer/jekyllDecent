@@ -54,26 +54,27 @@ import java.util.Iterator;
 import java.util.Set;
 
 class Solution {
-    public boolean solution(String[] phone_book) {
-        HashMap<String, Integer> temMap = new HashMap<>();
-        for(String phone_number : phone_book){
-        	Set set = temMap.keySet();
-        	Iterator iterator = set.iterator();
-        	while(iterator.hasNext()){
-        		Object object = iterator.next();
-        		int result = phone_number.indexOf(object.toString());
-        		if(result == 0){
-        			return false;
-        		}
-        		
-        		result = object.toString().indexOf(phone_number);
-        		if(!(result == 0)){
-        			return false;
-        		}
-        	}
-        	temMap.put(phone_number, 0);
-        }
-        return true;
+    public int solution(String[][] clothes) {
+    	HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
+    	for(String clothe[] :clothes){
+    		if(!hashmap.containsKey(clothe[1])){
+    			hashmap.put(clothe[1],2); //안 입는 경우 포함해서 
+    		}else{
+    			hashmap.put(clothe[1], hashmap.get(clothe[1]).intValue() +1);
+    		}
+    	}
+    	
+    	Set set = hashmap.keySet();
+    	Iterator iterator = set.iterator();
+    	
+    	int choices = 1;
+    	while(iterator.hasNext()){
+    		String key = iterator.next().toString();
+    		choices = choices*hashmap.get(key).intValue();
+    	}
+    	
+    	choices -= 1;  //다 안입는 경우 제거
+        return choices;
     }
 }
 ```
@@ -83,31 +84,28 @@ class Solution {
 
 ```java
 import java.util.HashMap;
-
-4
-5
-6
-7
-8
-9
-10
-11
-12
+import java.util.Iterator;
 class Solution {
-    public boolean solution(String[] phoneBook) {
-       for(int i=0; i<phoneBook.length-1; i++) {
-            for(int j=i+1; j<phoneBook.length; j++) {
-                if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
-                if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
+    public int solution(String[][] clothes) {
+        int answer = 1;
+        HashMap<String, Integer> map = new HashMap<>();
+        for(int i=0; i<clothes.length; i++){
+            String key = clothes[i][1];
+            if(!map.containsKey(key)) {
+                map.put(key, 1);
+            } else {
+                map.put(key, map.get(key) + 1);
             }
         }
-        return true;
+        Iterator<Integer> it = map.values().iterator();
+        while(it.hasNext()) {
+            answer *= it.next().intValue()+1;
+        }
+        return answer-1;
     }
 }
 ```
 
 ## 알게된 점 및 아쉬운 점
 
- - 문제를 제대로 읽지 않아 시간 낭비가 길었습니다.(접두어인 경우인데 존재하는 지 여부로 생각하고 풀었습니다. )
- - 해시맵이라 해서 억지로 해시맵을 만든 느낌이 강하네요...
- - 배열 함수중 startsWith라는 게 있네요
+ - Iterator를 통해 key와 value를 가져올 때 불필요한 코드가 많아 보이네
