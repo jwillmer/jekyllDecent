@@ -46,64 +46,65 @@ arrangement	            return
 ## 본인답안
 
 ```java
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+    import java.util.Stack;
 
-class Solution {
-    public int solution(String[][] clothes) {
-    	HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
-    	for(String clothe[] :clothes){
-    		if(!hashmap.containsKey(clothe[1])){
-    			hashmap.put(clothe[1],2); //안 입는 경우 포함해서 
-    		}else{
-    			hashmap.put(clothe[1], hashmap.get(clothe[1]).intValue() +1);
+    public static int solution(String arrangement) {
+    	char[] charArray = arrangement.toCharArray();
+    	
+    	int stickCount = 0;
+    	char tempChar = 'x';
+    	
+    	Stack<Character> stack = new Stack<Character>();
+    	for(char word : charArray ){
+    		if(stack.empty()){
+    			stack.push(word);
+    		}else{    			
+    			if(word == ')'){
+    				stack.pop();
+    				
+    				if(tempChar == '('){
+    					stickCount += stack.size();
+    				}else{
+    					stickCount += 1;
+    				}
+    			}else{
+    				stack.push(word);
+    			}
     		}
+    		tempChar = word;
     	}
-    	
-    	Set set = hashmap.keySet();
-    	Iterator iterator = set.iterator();
-    	
-    	int choices = 1;
-    	while(iterator.hasNext()){
-    		String key = iterator.next().toString();
-    		choices = choices*hashmap.get(key).intValue();
-    	}
-    	
-    	choices -= 1;  //다 안입는 경우 제거
-        return choices;
+        return stickCount;
     }
-}
 ```
 
 
 ## 점수가 높았던 답안
 
 ```java
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
+
 class Solution {
-    public int solution(String[][] clothes) {
-        int answer = 1;
-        HashMap<String, Integer> map = new HashMap<>();
-        for(int i=0; i<clothes.length; i++){
-            String key = clothes[i][1];
-            if(!map.containsKey(key)) {
-                map.put(key, 1);
-            } else {
-                map.put(key, map.get(key) + 1);
+    public static int solution(String arrangement) {
+        int answer = 0;
+        Stack<Integer> st = new Stack<>();
+        for (int i = 0; i < arrangement.length(); i++) {
+            if (arrangement.charAt(i) == '(') {
+                st.push(i);
+            } else if (arrangement.charAt(i) == ')') {
+                if (st.peek() + 1 == i) {
+                    st.pop();
+                    answer += st.size();
+                } else {
+                    st.pop();
+                    answer += 1;
+                }
             }
         }
-        Iterator<Integer> it = map.values().iterator();
-        while(it.hasNext()) {
-            answer *= it.next().intValue()+1;
-        }
-        return answer-1;
+        return answer;
     }
 }
 ```
 
 ## 알게된 점 및 아쉬운 점
 
- - Iterator를 통해 key와 value를 가져올 때 불필요한 코드가 많아 보이네요
 
