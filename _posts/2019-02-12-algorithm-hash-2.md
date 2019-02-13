@@ -59,12 +59,12 @@ class Solution {
         	while(iterator.hasNext()){
         		Object object = iterator.next();
         		int result = phone_number.indexOf(object.toString());
-        		if(!(result == -1)){
+        		if(result == 0){
         			return false;
         		}
         		
         		result = object.toString().indexOf(phone_number);
-        		if(!(result == -1)){
+        		if(!(result == 0)){
         			return false;
         		}
         	}
@@ -81,25 +81,29 @@ class Solution {
 ```java
 import java.util.HashMap;
 
+4
+5
+6
+7
+8
+9
+10
+11
+12
 class Solution {
-    public String solution(String[] participant, String[] completion) {
-        String answer = "";
-        HashMap<String, Integer> hm = new HashMap<>();
-        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
-        for (String player : completion) hm.put(player, hm.get(player) - 1);
-
-        for (String key : hm.keySet()) {
-            if (hm.get(key) != 0){
-                answer = key;
+    public boolean solution(String[] phoneBook) {
+       for(int i=0; i<phoneBook.length-1; i++) {
+            for(int j=i+1; j<phoneBook.length; j++) {
+                if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
+                if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
             }
         }
-        return answer;
+        return true;
     }
 }
 ```
 
 ## 알게된 점 및 아쉬운 점
 
- - 자꾸 String배열에 length함수가 아닌 size함수를 사용한다. 베열은 length, 리스트가 size()!
- - equals() 만족하면 배열에서 제거하고 팠지만 찾지 못해서 ""값으로 대체. 개인적으로 위험하다고 판단되
- - 푸는 것만 급급해 해쉬를 사용할 생각을 못했네요.
+ - 문제를 제대로 읽지 않아 시간 낭비가 길었습니다.(접두어인 경우인데 존재하는 지 여부로 생각하고 풀었습니다. )
+ - 해시맵이라 해서 억지로 해시맵을 만든 느낌이 강하네요...
