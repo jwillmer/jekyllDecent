@@ -12,7 +12,7 @@ redirect_from:     "/algoith3/"
 cover:             /assets/mountain-alternative-cover.jpg
 language:          KO
 comments:          true
-math:		   false
+math:		            false
 ---
 
 
