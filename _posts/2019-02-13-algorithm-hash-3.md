@@ -108,4 +108,4 @@ class Solution {
 
 ## 알게된 점 및 아쉬운 점
 
- - Iterator를 통해 key와 value를 가져올 때 불필요한 코드가 많아 보이네
+ - Iterator를 통해 key와 value를 가져올 때 불필요한 코드가 많아 보이네요
