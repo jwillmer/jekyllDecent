@@ -58,4 +58,4 @@ transactionManager의 type에는 MANAGED와 JDBC가 존재한다.
  - MANAGED : 자동적으로 열고 닫기가 자동으로 되며 그 외의 기능은 존재하지 않는다.
  - JDBC : commit, rollback 제공하며 특정 설정에 관해서는 open과 close도 해주어야 한다.
  
-transactionManager을 JDBC로 바꾸기 잘작동하였다.
+transactionManager을 JDBC로 바꾸니 정상 작동하였다.
