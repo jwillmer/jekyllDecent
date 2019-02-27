@@ -98,10 +98,7 @@ URL이름4	Uri = "/루트컨텍스트4", Svrtype = JSV, SVRNAME = 서버3, VHOST
 ## 해당 환경설정 적용시키기
 
 리눅스 기준 명령어
-컴파일 후 wscfl -i http.m
-웹서비스 껏다가 wsdown -i
-다시 키면 wsboot -i
-적용완료~
+컴파일(wscfl -i http.m) 웹서비스 껏다가(wsdown -i) 다시 켜면(wsboot -i) 적용완료
 
 
 
