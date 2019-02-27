@@ -35,59 +35,59 @@ math:		   false
 
 *NODE
 SAPWBBN1	
-    WEBTOBDIR="/jeus/webtob", 
-		SHMKEY = 54000,
-		DOCROOT="/jeus/webtob/docs",
-		PORT = "8088", 
-		HTH = 1,
-		#Group = "nobody",
-		#User = "nobody",
-		NODENAME = "$(NODENAME)",
-		ERRORDOCUMENT = "503",
-		#Options="IgnoreExpect100Continue",
-		JSVPORT = 9900,
-		IPCPERM = 0777,
-		LOGGING = "log1",
-		ERRORLOG = "log2",
-		SYSLOG = "syslog"
+	WEBTOBDIR="/jeus/webtob", 
+	SHMKEY = 54000,
+	DOCROOT="/jeus/webtob/docs",
+	PORT = "8088", 
+	HTH = 1,
+	#Group = "nobody",
+	#User = "nobody",
+	NODENAME = "$(NODENAME)",
+	ERRORDOCUMENT = "503",
+	#Options="IgnoreExpect100Continue",
+	JSVPORT = 9900,
+	IPCPERM = 0777,
+	LOGGING = "log1",
+	ERRORLOG = "log2",
+	SYSLOG = "syslog"
 
 *HTH_THREAD
 hth_worker
-    SendfileThreads = 4,
-    AccessLogThread = Y,
-    #ReadBufSize=1048576, #1M
-    #HtmlsCompression="text/html",
-    #SendfileThreshold=32768,
-    WorkerThreads=8
+	SendfileThreads = 4,
+	AccessLogThread = Y,
+	#ReadBufSize=1048576, #1M
+	#HtmlsCompression="text/html",
+	#SendfileThreshold=32768,
+	WorkerThreads=8
 
 *VHOST
 호스트명
-    DOCROOT="/jeus/webtob/docs",
-    HOSTNAME = :"도메인명",
-    HOSTALIAS = "해당 도메인에 매핑될 IP혹은 도메인",
-    PORT = "포트",
-    ServiceOrder = "uri,ext",
-    ERRORDOCUMENT = "400,401,403,404,405,406,503",
-    METHOD = "GET, POST, HEAD, -OPTIONS",
-    LOGGING = "acc_App",
-    ERRORLOG = "err_App"
+	DOCROOT="/jeus/webtob/docs",
+	HOSTNAME = :"도메인명",
+	HOSTALIAS = "해당 도메인에 매핑될 IP혹은 도메인",
+	PORT = "포트",
+	ServiceOrder = "uri,ext",
+	ERRORDOCUMENT = "400,401,403,404,405,406,503",
+	METHOD = "GET, POST, HEAD, -OPTIONS",
+	LOGGING = "acc_App",
+	ERRORLOG = "err_App"
 
 *SVRGROUP
-    htmlg		   SVRTYPE = HTML
-    서버그룹1		SVRTYPE = JSV, VhostName = "vh_App"
-    서버그룹2		SVRTYPE = JSV, VhostName = "vh_App"
-    서버그룹3		SVRTYPE = JSV, VhostName = "vh_App"
+htmlg		   SVRTYPE = HTML
+서버그룹1		SVRTYPE = JSV, VhostName = "vh_App"
+서버그룹2		SVRTYPE = JSV, VhostName = "vh_App"
+서버그룹3		SVRTYPE = JSV, VhostName = "vh_App"
 
 *SERVER
-    서버1 	SVGNAME = 서버그룹1,   MinProc = 30, MaxProc = 30
-    서버2 	SVGNAME = 서버그룹2,   MinProc = 30, MaxProc = 30
-    서버3 	SVGNAME = 서버그룹3,   MinProc = 30, MaxProc = 30
+서버1 	SVGNAME = 서버그룹1,   MinProc = 30, MaxProc = 30
+서버2 	SVGNAME = 서버그룹2,   MinProc = 30, MaxProc = 30
+서버3 	SVGNAME = 서버그룹3,   MinProc = 30, MaxProc = 30
 
 *URI
-  URL이름1  	Uri = "/루트컨텍스트1", Svrtype = JSV, SVRNAME = 서버1, VHOSTNAME ="호스트명"
-  URL이름2	Uri = "/루트컨텍스트2", Svrtype = JSV, SVRNAME = 서버2, VHOSTNAME ="호스트명"
-  URL이름3	Uri = "/루트컨텍스트3", Svrtype = JSV, SVRNAME = 서버3, VHOSTNAME ="호스트명"
-  URL이름4	Uri = "/루트컨텍스트4", Svrtype = JSV, SVRNAME = 서버3, VHOSTNAME ="호스트명"
+URL이름1  	Uri = "/루트컨텍스트1", Svrtype = JSV, SVRNAME = 서버1, VHOSTNAME ="호스트명"
+URL이름2	Uri = "/루트컨텍스트2", Svrtype = JSV, SVRNAME = 서버2, VHOSTNAME ="호스트명"
+URL이름3	Uri = "/루트컨텍스트3", Svrtype = JSV, SVRNAME = 서버3, VHOSTNAME ="호스트명"
+URL이름4	Uri = "/루트컨텍스트4", Svrtype = JSV, SVRNAME = 서버3, VHOSTNAME ="호스트명"
 
 ...이후 생략...
 
