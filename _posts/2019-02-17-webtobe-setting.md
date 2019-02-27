@@ -74,9 +74,9 @@ hth_worker
 
 *SVRGROUP
 htmlg		   SVRTYPE = HTML
-서버그룹1		SVRTYPE = JSV, VhostName = "vh_App"
-서버그룹2		SVRTYPE = JSV, VhostName = "vh_App"
-서버그룹3		SVRTYPE = JSV, VhostName = "vh_App"
+서버그룹1		SVRTYPE = JSV, VhostName = "호스트명"
+서버그룹2		SVRTYPE = JSV, VhostName = "호스트명"
+서버그룹3		SVRTYPE = JSV, VhostName = "호스트명"
 
 *SERVER
 서버1 	SVGNAME = 서버그룹1,   MinProc = 30, MaxProc = 30
