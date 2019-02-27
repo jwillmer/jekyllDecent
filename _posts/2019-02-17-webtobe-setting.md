@@ -1,7 +1,7 @@
 ---
 layout:            post
-title:             "WebtoB 세팅하기"
-menutitle:         "WebtoB 세팅하기"
+title:             "WebtoB - 도메인을 통해 여러 Application 서비스 하기"
+menutitle:         "WebtoB - 도메인을 통해 여러 Application 서비스 하기"
 tags:              WebtoB
 category:          Server
 author:            geunyoung
