@@ -20,19 +20,19 @@ math:		   false
 
 ```java
 
-	@Autowired
-	private DbAdapter dbAdapter;
+@Autowired
+private DbAdapter dbAdapter;
   
-  // 이후 로직 생략
+// 이후 로직 생략
   
-  SqlSession session = null;
-  session.openSession("데이터소스명", false);
-  int result = dbAdapter.insert(session, "매퍼명.쿼리ID",requestParam);
+SqlSession session = null;
+session.openSession("데이터소스명", false);
+int result = dbAdapter.insert(session, "매퍼명.쿼리ID",requestParam);
   
-  if(result != 1){
-    session.rollback();
-    session.close();  
-  }
+if(result != 1){
+  session.rollback();
+  session.close();  
+}
   
 ```
 
