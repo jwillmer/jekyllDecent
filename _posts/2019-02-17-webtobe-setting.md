@@ -64,13 +64,13 @@ hth_worker
 호스트명
     DOCROOT="/jeus/webtob/docs",
     HOSTNAME = :"도메인명",
-		HOSTALIAS = "해당 도메인에 매핑될 IP혹은 도메인",
+    HOSTALIAS = "해당 도메인에 매핑될 IP혹은 도메인",
     PORT = "포트",
-		ServiceOrder = "uri,ext",
-		ERRORDOCUMENT = "400,401,403,404,405,406,503",
-		METHOD = "GET, POST, HEAD, -OPTIONS",
+    ServiceOrder = "uri,ext",
+    ERRORDOCUMENT = "400,401,403,404,405,406,503",
+    METHOD = "GET, POST, HEAD, -OPTIONS",
     LOGGING = "acc_App",
-		ERRORLOG = "err_App"
+    ERRORLOG = "err_App"
 
 *SVRGROUP
     htmlg		   SVRTYPE = HTML
@@ -79,12 +79,12 @@ hth_worker
     서버그룹3		SVRTYPE = JSV, VhostName = "vh_App"
 
 *SERVER
-    서버1 	  SVGNAME = 서버그룹1,   MinProc = 30, MaxProc = 30
-    서버2 		SVGNAME = 서버그룹2,   MinProc = 30, MaxProc = 30
-    서버3 		SVGNAME = 서버그룹3,   MinProc = 30, MaxProc = 30
+    서버1 	SVGNAME = 서버그룹1,   MinProc = 30, MaxProc = 30
+    서버2 	SVGNAME = 서버그룹2,   MinProc = 30, MaxProc = 30
+    서버3 	SVGNAME = 서버그룹3,   MinProc = 30, MaxProc = 30
 
 *URI
-  URL이름1  Uri = "/루트컨텍스트1", Svrtype = JSV, SVRNAME = 서버1, VHOSTNAME ="호스트명"
+  URL이름1  	Uri = "/루트컨텍스트1", Svrtype = JSV, SVRNAME = 서버1, VHOSTNAME ="호스트명"
   URL이름2	Uri = "/루트컨텍스트2", Svrtype = JSV, SVRNAME = 서버2, VHOSTNAME ="호스트명"
   URL이름3	Uri = "/루트컨텍스트3", Svrtype = JSV, SVRNAME = 서버3, VHOSTNAME ="호스트명"
   URL이름4	Uri = "/루트컨텍스트4", Svrtype = JSV, SVRNAME = 서버3, VHOSTNAME ="호스트명"
@@ -93,9 +93,7 @@ hth_worker
 
 ```
 
-설명하자면
-
-## 경험
+도메인/루트컨텍스트3을 통해서 통신이 들어오면 서버3에 서비스되고 있는 투트컨텍스트가 루트컨텍스트3인 서비스와 매핑이 된다.
 
 
 
