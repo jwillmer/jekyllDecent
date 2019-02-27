@@ -1,13 +1,13 @@
 ---
 layout:            post
-title:             "Jndi 의미와 유형"
-menutitle:         "Jndi 의미와 유형"
+title:             "SQL 트랜잭션 처리"
+menutitle:         "SQL 트랜잭션 처리"
 tags:              Jndi
-category:          Server
+category:          Spring
 author:            geunyoung
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
-redirect_from:     "/server1/"
+redirect_from:     "/spring2/"
 cover:             /assets/mountain-alternative-cover.jpg
 language:          KO
 comments:          true
