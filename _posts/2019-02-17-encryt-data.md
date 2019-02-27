@@ -1,7 +1,7 @@
 ---
 layout:            post
-title:             "HTTP 통신 data 암호화/복호화(소스)"
-menutitle:         "HTTP 통신 data 암호화/복호화(소스)"
+title:             "AES방식을 통한 data 암호화/복호화(소스)"
+menutitle:         "AES방식을 통한 data 암호화/복호화(소스)"
 tags:              data encrypt
 category:          Java
 author:            geunyoung
@@ -14,35 +14,70 @@ comments:          true
 math:		   false
 ---
 
-저도 그랬고 많은 사람들이 
-Telnet은 포트 열였는지 확인을,
-Ping은 IP가 열였는지 확인하는 용도 정도로만 알고 있습니다.
+데이터를 주고 받을 때 해킹방지를 위해 암호화하여 보내곤 한다.
+AES(Advanced Encryption Standard) 방식을 통한 암호화 소스이다.
 
-이전에 시스템 개발을 할 때,
-OS(CentOS) 방화벽 및 WS/WAS(WebtoB/JEUS) 방화벽 까지 세팅을 마치고
-Ping과 Telnet을 테스트 하는데
-Ping 테스트를 할때 응답이 잘오는데 Telnet 테스트를 할때는 응답이 오지않아 
-"뭐가 이상한거지?"하며 엄한 곳을 수정하면서 시간을  투자한 경험이 있습니다.
 
-또, 다른 시스템과 연동시 방화벽 해제나 인프라 세팅 관련해서
-요청을 하거나 어디서 막히고 있는지 파악하여 그 개발자와 이야기를 해야하는데
-이럴때 ping과 telnet의 개념를 알면 이유를 들으며 여기가 문제가 되고 있다고 말할 수 있을 것입니다.
 
-## Telnet과 Ping의 개념
+## 소스
 
-우선 통신을 할때 아래의 7단계에 따라 통신을 하게 됩니다.
+```java
 
-<aside>
-<figure>
-<img src="{{ "/media/img/network/7layer.PNG" | absolute_url }}" />
-<figcaption>OSI 7 Layer Model</figcaption>
-</figure>
-</aside>
+public class AES_EnDecode {
+	private static final String KEY = "주고받을 쪽과 약속된 키";
 
-Sender에서 Reciever에서 통신을 할 때 
-Sender의 7 Layer에서 1 Layer로, Reciever의 1 Layer에서 7Layer로 가치게 됩니다.
+	private static byte[] hexToByteArray(String hex) {
+		if (hex == null || hex.length() == 0) {
+			return null;
+		}
+		byte[] byteArray = new byte[hex.length() / 2];
+		for (int i = 0; i < byteArray.length; i++) {
+			byteArray[i] = (byte) Integer.parseInt(hex.substring(2 * i, 2 * i + 2), 16);
+		}
+		return byteArray;
+	}
 
-Ping은 3 Layer를 확인을 하고 Telnet은 5 Layer를 확인하는 거죠.
+	private static String byteArrayToHex(byte[] ba) {
+		if (ba == null || ba.length == 0) {
+			return null;
+		}
+		StringBuffer sb = new StringBuffer(ba.length * 2);
+		String hexNumber;
+		for (int x = 0; x < ba.length; x++) {
+			hexNumber = "0" + Integer.toHexString(0xff & ba[x]);
+			sb.append(hexNumber.substring(hexNumber.length() - 2));
+		}
+		return sb.toString();
+	}
+
+	public static String encrypt(String message) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
+
+		SecretKeySpec skeySpec = new SecretKeySpec(KEY.getBytes(), "AES");
+
+		Cipher cipher = Cipher.getInstance("AES");
+		cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
+		byte[] encrypted = null;
+		try {
+			encrypted = cipher.doFinal(message.getBytes());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return byteArrayToHex(encrypted);
+	}
+
+	public static String decrypt(String encrypted) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, UnsupportedEncodingException {
+		SecretKeySpec skeySpec = new SecretKeySpec(KEY.getBytes(), "AES");
+		Cipher cipher = Cipher.getInstance("AES");
+		cipher.init(Cipher.DECRYPT_MODE, skeySpec);
+		byte[] original = cipher.doFinal(hexToByteArray(encrypted));
+		String originalString = new String(original);
+		return originalString;
+	}
+
+}
+
+```
 
 ## 경험
 
