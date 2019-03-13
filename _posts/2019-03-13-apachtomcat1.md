@@ -1,7 +1,7 @@
 ---
 layout:            post
-title:             "Apach/Tomcat SSL 등록 및 교체"
-menutitle:         "Apach/Tomcat SSL 등록 및 교체"
+title:             "Apach/Tomcat - SSL 등록 및 교체"
+menutitle:         "Apach/Tomcat - SSL 등록 및 교체"
 tags:              Server
 category:          Server
 author:            geunyoung
