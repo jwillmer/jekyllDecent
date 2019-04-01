@@ -17,9 +17,13 @@ math:		   false
 ## 환경파일 찾기
 
 우선 Apache 파일 위치부터 찾아보자.
+
 필자의 해당 서비스 인프라는
+
 OS : Windows
+
 Server : Apache/Tomcat
+
 이다.
 
 <aside>
