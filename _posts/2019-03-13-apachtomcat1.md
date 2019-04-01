@@ -75,6 +75,8 @@ SSLCertificateChainFile "C:/server/Apache/conf/ssl/체인파일명.pem"
 SSLCertificateKeyFile "C:/server/Apache/conf/ssl/키파일명.pem"
 SSLCertificateFile "C:/server/Apache/conf/ssl/인증서파일.pem"
 
+</VirtualHost>
+		
 ```
 
 SSL키매핑할경로및파일명.conf에서 위의 내용만 프로젝트에 맞게 설정라고 나머지는 샘플과 동일하게 하면된다.
