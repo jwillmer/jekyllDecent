@@ -32,18 +32,53 @@ math:		   false
 
 ```xml
 
-<![CDATA[
-	SELECT
-]]>			
-	<foreach collection="list" item="item" index="index" separator=",">
-		#{item}
-	</foreach>	
-<![CDATA[
-	FROM 
-    테이블명
-]]>
+LoadModule ssl_module modules/mod_ssl.so
 
 ```
+
+위의 내용이 주석처리가 되어 있을 텐데 주석을 풀어준다. 해당 내용은 아파치에서 제공해주는 SSL 모듈을 사용하겠다는 뜻이다.
+
+
+```xml
+
+<IfModule ssl_module>
+SSLRandomSeed startup builtin
+SSLRandomSeed connect builtin
+</IfModule>
+
+```
+
+이후, 위의 내용도 주석처리나 안되어 있다면 추가해준다. ssl_module 사용시 세팅에 관한 태그인데 해당 내용은 서비스가 켜질때 SSL이 seedind이 되기 위한 규칙중 Pseudo Random Number Generator (PRNG)의 규칙을 활용한다는 뜻이다. 문서에 의하면 해당 규칙은 그다지 강력한 보안 및 정보를 담지못하며, 만약 다른 외부 방식으로 설정하고 싶다면 SSLRandomSeed startup file:/dev/ssl_num_random, SSLRandomSeed connect file:/dev/ssl_num_random 으로 정할 수 있다.
+
+
+```xml
+
+Include conf/SSL키매핑할경로및파일명.conf
+
+```
+
+으로 ssl매핑할 내용들만 파일로 따로 만들서 관리해준다. 
+
+
+```xml
+
+<VirtualHost _default_:443>
+	
+JkMount ssl 사용할 어플케이션 context 및 서블릿ServerName
+	
+ServerName 도메인명:포트
+	
+SSLProtocol all -SSLv2
+#어떤 프로톨 콜 사용할지 해당 설정은 SSLv2 빼고(-) 다 사용하겠다는 의미. 이유는 1.6에서 SSLv2가 Handshake건헐적으로 발생하여 제거하였음
+
+SSLCertificateChainFile "C:/server/Apache/conf/ssl/체인파일명.pem"
+SSLCertificateKeyFile "C:/server/Apache/conf/ssl/키파핑명.pem"
+SSLCertificateFile "C:/server/Apache/conf/ssl/.pem"
+
+```
+
+SSL키매핑할경로및파일명.conf에서 위의 내용만 프로젝트에 맞게 설정라고 나머지는 샘플과 동일하게 하면된다.
+
 
 ## 원인
 
