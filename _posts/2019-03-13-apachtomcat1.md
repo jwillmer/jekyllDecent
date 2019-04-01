@@ -14,14 +14,15 @@ comments:          true
 math:		   false
 ---
 
-쿼리를 통해 사용하는 컬럼명을 뽑아와
-그 컬럼명을 토대로 다른 테이블을 검색해야 하는 쿼리를 만들어야 했다.
+## 환경파일 찾기
 
-예시)
-select columnName from AAA으로  a, b, c, d를 뽑았으면
-select a,b,c,d from BBB라는 쿼리를 날려야한다.
+우선 Apache 파일 위치부터 찾아보자.
+필자의 해당 서비스 인프라는
+OS : Windows
+Server : Apache/Tomcat
+이다.
 
-## 오류가 났던 XML
+
 
 ```xml
 
