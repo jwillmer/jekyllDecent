@@ -1,6 +1,6 @@
 geunyoung:                                                      # Fallback if nothing is specified
   initial:      Geunny                                        # used for author lookup in posts and for first two characters in the about page back button
-  name:         "김근영(Geun Young Kim)"                       # used to display author name
+  name:         "김근영(Geun-Young Kim)"                       # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/gykim.jpg                           # OPTIONAL: author picture
   bio:          컴퓨터는 거짓말을 하지 않는다.                   # OPTIONAL: text below author name in posts
