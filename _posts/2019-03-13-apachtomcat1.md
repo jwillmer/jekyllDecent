@@ -22,7 +22,11 @@ OS : Windows
 Server : Apache/Tomcat
 이다.
 
-
+<aside>
+<figure>
+<img src="{{ "/media/img/Server/apache.png" | absolute_url }}" />
+</figure>
+</aside>
 
 ```xml
 
