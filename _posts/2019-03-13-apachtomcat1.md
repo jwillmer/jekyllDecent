@@ -17,9 +17,7 @@ math:		   false
 ## 환경파일 찾기
 
 우선 Apache 파일 위치부터 찾아보자.
-필자의 해당 서비스 인프라는
-OS : Windows
-Server : Apache/Tomcat
+필자의 해당 서비스 인프라는 OS가 Windows이며, Server는 Apache/Tomcat이다.
 이다.
 
 <aside>
@@ -27,6 +25,10 @@ Server : Apache/Tomcat
 <img src="{{ "/media/img/Server/apache.png" | absolute_url }}" />
 </figure>
 </aside>
+
+해당 위치에 설정파일이 있다.
+
+## 환경파일 세팅하기
 
 ```xml
 
