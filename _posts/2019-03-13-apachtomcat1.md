@@ -72,21 +72,25 @@ SSLProtocol all -SSLv2
 #어떤 프로톨 콜 사용할지 해당 설정은 SSLv2 빼고(-) 다 사용하겠다는 의미. 이유는 1.6에서 SSLv2가 Handshake건헐적으로 발생하여 제거하였음
 
 SSLCertificateChainFile "C:/server/Apache/conf/ssl/체인파일명.pem"
-SSLCertificateKeyFile "C:/server/Apache/conf/ssl/키파핑명.pem"
-SSLCertificateFile "C:/server/Apache/conf/ssl/.pem"
+SSLCertificateKeyFile "C:/server/Apache/conf/ssl/키파일명.pem"
+SSLCertificateFile "C:/server/Apache/conf/ssl/인증서파일.pem"
 
 ```
 
 SSL키매핑할경로및파일명.conf에서 위의 내용만 프로젝트에 맞게 설정라고 나머지는 샘플과 동일하게 하면된다.
 
+Windows같은 경우 개인키의 패스워드를 제거하고 사용해야 하는데 방법은 openssl프로램을 설치하고 해당 위치에서 cmd를 열어
 
-## 원인
+openssl rsa -in 기존개인키.pem -out 새로운개인키.pem
 
-분명 문제가 없어보이는데 왜 안되는 거지? 혹시 foreach문이 잘못되었나? 하며 루프문에 대해 검색해가며 원인을 찾아보려했지만 해결이 할 수 없었다.
-원인을 바로바로!!!
-변수를 받는 #{item}에 있었다. #{}로 선언을 하면 mybatis문법상 ''를 붙여서 쿼리가 실행이 된다는 것이다.
-즉, select 'a','b','c' from BBB으로 인식이 된것이다.
-${}으로 수정하니 정상작동하였다.
+의 명령어를 실행해 그것을 적용시킨다.
 
+
+
+## 확인하기
+
+이 후 아파치를 재구동하여 확인하면 된다.
+포트확인은 netstat -na | grep 설정포트
+웹페이지로 확인은 https://URL:포트로 확인 가능하다.
 
 
