@@ -25,19 +25,45 @@ math:		   false
 
 위의 그림으로 보면서 인코딩이 필요한 부분들을 알아보자.
 
-우선 필요한 작업이 WebServer를 통과할 때 인코딩이 되어있는지,
-두번째가 WAS를 통과 할 때 인코딩이 되어있는지,
-JSP컴파일시 인코딩이 되어있는지이다.
+우선 필요한 작업이 WebServer/WAS를 통과할 때 인코딩이 되어있는지,
+두번째가 어플리케이션에 들어올 때 인코딩이 되어있는지,
+세번째가 JSP컴파일시 인코딩이 되어 있는지이다.
 
-## 문제 해결 방향
+그래도 안된다면 받은 Request를 프로토콜이 UTF-8이 되어있는지 확인해보자.
 
-### 첫번째 시도
+## 세팅
 
- 가장 처음 의심을 한것은 내가 배포를 잘못한건가에 대한 것이었다. 다시 로컬에서 잘되는 소스를 war로 묶어 재배포하였고 다시 테스트해보니 결과는 실패. war가 풀려있는 디렉토리를 찾아 에러와 관련된 JSP 및 JAVA 파일들을 일일이 다 뒤져보니 시작했다. 잘못 배포되어 있는 소스가 있길 바랬지만 결과는 모두 동일.
+### Webserver(Apache/Tomcat) 기준 UTF-8 수정
+
+Server의 server.xml을 아래와 같이 수정
+
+```xml
+
+<Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" URIEncoding="UTF-8"/>
+<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8"/>
+
+```
+
+### 어플리케이션 UTF-8수정
+
+Application에 있는 web.xml을 아래와 같이 수정
  
-### 두번째 시도
- 
-  소스는 똑같은데 어떻게 로컬에선 안나고 운영에서 나는 것일까? 그 다음 접근은 로그를 통한 원인 파악이었다. 로그를 찍으며 확인해 보니 우선 컨트롤러까지 탔으며 Request값도 정상, 쿼리 및 비지니스 로직도 정상적으로 통과하였다. 모델 변수를 return해줄때 에러가 발생하였다. 이 후 Postman이라는 통신 S/W를 활요하여 해당 서블릿을 불러보니 똑같이 발생. 그로인해 JSP문제가 아니라고 생각을 하였고 해결하는데 시간을 더 걸리게 하였다.
+```xml
+
+	<filter>
+    	<filter-name>encodingFilter</filter-name>
+    	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    	<init-param>
+    	  	<param-name>encoding</param-name>
+      		<param-value>UTF-8</param-value>
+    	</init-param>
+  	</filter>
+  	<filter-mapping>
+    	<filter-name>encodingFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+
+```
   
 ### 세번째 시도
 
