@@ -1,7 +1,7 @@
 ---
 layout:            post
-title:             "Websphere - Application 제대로 설치 되었는데 도메인이 안켜질때"
-menutitle:         "Websphere - Application 제대로 설치 되었는데 도메인이 안켜질때"
+title:             "Websphere - 도메인 매핑이 안됨"
+menutitle:         "Websphere - 도메인 매핑이 안됨"
 tags:              Websphere
 category:          Mistakes & Tips
 author:            geunyoung
