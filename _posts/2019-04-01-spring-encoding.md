@@ -65,31 +65,28 @@ Application에 있는 web.xml을 아래와 같이 수정
 
 ```
   
-### 세번째 시도
+### JSP수정
 
- 그 다음으로 확인한 것은 JEUS세팅이었다. JEUS Setting관련하여 인터넷 검색해보니 JSP 파일의 변화를 인식하고 적용시켜주는 기능이 있었다.
- 
+jsp 맨 위의 페이지에 아래 내용 추가
 
- 
-해당 부분이 체크가 되어 있으면 된다. 체크후 재배포를 하였지만 결과는 동일...
-다음으로 찾은 것은 JSP가 반영되면 compile된 소스는 $JEUS_HOME/webhome/컨테이너명/generated/어플리케이션/jeus_jspwork 저장된다는 내용이며,
-여기의 파일들을 지우고 다시 배포해보라는 것이었다. 이것도 해보았지만 역시 실패. 하지만 컴파일된 경로에 로그에서 보던 800_previewUseDevice_5fjsp.java 파일을 찾았고 디컴파일해서 소스확인해보니 정말 B에 대해서 찾는 로직이 있었던 것이었다.
+```jsp
+
+<%@ page session="false" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+
+```
+
+### Request 프로토콜 추가
+
+보통 저기 3단계까지하면 인코딩이 제대로 되었다. 근데 페이지를 redirect할 때나 값을 다시 JSP 페이지로 넘어갈때 인코딩이 안될때가 있다. 그럼 타고있는 Controller를 찾아서 UTF-8 프로토콜을 추가해준다. 
+
+ex)
+
+```java
+
+@GetMapping(value = "/test", produces = "text/plain;charset=UTF-8")
+public String test(@Valid JavaBean bean, BindingResult result) {
+	return "hello world"
+}
 
 
-## 문제 해결
-
-왜 800_previewUseDevice_5fjsp.java에서 B라는 값을 찾을까? 해답은 JSP 라이플 사이클에서 찾을 수 있었다. 
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Mistakes/jsplifecycle.png" | absolute_url }}" />
-</figure>
-</aside>
-
-에러 원인은 서블릿이 아닌 서블릿 호출 후 리턴되는 JSP파일의 컴파일이 잘못되어 있던 것이었다.
-호출하는 JSP가 아닌 리턴되는 JSP확인해보니 B라는 값에 대해서 "c:set에서 B가 빈값이면 영역을 hide()"라는 로직이 컴파일되면서 B.equals("")로 변환되었고 그곳에서 null point exception이 난 것이다. 해당 로직을 수정하면서 문제가 해결되었다.
-
-그럼 왜 로컬에선 잘되었고 반영시 문제가 되었을까?
-
-로컬에서는 JVM을 1.8로 세팅을 하였고 JEUS는 기본적으로 JVM을 1.6기반으로 만든다고 한다. 그래서 JVM의 버전이 달라 컴파일 방식이 다른것으로 판단된다.
-
+```
