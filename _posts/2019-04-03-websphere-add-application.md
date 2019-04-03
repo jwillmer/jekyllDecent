@@ -12,8 +12,9 @@ language:          KO
 comments:          true
 ---
 
-쿼리를 통해 사용하는 컬럼명을 뽑아와
-그 컬럼명을 토대로 다른 테이블을 검색해야 하는 쿼리를 만들어야 했다.
+콘솔을 통해 애플리케이션을 설치를 완료를 하고 도메인을 통해 호출을 하려했는데 404에러가 발생하였다.
+
+분명 Web Server, WAS, vhost, root Context 등 다 제대로 값이 들어갔는데 안되는 것이었다.
 
 예시)
 select columnName from AAA으로  a, b, c, d를 뽑았으면
