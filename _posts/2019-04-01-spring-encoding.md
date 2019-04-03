@@ -13,32 +13,15 @@ comments:          true
 math:		   false
 ---
 
-## 문제 발생
+## 소스 세팅 전에...
 
-ajax통신을 통해 특정 영역에 JSP를 렌더시키는 작업을 하였다. 작업 완료후 운영(WebtoB/JEUS) 반영하여 테스트를 하는데 결과가 제대로 나오지 않았다. 특이한 것이 A라는 변수를 넣어 통신하는데 ajax통신과 전혀 상관없는 B라는 변수의 유무에 따라 에러가 발생하는 것이었다.
+인코딩 관련하여 설정을 할때 한부분만 설정한다고 되는것이 아니라 여러 부분에서 바꿔줘야한다. 어디를 바꿔야하는지는 데이터들이 어떤 경로를 통해 주고받는지 알면 어디를 설정해줘야하는지 더 쉽게 알 수 있다.
 
-그래서 로그를 확인해보니,
-
-```text
-[Server_App-94] [WEB-3456] Executing the servlet appServlet failed.
-<<__Exception__>>
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.apache.tiles.impl.CannotRenderException: JSPException including path '/WEB-INF/views/useDevice/previewUseDevice.jsp'.
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:789)
-	
-이하 생략
-
-Caused by: java.lang.NullPointerException
-	at jeus_jspwork._WEB_5fINF._views._useDevice._800_previewUseDevice_5fjsp._jspx_meth_c_005fif_005f2(_800_previewUseDevice_5fjsp.java:1523)
-	at jeus_jspwork._WEB_5fINF._views._useDevice._800_previewUseDevice_5fjsp._jspService(_800_previewUseDevice_5fjsp.java:459)
-	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
-
-```
-
-뭐지...? 내가 개발을 잘못했나?
-
-다시 로컬(Apache/Tomcat)에서 테스트 해보니, 잘되는 것이었다. 여기서부터 멘붕에 빠지기 시작하였다.
-
+<aside>
+<figure>
+<img src="{{ "/media/img/Spring/UTF8.PNG" | absolute_url }}" />
+</figure>
+</aside>
 
 ## 문제 해결 방향
 
@@ -54,11 +37,7 @@ Caused by: java.lang.NullPointerException
 
  그 다음으로 확인한 것은 JEUS세팅이었다. JEUS Setting관련하여 인터넷 검색해보니 JSP 파일의 변화를 인식하고 적용시켜주는 기능이 있었다.
  
-<aside>
-<figure>
-<img src="{{ "/media/img/Mistakes/jeus20190326.png" | absolute_url }}" />
-</figure>
-</aside>
+
  
 해당 부분이 체크가 되어 있으면 된다. 체크후 재배포를 하였지만 결과는 동일...
 다음으로 찾은 것은 JSP가 반영되면 compile된 소스는 $JEUS_HOME/webhome/컨테이너명/generated/어플리케이션/jeus_jspwork 저장된다는 내용이며,
