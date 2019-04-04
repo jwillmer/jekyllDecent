@@ -12,15 +12,22 @@ language:          KO
 comments:          true
 ---
 
+## 오류 현상
+
 콘솔을 통해 애플리케이션을 설치를 완료를 하고 도메인을 통해 호출을 하려했는데 404에러가 발생하였다.
-
 분명 Web Server, WAS, vhost, root Context 등 다 제대로 값이 들어갔는데 안되는 것이었다.
+이미 서비스 되고 있는 웹서버 및 어플리케이션서버에 어플리케이션만 추가했는데 왜 안되는거지?
+조금 더 자세히 살펴보니, vhost에 매핑되어 있는 포트에 관해서 서비스가 실행되지 않았고, 실제 서비스가 실행되고 있는 포트로는 호출이 잘되었다.
 
-예시)
-select columnName from AAA으로  a, b, c, d를 뽑았으면
-select a,b,c,d from BBB라는 쿼리를 날려야한다.
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/host1.PNG" | absolute_url }}" />
+</figure>
+</aside>
 
-## 오류가 났던 XML
+## 오류 원인
+
+일반적으로 어플리케이션을 설치하면서 가상호스트, 웹서버, WAS를 매핑하면 자동적으로 웹서버, WAS에서도 매핑이 되야하는데 웹서버에 해당
 
 ```xml
 
