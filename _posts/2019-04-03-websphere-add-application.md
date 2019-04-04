@@ -22,33 +22,39 @@ comments:          true
 <aside>
 <figure>
 <img src="{{ "/media/img/Mistakes/host1.PNG" | absolute_url }}" />
+<figcaption>위의 포트가 실제 HTTP 요청 포트</figcaption>
 </figure>
 </aside>
 
+더욱 미궁속으로 빠져드는데....
+
+
 ## 오류 원인
 
-일반적으로 어플리케이션을 설치하면서 가상호스트, 웹서버, WAS를 매핑하면 자동적으로 웹서버, WAS에서도 매핑이 되야하는데 웹서버에 해당
+일반적으로 어플리케이션을 설치하면서 가상호스트, 웹서버, WAS를 매핑하면 자동적으로 웹서버, WAS에서도 매핑이 되야하는데 웹서버에 해당 어플리케이션이 제대로 되지 않은 것이다. 
 
-```xml
+파악은 아래 사진의 설정에서 
 
-<![CDATA[
-	SELECT
-]]>			
-	<foreach collection="list" item="item" index="index" separator=",">
-		#{item}
-	</foreach>	
-<![CDATA[
-	FROM 
-    테이블명
-]]>
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/websphere10.png" | absolute_url }}" />>
+</figure>
+</aside>
 
-```
+보기를 눌러서 나온 설정에서 추가한 내용이 빠져있는 것이었다.
 
-## 원인
+## 오류 해결
 
-분명 문제가 없어보이는데 왜 안되는 거지? 혹시 foreach문이 잘못되었나? 하며 루프문에 대해 검색해가며 원인을 찾아보려했지만 해결이 할 수 없었다.
-원인을 바로바로!!!
-변수를 받는 #{item}에 있었다. #{}로 선언을 하면 mybatis문법상 ''를 붙여서 쿼리가 실행이 된다는 것이다.
-즉, select 'a','b','c' from BBB으로 인식이 된것이다.
-${}으로 수정하니 정상작동하였다.
+엇, 그럼 적용하려면 웹서버를 꺼야하나? 해당 웹스피어는 운영서버도 같이 반영되어 있어 끄면 운영서비스도 죽게 되는데...?
 
+그렇게 이것저것 찾아보다 웹서버를 죽이지 않고 설정을 추가하는법이 있었다.
+
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/websphere11.PNG" | absolute_url }}" />>
+</figure>
+</aside>
+
+그림에서처럼 웹서버 선택 후 플러그인 생성 후, 플러그인 전파 클릭하면 된다.
+
+이후 웹브라우저를 통해 호출되는 것을 확인하였다.
