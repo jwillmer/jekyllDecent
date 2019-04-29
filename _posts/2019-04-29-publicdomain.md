@@ -12,38 +12,23 @@ language:          KO
 comments:          true
 ---
 
-## 오류 현상 1
+## 공부하게된 계기
 
-pom.xml에 아래의 라이브러리를 추가했더니
-```xml
-		<dependency>
-			<groupId>commons-net</groupId>
-			<artifactId>commons-net</artifactId>
-			<version>3.5</version>
-      <scope>provided</scope>
-		</dependency>
-```
+개발을 하여 고객들에게 서비스를 제공하기 위해서
 
-로컬 구동시 아래와 같은 에러가 발생하였다.
-```text
-... noClassDefFound error on ftp client: org.apache.commons.net.ftp.FTPClient
+'공인IP를 열어 도메인을 매핑'시킨다고 한다.
 
-```
+이말을 처음 듣고 생겼던 의문들은
 
-으잉? 왜 그러지...
+1) IP는 서비스되는 고유한 위치인데 어떻게 다른 IP에 매핑을 시킬까?
 
-## 오류 파악하기 (실패)
+2) 공인으로 수정시 어짜피 모든 사람에게 오픈이 되는 것인데 공인IP를 통한 접근과 특정 포트를 오픈하는게 보안적으로 어떻게 다른 것인가?
 
-역시 처음에는 단순히 라이브러리가 추가가 안된거겠지 하면서,
-project explorer에서 해당 라이브러리를 찾았았더니 존재하였다...
+였다.
 
-음... java build path에 안 잡힌것 인가?
+여기에 대한 의문점을 풀기 위해 찾아보았다.
 
-찾아봤더니 역시나 잡혀있었다...
-
-
-해당 라이브러리는 서버켤때부터 적용이 되어야 하나?
-deploy assembly에 따로 추가!
+## 공인IP로 매핑한다?
 
 역시 해결이 안되었다...
 
