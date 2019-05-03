@@ -41,26 +41,20 @@ WAS 문제로 인식 후에 catalina의 로그를 확인.
 </figure>
 </aside>
 
-```text
+로그를  살펴보면
 
+Waiting for 1 instance to be deallocated ->서버가 재기동이 되었고
 
-```
+but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered -> JDBC Driver가 문제생겨 장제로 종료하려 했지만
 
-## 오류 파악 하기 (성공)
+but has failed to stop it. This is very likely to create a memory leak. -> 종료하지 못하여 memort leak이 발생하였다
 
-문제는 pom.xml 설정에 있었다.
+라는 걸 볼 수 있다.
 
-pom.xml 태그들에 대해 정확히 알아보지 않고 인터넷에 있는 그대로 쓰다가 크게 데였다.
+## 문제 접근 3
 
-scope의 특성때문에 에러가 났던것이었다.
+그럼 무엇 때문에 서버가 재기동 되었을까?
 
-## 원인 정리
+그전에 일어났던 내역을 제니퍼 툴을 활용하여 데이터 확인을 해보니 insert 및 update하는 데 10분 이상이  걸린 내역이 있으며, 트랜잭션이 꽉차서 처리하지 못햇다는 에러 내역들이 존재 하였다.
 
- - compile : 컴파일 할때 필요. 테스트 및 런타임에도 클래스 패스에 포함 된다. scorp 을 설정 하지 않는 경우 기본값이다.
- - runtime : 런타임에 필요. JDBC 드라이버 등이 예가 된다. 컴파일 시에는 필요하지 않지만, 실행 시에 필요한 경우.
- - provided : 컴파일 시에 필요하지만, 실제 런타임 때에는 컨테이너 같은 것에서 제공되는 모듈. servlet, jsp api 등이 이에 해당. 배포시 제외된다.
- - test : 테스트 코드를 컴파일 할때 필요. 테스트시 클래스 패스에 포함되며, 배포시 제외된다.
- 
-나의 세팅은 provided로 되어 있어 로컬에서 구동시 적용이 안되었던 것이었다.
-
-pom.xml태그에 대해 다시 공부하여 되는 계기가 되었다.
+그것때문에 서버가 과부하 걸리다 재기동 되었는지 확답은 할 수 없지만 우선 해당 쿼리에 대해 수정을 하고 지켜보기로 결정하였다.
