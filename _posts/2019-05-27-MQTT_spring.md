@@ -1,9 +1,9 @@
 ---
 layout:            post
-title:             "UTF-8 Encoding 하기"
-menutitle:         "UTF-8 Encoding 하기"
-tags:              Spring Encoding
-category:          Spring
+title:             "bean을 통한 MQTT 객체 생성"
+menutitle:         "bean을 통한 MQTT 객체 생성"
+tags:              MQTT
+category:          MQTT
 author:            geunyoung
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
