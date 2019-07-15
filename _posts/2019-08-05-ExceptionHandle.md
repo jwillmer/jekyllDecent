@@ -152,41 +152,6 @@ public class ExceptionController {
 
 ```
 
-다양한 방법을 로그를 확인 할 수 있다.
-
-1. **git log --branches --decorate**
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice27.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-2. **git log --branches --decorate --graph**
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice28.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-3. **git log --branches --decorate --graph --oneline**
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice29.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-형상 관리하다 보면 아래의 사진과 같이 나타난다.
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice30.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-
 
 ### Git 실습하기 3(병합하기)
 
@@ -209,7 +174,7 @@ public class ExceptionController {
 </aside>
 
 
-### branch 개념 응용
+## Exception Handling 하며 느낀점 및 깨달았던 부분
 
 Git의 공식홈페이지인 https://git-scm.com/doc에서 설명이 너무 잘되어있어 블로그에 따로 정리하지 않았지만 보다 더 깊게 git을 활용할 수 있게 만드는 중요한 내용들을 따로 리스트업 해둔다.
 
