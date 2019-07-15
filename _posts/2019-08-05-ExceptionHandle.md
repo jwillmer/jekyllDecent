@@ -28,62 +28,22 @@ exception은 프로젝트가 진행 도중 예기치 않았던 이상 상태가 
 프로젝트를 개발하는 개발자들은 일반적으로 exception에 대해서만 고민을 하고 handling을 한다.
 
 
-### Git 실습하기 1(브랜치 생성)
+### Spring Exception Handling 방식
 
-리눅스 명령어는 따로 설명하지 않고 진행하겠다.
+우선 Java에서 try catch finally문을 이용하여 Exception을 잡는다는 것은 안다는 전제하에 진행하겠다.
 
-현재 프로젝트에서 다른 기능을 추가하는 예시로 실습을 해보겠다 
+Spring에서는 Exception에 대한 소스를 개발할때 일반적으로 3가지 정도를 생각하며 정리한다.
 
-1. Git bash를 실행 후 자신이 init한 디렉토리로 이동
+1. 예외별로 - Exception에서는 다양한 종류들이 존재한다. (ParseException, NullPointException, FileNotFountException 등등) 그 종류별로 처리를 해준다.
 
-2. 명령어 **git branch 브랜치명**을 통해 브랜치 생성
+2. 컨트롤러별로 - Spring으로 프로젝트를 진행하다보면 기능에 따라 묶다보면 여러개의 컨트롤러가 생긴다. 컨트롤러에 따라 Excption을 처리해준다.
 
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice21.PNG" | absolute_url }}" />
-</figure>
-</aside>
+3. 전역별로 - 전역적으로 발생하는 예외들에 대해 처리한다.
 
 
-3. 명령어 **git branch**를 통해 브랜치 생성된 것을 확인
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice22.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-여기서 master란 **git init**을 할때 생성돠는 기본이 되는 브랜치이고 초록색으로 표시된 브랜치가 현재 작업하는 브랜치이다.
+### Spring Exception Handling 소스
 
 
-4. 명령어 **git checkout branch명**을 통해 새로 생성한 브랜치로 이동(참고로 **git checkout -b branch명**을 통해 생성후 바로 이동이 가능)
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice23.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-5. 새로운 기능에 대한 파일을 추가 후 커밋
-
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice24.PNG" | absolute_url }}" />
-</figure>
-</aside>
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice25.PNG" | absolute_url }}" />
-</figure>
-</aside>
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice26.PNG" | absolute_url }}" />
-</figure>
-</aside>
-
-
-### Git 실습하기 2(브랜치 로그 확인)
 
 다양한 방법을 로그를 확인 할 수 있다.
 
