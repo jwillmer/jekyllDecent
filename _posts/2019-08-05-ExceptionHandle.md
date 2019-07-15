@@ -34,7 +34,7 @@ exception은 프로젝트가 진행 도중 예기치 않았던 이상 상태가 
 
 Spring에서는 Exception에 대한 소스를 개발할때 일반적으로 3가지 정도를 생각하며 정리한다.
 
-1. 예외별로 - Exception에서는 다양한 종류들이 존재한다. (ParseException, NullPointException, FileNotFountException 등등) 그 종류별로 처리를 해준다.
+1. 예외별로 - Exception을 커스텀마이즈하여 그 Exception의 Error Status Code를 매핑하여 처리할 때 사용.
 
 2. 컨트롤러별로 - Spring으로 프로젝트를 진행하다보면 기능에 따라 묶다보면 여러개의 컨트롤러가 생긴다. 컨트롤러에 따라 Excption을 처리해준다.
 
@@ -43,6 +43,38 @@ Spring에서는 Exception에 대한 소스를 개발할때 일반적으로 3가�
 
 ### Spring Exception Handling 소스
 
+예외별 방식부터 살펴보자
+
+예를 들어 id에 0~100사이가 아닐 시 IdFotFoundException이란 커스터마이즈된 Exception을 발생시키고 그 Exception은 RuntimeException으로 처리하고 싶다고 가정하자
+
+```java
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "No such order")
+public class IdNotFoundException extends RuntimeException {
+
+	/**
+	 * Unique ID for Serialized object
+	 */
+	private static final long serialVersionUID = -6184044926029805156L;
+
+	public IdNotFoundException(int orderId) {
+		super(orderId + " not found");
+	}
+}
+
+```
+
+```java
+
+	@GetMapping(value="/checkIdValidation/{id}") 
+	public String checkIdValidation(@PathVariable("id") int id) { 
+		
+		if (id < 0 || id > 100 ) throw new IdNotFoundException(id); 
+		return "it's valid Id"; 
+	}
+
+```
+위와 같이 생성한다면 IdNotFoundException을 통하여 404 에러를 만들 것이다. 
 
 
 다양한 방법을 로그를 확인 할 수 있다.
