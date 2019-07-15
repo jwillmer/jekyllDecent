@@ -41,7 +41,7 @@ Spring에서는 Exception에 대한 소스를 개발할때 일반적으로 3가�
 3. 전역별로 - 전역적으로 발생하는 예외들에 대해 처리한다.
 
 
-### Spring Exception Handling 소스
+### 1. 예외별로
 
 예외별 방식부터 살펴보자
 
@@ -76,6 +76,32 @@ public class IdNotFoundException extends RuntimeException {
 ```
 위와 같이 생성한다면 IdNotFoundException을 통하여 404 에러를 만들 것이다. 
 
+### 2. 컨트롤별 예외처리
+
+@RestController를 통해 컨트롤를 만들 때, 그 안에서 @ExceptionHandler를 활용하여 해당 컨트롤러에서 일어나는 Exception들을 컨트롤하는 방식이다.
+
+
+```java
+
+@RestController
+public class ExceptionController {
+
+	@GetMapping("/localException")
+	public String exception() {
+		throw new IllegalStateException("Sorry!");
+	}
+	
+	@ExceptionHandler
+	public String handle(IllegalStateException e) {
+		return "IllegalStateException handled!";
+	}
+
+}
+
+```
+와 같은 형식이다.
+
+### 3. 글로벌 ㅇ
 
 다양한 방법을 로그를 확인 할 수 있다.
 
