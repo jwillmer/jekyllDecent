@@ -153,30 +153,29 @@ public class ExceptionController {
 ```
 
 
-### Git 실습하기 3(병합하기)
+## Exception Handling 하며 느낀점, 깨달았던 부분, 실수했던 부분
 
-주축이 될 브랜치로 이동 후
+try catch 문에서 catch 구문은 순차적임을 잊지 말아야한다. 즉, 2개의 catch문에 해당되더라도 위의 것에만 걸린다는 뜻이다.
 
-1. **git merge 병합시키고픈 브랜치명**
+예를 들어
 
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice31.PNG" | absolute_url }}" />
-</figure>
-</aside>
+```java
 
-2. 커밋된 브랜치 **git branch -d 브랜치명**을 통해 삭제
+try{
 
-<aside>
-<figure>
-<img src="{{ "/media/img/Git/practice32.PNG" | absolute_url }}" />
-</figure>
-</aside>
+	//로직
+}catch(CustomException1 e){
+	//CustomException1 발생시 로직
+}catch(CustomException2 e){
+	//CustomException2 발생시 로직
+}
 
+```
 
-## Exception Handling 하며 느낀점 및 깨달았던 부분
+에서 CustomException1와 CustomException2에 해당되더라도 CustomException1의 로직만 수행된다.
 
-Git의 공식홈페이지인 https://git-scm.com/doc에서 설명이 너무 잘되어있어 블로그에 따로 정리하지 않았지만 보다 더 깊게 git을 활용할 수 있게 만드는 중요한 내용들을 따로 리스트업 해둔다.
+그 성질을 이용해 나는 글로벌 예외로서는 Exception이나 시스템적 에러 발생시 
+
 
  - Fast-Forword와 recursive strategy의 이해(3way merge)
  - stash의 활용
