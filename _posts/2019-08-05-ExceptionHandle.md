@@ -67,12 +67,16 @@ public class IdNotFoundException extends RuntimeException {
 
 ```java
 
+@RestController
+public class ExceptionController {
+
 	@GetMapping(value="/checkIdValidation/{id}") 
 	public String checkIdValidation(@PathVariable("id") int id) { 
 		
 		if (id < 0 || id > 100 ) throw new IdNotFoundException(id); 
 		return "it's valid Id"; 
 	}
+}
 
 ```
 위와 같이 생성한다면 IdNotFoundException을 통하여 404 에러를 만들 것이다. 
