@@ -40,6 +40,7 @@ Spring에서는 Exception에 대한 소스를 개발할때 일반적으로 3가�
 
 3. 전역별로 - 전역적으로 발생하는 예외들에 대해 처리한다.
 
+## 자 이제 소스로 구현하는 방법을 알아보자
 
 ### 1. 예외별로
 
@@ -101,7 +102,51 @@ public class ExceptionController {
 ```
 와 같은 형식이다.
 
-### 3. 글로벌 ㅇ
+### 3. 글로벌 예외처리
+
+따로 @RestControllerAdvice을 활용하여 @ExceptionHandler을 통해 프로젝트 전체에 일어나는 예외들을 핸들링하는 방식이다.
+
+```java
+
+package com.myproject.spring5.mvc.exceptions;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+	@ExceptionHandler
+	public String handleBusinessException(BusinessException ex) {
+		return "Handled BusinessException";
+	}
+
+}
+
+
+```
+
+```java
+
+package com.myproject.spring5.mvc.exceptions;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ExceptionController {
+
+	@GetMapping("/global-exception")
+	public String businessException() throws BusinessException {
+		throw new BusinessException();
+	}
+
+}
+
+
+```
 
 다양한 방법을 로그를 확인 할 수 있다.
 
