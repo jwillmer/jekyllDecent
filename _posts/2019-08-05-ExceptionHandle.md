@@ -195,17 +195,64 @@ for(int i : integerList){
 	}
 
 }
+
+```
+반대로 하나라도 실패하면 안되면 
+
+```java
+
+List<Integer> integerList;
+
+...로직 이하 생략...
+
+
+try{
+	for(int i : integerList){
+		...삽입로직...
+	}
+}catch(Exception e){
+	logger.error(i.toString() + "를 삽입하는데 에러가 발생하였습니다.")
+}finally{
+	...롤백로직...
+}
+
 ```
 
+와 같은 로직으로 개발한다.
 
- - Fast-Forword와 recursive strategy의 이해(3way merge)
- - stash의 활용
- - auto-merge의 기본적 정책
- - working copy&index&repository의 이해
 
- 
- ### 참고 사이트
-  - https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html
-  - https://www.youtube.com/watch?v=P-EJ-Tkb5FM&list=PLuHgQVnccGMA8iwZwrGyNXCGy2LAAsTXk&index=29
-  - https://git-scm.com/doc
+3. 클라이언트에게 에러가 전달되러면 catch 문에서 다시 throw를 해야한다. 당연한 말이기도 하지만 개발에 대해 익숙치 않을때 실수를 한 부분이다.
+
+예를 들어
+
+```java
+
+	public JsonNode getDetectMainInfo(Object reqBody, String trCode)
+	{
+		try{
+		
+		}catch(Exception){
+		
+		}
+	}
+
+```
+
+과 같이 코딩을 하면 서버내에서만 예외가 발생함을 알 수 있고, 클라이언트나 서블릿 dispatcher는 알 수 없다. 
+따라서 나는 클라이언트나 서블릿 dispatcher가 알아 차릴수 있게 코딩을 할때 아래와 같이 코딩을 하였다.
+
+```java
+
+	public JsonNode getDetectMainInfo(Object reqBody, String trCode)
+	{
+		try{
+		
+		}catch(Exception){
+			logger.error("여기서 에러발생");
+			throw new CustomException("에러코드","에러메세지");
+		}
+	}
+
+```
+와 같이 코딩 하였다.
 
