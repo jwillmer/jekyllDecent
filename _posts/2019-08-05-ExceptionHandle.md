@@ -155,7 +155,8 @@ public class ExceptionController {
 
 ## Exception Handling 하며 느낀점, 깨달았던 부분, 실수했던 부분
 
-try catch 문에서 catch 구문은 순차적임을 잊지 말아야한다. 즉, 2개의 catch문에 해당되더라도 위의 것에만 걸린다는 뜻이다.
+1. try catch 문에서 catch 구문은 순차적임을 잊지 말아야한다. 
+즉, 2개의 catch문에 해당되더라도 위의 것에만 걸린다는 뜻이다.
 
 예를 들어
 
@@ -173,8 +174,28 @@ try{
 ```
 
 에서 CustomException1와 CustomException2에 해당되더라도 CustomException1의 로직만 수행된다.
+그 성질을 이용해 나는 글로벌 예외로서는 Exception이나 시스템적 에러 발생시 나는 예외들을 처리하였고,
+로직적 에러 등은 Exception Class를 extend하여 커스텀마이즈한 후 사용하였다.
 
-그 성질을 이용해 나는 글로벌 예외로서는 Exception이나 시스템적 에러 발생시 
+
+2. catch문에서 예외가 발생하면 catch 내의 로직에서 나오는 것이지, 컨트롤러 전체에서 나오는 것이 아니다.
+
+예를 들어, 100개의 데이터를 삽입해야하는데 그 중에 한개가 실패하더라도 나머지 데이터들에 대해 삽입이 필요한 로직을 짜고 싶으면,
+
+```java
+List<Integer> integerList;
+
+...로직 이하 생략...
+
+for(int i : integerList){
+	try{
+		...삽입로직...
+	}catch(Exception e){
+		logger.error(i.toString() + "를 삽입하는데 에러가 발생하였습니다.")
+	}
+
+}
+```
 
 
  - Fast-Forword와 recursive strategy의 이해(3way merge)
