@@ -1,7 +1,7 @@
 ---
 layout:            post
-title:             "AES방식을 통한 data 암호화/복호화(소스)"
-menutitle:         "AES방식을 통한 data 암호화/복호화(소스)"
+title:             "AES128방식을 통한 data 암호화/복호화(소스)"
+menutitle:         "AES128방식을 통한 data 암호화/복호화(소스)"
 tags:              data encrypt
 category:          Java
 author:            geunyoung
