@@ -1,1 +1,97 @@
+---
+layout:            post
+title:             "JEUS - DataSource가 죽은 상황에서 서버 실행하기"
+menutitle:         "JEUS - DataSource가 죽은 상황에서 서버 실행하기"
+tags:              jeus
+category:          Server
+author:            geunyoung
+cover:             /assets/mountain-alternative-cover.jpg
+published:         true
+cover:             /assets/mountain-alternative-cover.jpg
+language:          KO
+comments:          true
+---
 
+## 들어가기 앞서...
+
+이번 추가 개발 건에서 특이한 현상에 맞딱드리게 되었다. 분명 db툴에서는 3~5 초 내에서 결과를 내던 것이 프로젝트 내에선 10여초가 걸리는 것이었다. 로그 레벨을 낮춰서 혹시 connection 맺는 곳에서 느려지는지, 로직에서 느려지는지, 대체 어디서 느려지는 확인을 했지만 정말 쿼리 실행에서 느린 거였다. 인터넷 검색에도 마땅한 답변을 찾지 못했다가 특정 블로그에서 도움을 받아 해결하였고 정리를 하게되었다.
+
+
+### 문제가 되었던 쿼리
+
+```xml
+
+SELECT
+	...이하 중략...
+FROM
+	...이하 중략...
+WHERE 
+	A = #{a, jdbcType = VARCHAR}
+
+```
+
+과 같은 쿼리였다.
+
+
+### 해결방안
+
+검색을 열심히 했지만 찾기 힘들었지만 결국 도움이 될만한 내용을 찾을 수 있다.
+참고한 블로그는 https://dsmoon.tistory.com/entry/ibatis-%EC%BF%BC%EB%A6%AC-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC-%EB%B0%8F-%EC%A3%BC%EC%9D%98%EC%A0%90-%EB%B3%80%EC%88%98 이다.
+
+해당 내용을 정리하자면 
+
+1. 리터럴 변수(${}형식)과 바인드 변수(#{}형식)이 존재
+
+2. ibatis에서 쿼리가 실행될 때 리터럴 변수는 해당 값이 바로 복사(약간, 자바의 statc final 느낌)
+
+3. 바인드 변수는 OraclePreparedStatment가 생성되면서 jdbcType에 맞게 변수 적용.
+
+이며,
+
+
+실행 순서는 아래와 같다
+
+(1) SELECT NAME FROM A WHERE AGE = #{age} AND SEX = '${male}'
+(2) SELECT NAME FROM A WHERE AGE = #{age} AND SEX = 'MALE'
+(3) SELECT NAME FROM A WHERE AGE = ? AND SEX = 'MALE' <-- 여기서 실행 PLAN 적용
+(4) oracle.jdbc.driver.OraclePreparedStatement 생성
+(5) SELECT NAME FROM A WHERE AGE = '20' AND SEX = 'MALE'
+(6) oracle.jdbc.driver.OraclePreparedStatement.excute() 실행
+
+이러한 순서 때문에 바인드 변수로 쿼리를 실행시키면 범용적 플랜을 적용할 수 밖에 없으며,
+실행 플랜이 달라지면서 속도 차이가 날 수 있는 것이었다.
+
+
+### 현재 소스
+
+```xml
+
+
+SELECT
+	...이하 중략...
+FROM
+	...이하 중략...
+WHERE 
+	A = '{a}'
+
+```
+
+와 같이 수정하였더니 수행 시간이 db툴과 같아졌다.
+추가로 #{a, jdbcType = VARCHAR}에서 자연스럽게 처리해주는 null에 대해서는 ibatis 쿼리 실행전 java단에서 방지시켰다.
+
+### 바인드 변수는 그럼 왜 쓸까?
+
+바인드 변수를 사용함으로써 서버의 과부하를 줄일 수 있다.
+
+무슨 뜻이냐면 DB 및 서버에서 캐쉬와 메모리를 할용하는데 리터럴 변수를 활용하면 해당 내용을 재사용을 한다.
+
+예를 들면 SELECT USER_NAME WHERE T_USER WHERE USER_ID = #{user_id}가 있다면
+SELECT USER_NAME WHERE T_USER WHERE USER_ID = ? 의 형태를 메모리에 올려놓고 쿼리가 불릴때마다 재사용이 된다.
+
+예를 들면 SELECT USER_NAME WHERE T_USER WHERE USER_ID = '${user_id}'
+user_id 변수가 다른 값이 들어올때마다 쿼리가 다시 빌드되어 수행된다.
+
+
+### 결론
+
+리터럴 변수를 활용하되 쿼리 최적화를 시켜도 실행속도가 마음에 안든다면 최후의 보루로 리터럴 변수를 활용하자
