@@ -12,87 +12,65 @@ language:          KO
 comments:          true
 ---
 
-## 들어가기 앞서...
+## 발생 시점
 
-이번 추가 개발 건에서 특이한 현상에 맞딱드리게 되었다. 분명 db툴에서는 3~5 초 내에서 결과를 내던 것이 프로젝트 내에선 10여초가 걸리는 것이었다. 로그 레벨을 낮춰서 혹시 connection 맺는 곳에서 느려지는지, 로직에서 느려지는지, 대체 어디서 느려지는 확인을 했지만 정말 쿼리 실행에서 느린 거였다. 인터넷 검색에도 마땅한 답변을 찾지 못했다가 특정 블로그에서 도움을 받아 해결하였고 정리를 하게되었다.
-
-
-### 문제가 되었던 쿼리
-
-```xml
-
-SELECT
-	...이하 중략...
-FROM
-	...이하 중략...
-WHERE 
-	A = #{a, jdbcType = VARCHAR}
-
-```
-
-과 같은 쿼리였다.
+WebtoB/JEUS 인프라에서 운영중인 시스템에서 여느 때와 같이 운영반영을 진행하였다.
+WebAdmin을 통해 서버를 껐지만 배치 스케줄러에서 DeadLock이 걸려 서버 꺼지지 않는 상황이 발생하였다.
+이전에도 겪었던 문제라서 당황하지 않고 putty(원격 시스템)을 통해서 접속하여 ps -ef로 pid 확인 후 kill을 하였다.
+이 후 서버를 키려 했지만 갑자기 서버가 켜지지 않는 현상 발생!
+5분 동안 운영서버가 죽은 상태가 되었고 다행히 Disaster Plan이 있어 다른 서버로 사용자 접속 옮긴 후 확인하기 시작했다.
 
 
-### 해결방안
+### 임시방편 대처
 
-검색을 열심히 했지만 찾기 힘들었지만 결국 도움이 될만한 내용을 찾을 수 있다.
-참고한 블로그는 https://dsmoon.tistory.com/entry/ibatis-%EC%BF%BC%EB%A6%AC-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC-%EB%B0%8F-%EC%A3%BC%EC%9D%98%EC%A0%90-%EB%B3%80%EC%88%98 이다.
+JEUS 설치된 곳으로 가서 서버 실행파일을 찾은 뒤 실행을 시키니 다행히 서버 실행은 되었다.
 
-해당 내용을 정리하자면 
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/jeus1.png" | absolute_url }}" />>
+</figure>
+</aside>
 
-1. 리터럴 변수(${}형식)과 바인드 변수(#{}형식)이 존재
-
-2. ibatis에서 쿼리가 실행될 때 리터럴 변수는 해당 값이 바로 복사(약간, 자바의 statc final 느낌)
-
-3. 바인드 변수는 OraclePreparedStatment가 생성되면서 jdbcType에 맞게 변수 적용.
-
-이며,
+개발자가 아닌 담당자들도 사용을 하기에 WebAdmin에서도 실행이 되어야 하는 상황...
 
 
-실행 순서는 아래와 같다
+### 원인파악
 
-(1) SELECT NAME FROM A WHERE AGE = #{age} AND SEX = '${male}'
-(2) SELECT NAME FROM A WHERE AGE = #{age} AND SEX = 'MALE'
-(3) SELECT NAME FROM A WHERE AGE = ? AND SEX = 'MALE' <-- 여기서 실행 PLAN 적용
-(4) oracle.jdbc.driver.OraclePreparedStatement 생성
-(5) SELECT NAME FROM A WHERE AGE = '20' AND SEX = 'MALE'
-(6) oracle.jdbc.driver.OraclePreparedStatement.excute() 실행
+헤매이다 결국 원인 발견!
 
-이러한 순서 때문에 바인드 변수로 쿼리를 실행시키면 범용적 플랜을 적용할 수 밖에 없으며,
-실행 플랜이 달라지면서 속도 차이가 날 수 있는 것이었다.
+NodeManager가 죽은 상태였던 것이다.
 
+NodeManager가 켜져있는지 알 수 있는 방법 중 내가 활용하는 방법은 
 
-### 현재 소스
+1. WebAdmin에서 메인 -> Node 설정 탭에서 Under Control이 Y 인지 확인하는 방법
 
-```xml
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/jeus2.PNG" | absolute_url }}" />>
+</figure>
+</aside>
 
-
-SELECT
-	...이하 중략...
-FROM
-	...이하 중략...
-WHERE 
-	A = '{a}'
-
-```
-
-와 같이 수정하였더니 수행 시간이 db툴과 같아졌다.
-추가로 #{a, jdbcType = VARCHAR}에서 자연스럽게 처리해주는 null에 대해서는 ibatis 쿼리 실행전 java단에서 방지시켰다.
-
-### 바인드 변수는 그럼 왜 쓸까?
-
-바인드 변수를 사용함으로써 서버의 과부하를 줄일 수 있다.
-
-무슨 뜻이냐면 DB 및 서버에서 캐쉬와 메모리를 할용하는데 리터럴 변수를 활용하면 해당 내용을 재사용을 한다.
-
-예를 들면 SELECT USER_NAME WHERE T_USER WHERE USER_ID = #{user_id}가 있다면
-SELECT USER_NAME WHERE T_USER WHERE USER_ID = ? 의 형태를 메모리에 올려놓고 쿼리가 불릴때마다 재사용이 된다.
-
-예를 들면 SELECT USER_NAME WHERE T_USER WHERE USER_ID = '${user_id}'
-user_id 변수가 다른 값이 들어올때마다 쿼리가 다시 빌드되어 수행된다.
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/jeus3.PNG" | absolute_url }}" />>
+</figure>
+</aside>
 
 
-### 결론
+2. Putty내에서 명령어를 통한 방식
 
-리터럴 변수를 활용하되 쿼리 최적화를 시켜도 실행속도가 마음에 안든다면 최후의 보루로 리터럴 변수를 활용하자
+putty를 통해 시스템에 접근하여 jps를 입력하면 현재 jeus가 실행하고 있는 process들이 나오는 데 거기서 NodemanagerBootstrapper
+가 있으면 실행되는 중인 것이다.
 
+<aside>
+<figure>
+<img src="{{ "/media/img/Mistakes/jeus4.PNG" | absolute_url }}" />>
+</figure>
+</aside>
+
+
+### 문제 해결
+
+해결하는 법은 노드 매니저를 다시 켜면 되고 JEUS 매뉴얼이나 이전에 포스팅 내용 참조~
+
+(짧게 설명하면 nmboot를 입력)
