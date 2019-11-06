@@ -4,7 +4,7 @@ title:             "Websphere - 도메인 매핑이 안됨"
 menutitle:         "Websphere - 도메인 매핑이 안됨"
 tags:              Websphere
 category:          Mistakes & Tips
-author:            Geunny
+author:            geunyoung
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
 language:          KO
