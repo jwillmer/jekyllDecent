@@ -4,7 +4,7 @@ permalink: "/about"
 author:    geunyoung
 keywords:  about person demo example
 title:     Geunny's Blog의 목적
-menutitle: About ME
+menutitle: About Me
 weight:    90
 excerpt:   This page contains the curriculum vitae (CV) of the author.
 --- 
