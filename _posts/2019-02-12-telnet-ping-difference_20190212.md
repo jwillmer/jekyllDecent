@@ -4,7 +4,7 @@ title:             "Telnet과 Ping의 차이"
 menutitle:         "Telnet과 Ping의 차이"
 tags:              Tenet Ping
 category:          Network
-author:            Geunny
+author:            geunyoung
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
 language:          KO
