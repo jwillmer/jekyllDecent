@@ -1,6 +1,6 @@
 ---
 layout:    page
-permalink: "/hello"
+permalink: "/index_spring.html"
 author:    jwillmer
 weight:    5
 menutitle: HELloWorld
