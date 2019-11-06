@@ -1,6 +1,6 @@
 ---
 layout:    page
-permalink: "/hello/"
+permalink: "/hello"
 author:    jwillmer
 weight:    5
 menutitle: Offline
