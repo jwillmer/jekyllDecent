@@ -1,10 +1,10 @@
 ---
 layout:    page
 permalink: "/index_spring.html"
-author:    jwillmer
+author:    gykim
 weight:    5
-menutitle: HELloWorld
-title:     HelloWORld
+menutitle: Spring
+title:     Spring
 excerpt:   If you click on the link below it will render all content of the blog in one site. This can take some time!
 ---
 
