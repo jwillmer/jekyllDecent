@@ -5,7 +5,7 @@ menutitle:         "ORA-00923: FROM 키워드가 필요한 위치에 없습니�
 date:              2019-02-11 00:40:00 +0300
 tags:              ORACLE 오류
 category:          Mistakes & Tips
-author:            geunyoung
+author:            Geunny
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
 redirect_from:     "/mistakes1/"
