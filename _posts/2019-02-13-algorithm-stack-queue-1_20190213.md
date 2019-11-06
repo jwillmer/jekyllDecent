@@ -4,11 +4,9 @@ title:             "쇠막대기"
 menutitle:         "스택/큐를 이용한 알고리즘 1"
 tags:              Algorithm Queue Stack
 category:          Algorithm
-author:            geunyoung
+author:            Geunny
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
-redirect_from:     "/algoith5/"
-cover:             /assets/mountain-alternative-cover.jpg
 language:          KO
 comments:          true
 math:		   false
