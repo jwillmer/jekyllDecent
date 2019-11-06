@@ -4,11 +4,9 @@ title:             "위장"
 menutitle:         "해시를 이용한 알고리즘 3"
 tags:              Algorithm Hash
 category:          Algorithm
-author:            geunyoung
+author:            Geunny
 cover:             /assets/mountain-alternative-cover.jpg
 published:         true
-redirect_from:     "/algoith3/"
-cover:             /assets/mountain-alternative-cover.jpg
 language:          KO
 comments:          true
 math:		   false
