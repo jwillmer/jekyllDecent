@@ -1,7 +1,7 @@
 ---
 layout:    page
 permalink: "/index_spring.html"
-author:    gykim
+author:    geunyoung
 weight:    5
 menutitle: Spring
 title:     Spring
