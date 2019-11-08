@@ -13,7 +13,7 @@ title:     Database
     {% assign sorted_cats = site.categories | sort %}
     {% for category in sorted_cats %}
     {% assign sorted_posts = category[1] | reversed %}
-    {% unless category[0] != "Database" %}
+    {% unless category[0] != "DataBase" %}
         <h3 id="{{category[0] | uri_escape | downcase | slugify }}">{{category[0] | camelcase }}</h3>
         <ul class="category {{category[0] | uri_escape | downcase | slugify}}">  
             {% for post in sorted_posts %}
