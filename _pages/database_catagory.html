@@ -1,19 +1,19 @@
 ---
-layout:    page
+layout: default
 permalink: "/database/"
 author:    geunyoung
-title:     DataBase
-menutitle: DataBase
-weight:    70
-excerpt:   This page contains the post about Algorithm catagory
+weight:    5
+menutitle: Database
+title:     Database
 ---
+
 
 <div id="content" class="content">
 
     {% assign sorted_cats = site.categories | sort %}
     {% for category in sorted_cats %}
     {% assign sorted_posts = category[1] | reversed %}
-    {% unless category[0] != "DataBase" %}
+    {% unless category[0] != "Database" %}
         <h3 id="{{category[0] | uri_escape | downcase | slugify }}">{{category[0] | camelcase }}</h3>
         <ul class="category {{category[0] | uri_escape | downcase | slugify}}">  
             {% for post in sorted_posts %}
@@ -44,4 +44,3 @@ excerpt:   This page contains the post about Algorithm catagory
 
 
 </div>
-
