@@ -5,6 +5,7 @@ author:    jwillmer
 weight:    5
 menutitle: Offline
 title:     Offline Warning
+publish: false
 excerpt:   If you click on the link below it will render all content of the blog in one site. This can take some time!
 ---
 
