@@ -1,6 +1,6 @@
 ---
 layout:    page
-permalink: "/index_spring.html"
+permalink: "/index_spring/"
 author:    geunyoung
 weight:    5
 menutitle: Spring
