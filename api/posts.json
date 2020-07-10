@@ -8,7 +8,7 @@
         "category": "{{ post.category }}",
         "url": "{{ post.url | absolute_url }}",
         "tags": {{ post.tags | jsonify }},
-        "date": "{{ post.date }}",
+        "date": "{{ post.date | date_to_rfc822 }}",
         "language": "{% if post.language %}{{ post.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}"
     }{% unless forloop.last %},{% endunless %}
   {% endunless %}
