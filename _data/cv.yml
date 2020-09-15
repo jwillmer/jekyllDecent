@@ -26,13 +26,19 @@ geunyoung:
             - "Javascript/JQuery를 이용한 개인 프로젝트 진행"
             - "Java/Spring를 이용한 개인 프로젝트 진행"
             - "운영팀 서포트하여 SM(추가개발 및 유지보수)업무 수행"
-        - time:             "2018.01 - "
+        - time:             "2018.01 - 2019.12"
           location:         "서울시 강남구 논현1동 율암빌딩"
           company:          "(주)모빌씨앤씨"
           position:         "연구원"
           responsibilities:
             - "ADT, HITE 및 아모레의 시판 계열 프로젝트 Back-End SM(추가개발 및 유지보수)업무 수행"
             - "아모레 시판 및 ADT에 대해 상주 SI(System Integration) Back-End 업무 수행"
+        - time:             "2020.01 - 2020.06"
+          location:         "서울특별시 서초구 효령로"
+          company:          "ktds"
+          position:         "사원"
+          responsibilities:
+            - "데이터플랫폼서비스팀 TA 업무 수행"
     projects:
         - time:             "12 months in 2018"
           team:             "Team System Operation"
