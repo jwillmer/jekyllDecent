@@ -39,6 +39,12 @@ geunyoung:
           position:         "사원"
           responsibilities:
             - "데이터플랫폼서비스팀 TA 업무 수행"
+        - time:             "2020.09 - "
+          location:         "서울특별시 서초구 효령로"
+          company:          "ktds"
+          position:         "사원"
+          responsibilities:
+            - "오픈소스사업팀 솔루션파트 업무 수행"
     projects:
         - time:             "12 months in 2018"
           team:             "Team System Operation"
