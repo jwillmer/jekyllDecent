@@ -1,7 +1,7 @@
 # jekyllDecent
 [![Build Status](https://travis-ci.org/jwillmer/jekyllDecent.svg?branch=gh-pages)](https://travis-ci.org/jwillmer/jekyllDecent) 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
-[![Release v1.1.9](https://img.shields.io/badge/release-v1.1.9-blue.svg)](https://github.com/jwillmer/jekyllDecent/releases/tag/1.1.9)
+[![Release v1.2.0](https://img.shields.io/badge/release-v1.2.0-blue.svg)](https://github.com/jwillmer/jekyllDecent/releases/tag/1.2.0)
 
 This is a blog template for a static site generator named [Jekyll](https://jekyllrb.com/docs/home/) based on a [Ghost](https://ghost.org) template named [Decent](https://github.com/serenader2014/decent). 
 
