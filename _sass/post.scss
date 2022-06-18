@@ -36,6 +36,12 @@
         figure.left, figure.right {
             max-width: 250px;
         }
+        
+        video {
+          display: block;
+          padding: 0 0 1.75em 0;
+          margin: 0 auto;
+        }
     }
 
     .post-title {
@@ -93,14 +99,14 @@
             float: left;
             margin-left: 0;
             margin-right: 20px;
-            margin-top: 20px;
+            margin-top: 5px;
         }
 
         &.right {
             float: right;
-            margin-left: 0;
-            margin-right: 20px;
-            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 0;
+            margin-top: 5px;
         }
 
         img {
@@ -252,6 +258,10 @@
             font-weight: bold;
             font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
             font-size: 14px;
+        }
+        
+        p:last-of-type {
+          margin: 0;
         }
     }
 }
