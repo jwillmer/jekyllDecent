@@ -8,6 +8,7 @@ default:                                                      # Fallback if noth
   website:                          						  # OPTIONAL: link to the author of a post
   email:                                                      # OPTIONAL: used in the about page
   twitter:                                                    # OPTIONAL: used in the about page
+  mastodon:                                                   # OPTIONAL: used in the about page
   linkedin:                                                   # OPTIONAL: used in the about page
   xing:                                                       # OPTIONAL: used in the about page
   github:                                                     # OPTIONAL: used in the about page
